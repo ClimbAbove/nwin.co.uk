@@ -5,10 +5,10 @@ s3:
   bucket: 'config.climbabove.co.uk'
   files:
     dev:
-      - key: 'dev-drainsure.co.uk.env'
+      - key: 'dev-nwin.co.uk.env'
         target: '.env'
     prod:
-      - key: 'prod-drainsure.co.uk.env'
+      - key: 'prod-nwin.co.uk.env'
         target: '.env'
 ec2:
   access_key_id:
@@ -21,7 +21,7 @@ ec2:
     group_names:
       dev: 'climbabove-nwin'
       prod: 'climbabove-nwin'
-    amis:   
+    amis:
       dev:
         snapshot: true
         prefix: 'climbabove-nwin-cap'
