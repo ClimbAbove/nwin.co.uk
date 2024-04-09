@@ -1,0 +1,22 @@
+.how_we_work {
+    text-align: center;
+}
+.how_we_work h2 {
+    font-size:3rem;
+}
+.how_we_work .card {
+    padding:1rem;
+    border: 0;
+}
+.how_we_work .card .image_container {
+    margin-bottom: 1rem;
+}
+.how_we_work .card .image_container img,
+.how_we_work .card .image_container svg
+{
+    height:200px;
+}
+.how_we_work .card p.title {
+    font-weight:bold;
+    font-size:1.2rem;
+}

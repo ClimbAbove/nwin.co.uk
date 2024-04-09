@@ -1,0 +1,137 @@
+.masthead {
+    border-top:5px solid #1A90D9;
+    background: #FFFFFF;
+}
+.masthead .grid-container {
+    max-width: 90rem;
+}
+.masthead .logo_container {
+    text-align: left;
+}
+.masthead .logo_container svg  {
+    margin-top:-3px;
+    height:100px;
+    width:80px;
+}
+.masthead .menu_container {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around;
+    align-items: center;
+}
+.masthead .menu_container a {
+    color:#222222;
+    background: #ECECEC;
+    font-weight: bold;
+    border-radius: 2rem;
+    padding:0.5rem 1rem;
+    border:0 solid #222222;
+    margin-top:1rem;
+}
+.masthead .menu_container a:hover {
+    background:#AAAAAA
+}
+.masthead .cta_container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1.7rem;
+}
+.masthead .cta_container .button {
+    background: #BF0F30;
+}
+
+
+.masthead .price_match_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#FFFFFF;
+
+    position: absolute; top:0; right:2rem; width:80px; text-align: center;
+
+
+}
+.masthead .price_match_container .top {
+    background: #BF0F30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#FFFFFF;
+    padding:0.8rem 0.3rem 0.6rem 0.3rem;
+    line-height:1rem;
+
+
+
+}
+
+.maxsthead .price_match_container .bottom {
+    margin-top: -3px;
+    background: #BF0F30;
+    height: 8px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+}
+
+
+.masthead .price_match_container .bottom {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    height: 18px;
+    position: relative;
+    bottom: 0;
+}
+
+.masthead .price_match_container .bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 19px;
+}
+
+.masthead .price_match_container .bottom .shape-fill {
+    fill: #BF0F30;
+}
+
+
+@media print, screen and (max-width: 108em) {
+
+
+    .masthead .cta_container {
+        margin-right:7.4rem;
+    }
+}
+
+@media print, screen and (max-width: 64em) {
+    .masthead .price_match_container {
+        display: none;
+    }
+    .masthead .menu_container {
+        display: none;
+    }
+    .masthead .cta_container {
+        margin-right:0;
+        display: none;
+    }
+}
+@media print, screen and (max-width: 40em) {
+
+    .masthead .grid-container .grid-x {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .masthead .logo_container {
+        display:flex;
+        text-align: center;
+    }
+
+
+
+
+}
