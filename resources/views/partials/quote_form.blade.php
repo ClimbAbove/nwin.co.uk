@@ -14,7 +14,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="large-8 medium-12 small-12">
+            <div class="large-8 medium-12 small-12 comp">
                 @livewire('questionnaire-component', ['data' => ['questionnaire_element' => $questionnaire_element]])
             </div>
         </div>
@@ -56,8 +56,10 @@
         width:100%;
         text-align: center;
     }
-    section.quote_form section.quote_tool {
-        padding:0;
+    .comp {
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        overflow:hidden;
     }
     section.quote_form {
         background:#ECECEC;
@@ -65,17 +67,30 @@
     section.quote_form section.quote_tool {
         background:#FFFFFF;
         min-height: 325px;
+        padding:0;
     }
     section.quote_form section.quote_tool .button_container {
         width:100%;
         text-align: center;
     }
     section.quote_form section.quote_tool .button_container button {
-        border-radius: 0.2rem;
+        border-radius: 2rem;
         color:#FFFFFF;
         width:100%;
+        border:2px solid var(--ca-button-primary);
+        background: var(--ca-button-primary);
+    }
+    section.quote_form section.quote_tool .button_container button:hover {
+        background: #FFFFFF;
+        color:  var(--ca-button-primary);
     }
 
+    section.quote_form section.quote_tool .previous_question {
+        color:#ccc;
+    }
+    section.quote_form section.quote_tool .previous_question:hover {
+        color:#333;
+    }
     section.quote_form .reversible .large-8 {
         min-height: 325px;
     }
@@ -95,6 +110,8 @@
         align-items: center;
         color:#FFFFFF;
         padding:2rem 1rem;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
     }
     section.quote_form .selling_points_container ul {
         margin:0;
@@ -107,11 +124,15 @@
         font-size:1.2rem;
     }
 
+    .quote_tool_container {
+
+    }
     .quote_tool_container .progress_bar {
         background-color: #CCCCCC;
     }
     .quote_tool_container form {
         background-color: #FFFFFF;
+        overflow: hidden;
     }
     .quote_tool_container  .step_container {
         padding:1rem;
@@ -190,7 +211,18 @@
     .quote_tool_container .controls_container .button {
         background:#BF0F30;
     }
-
+    @media print, screen and (max-width: 1024px) {
+        section.quote_form .selling_points_container {
+            border-top-right-radius: 2rem;
+            border-bottom-left-radius: 0;
+        }
+        .comp {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 2rem;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 2rem;
+        }
+    }
     @media print, screen and (max-width: 40em) {
         .quote_form .reversible {
             flex-direction: column-reverse;

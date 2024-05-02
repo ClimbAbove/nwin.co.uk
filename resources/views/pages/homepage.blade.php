@@ -7,7 +7,8 @@
     @include('partials/quote_form')
     @include('partials/how_we_work')
     @include('partials/price_beater')
-    @include('partials/product_grid')
+
+    @include('partials/masonry')
     @include('partials/why_customers_love_us')
     @include('partials/made_in_britain')
     @include('partials/local_to_you')

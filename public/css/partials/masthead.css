@@ -37,7 +37,12 @@
     padding-top: 1.7rem;
 }
 .masthead .cta_container .button {
-    background: #BF0F30;
+    background:var(--ca-button-primary);
+    border:2px solid var(--ca-button-primary);
+}
+.masthead .cta_container .button:hover {
+    background:#FFFFFF;
+    color: var(--ca-button-primary);
 }
 
 
@@ -53,7 +58,7 @@
 
 }
 .masthead .price_match_container .top {
-    background: #BF0F30;
+    background:var(--ca-button-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,12 +73,11 @@
 
 .maxsthead .price_match_container .bottom {
     margin-top: -3px;
-    background: #BF0F30;
+    background:var(--ca-button-primary);
     height: 8px;
     position: relative;
     bottom: 0;
     width: 100%;
-
 }
 
 
@@ -96,7 +100,7 @@
 }
 
 .masthead .price_match_container .bottom .shape-fill {
-    fill: #BF0F30;
+    fill:var(--ca-button-primary);
 }
 
 

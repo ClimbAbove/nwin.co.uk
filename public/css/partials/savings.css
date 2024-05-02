@@ -11,7 +11,7 @@ section.savings .content_container {
     flex-direction: column;
     justify-items: center;
     justify-content: space-evenly;
-    background-color: purple;
+    background-color: #5BC8AF;
     color: #FFFFFF;
     min-height: 300px;
     padding:1rem;

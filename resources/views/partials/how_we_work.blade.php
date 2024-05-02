@@ -15,7 +15,7 @@
                             <p>
                                 Let us know a few details about your Home through our online platform.
                             </p>
-                            47555E      </div>
+                        </div>
                         <div class="cell large-4 card">
                             <div class="image_container">
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 250 250">

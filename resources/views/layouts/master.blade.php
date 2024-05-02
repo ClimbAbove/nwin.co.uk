@@ -12,6 +12,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
         <link href="/css/fontawesome/css/all.min.css" rel="stylesheet">
+        <style>
+            :root {
+                --ca-action: #BF0F30;
+            }
+        </style>
         <link rel="stylesheet" href="/css/master.css">
         {!! $page->getCSSInline('top') !!}
         {!! $page->getCSS('top') !!}

@@ -6,6 +6,60 @@ use App\Repositories\Content\DefaultContentRepository;
 
 class ContentRepository extends DefaultContentRepository
 {
+
+    public function getMasonry()
+    {
+        return [
+            [
+                'text'     => 'Windows',
+                'sub_text' => '',
+                'image'    => '/images/product-grid/windows.jpg',
+            ],
+            [
+                'text'     => 'Conservatory',
+                'sub_text' => '',
+                'image' => '/images/product-grid/conservatory.jpg',
+            ],
+            [
+                'text'     => 'Sliding Door',
+                'sub_text' => '',
+                'image' => '/images/product-grid/sliding-door.jpg',
+            ],
+            [
+                'text'     => 'Bi Folds',
+                'sub_text' => '',
+                'image' => '/images/product-grid/bifolds.jpg',
+            ],
+            [
+                'text'     => 'Orangery',
+                'sub_text' => '',
+                'image' => '/images/product-grid/orangery.jpg',
+            ],
+            [
+                'text'     => 'Garden Room',
+                'sub_text' => '',
+                'image' => '/images/product-grid/garden-room.jpg',
+            ],
+
+            [
+                'text'     => 'Doors',
+                'sub_text' => '',
+                'image' => '/images/product-grid/doors.jpg',
+            ],
+            [
+                'text'     => 'Porch',
+                'sub_text' => '',
+                'image' => '/images/product-grid/porch.jpg',
+            ],
+            [
+                'text'     => 'Garage',
+                'sub_text' => '',
+                'image' => '/images/product-grid/garage.jpg',
+            ],
+        ];
+
+
+    }
     public function getFAQs()
     {
 

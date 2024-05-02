@@ -1,20 +1,24 @@
 .stalker {
     background: var(--ca-tertiary);
     background: #eeee22;
+    background: #564E58;
     text-align: center;
     padding:1rem;
     position: sticky;
     bottom:0;
+
+    z-index:101;
 }
 .stalker .cta_container .button {
     margin-bottom: 0;
-    background: #BF0F30;
+    border:2px solid var(--ca-button-primary);
+    background: var(--ca-button-primary);
     color:#FFFFFF
 }
 .stalker .cta_container .button:hover {
     margin-bottom: 0;
     background: #FFFFFF;
-    color:#000000;
+    color: var(--ca-button-primary);
 }
 
 @media print, screen and (max-width: 40em) {

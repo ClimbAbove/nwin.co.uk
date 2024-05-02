@@ -9,6 +9,7 @@
     justify-items: center;
     justify-content: center;
     background:#ECECEC;
+    border-radius: 2rem;
 }
 .local_to_you .image_container img {
     height:350px;

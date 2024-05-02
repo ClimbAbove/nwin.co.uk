@@ -1,247 +1,271 @@
-<div class="hero_container">
-    <div class="hero grid-container-fluid">
-        <div class="grid-x">
-            <div class="large-12">
-                <div class="grid-container">
-                    <div class="grid-x">
-                        <div class="large-3 image_container left"></div>
-                        <div class="large-6 medium-12 small-12 blurb">
-                            <h2>
-                                Windows & Door Sale Now On
-                            </h2>
-                            <h3>
-                                Unbeatable Prices, Unbeatable Quality
-                            </h3>
-                            <div class="selling_points_container">
-                                <ul class="selling_points hide-for-small-only">
-                                    <li><img src="images/icons/white/tick.svg"> Leading Brands, Lowest prices</li>
-                                    <li><img src="images/icons/white/tick.svg"> 25+ Years Experience</li>
-                                    <li><img src="images/icons/white/tick.svg"> Free Expert Advice</li>
-                                    <li><img src="images/icons/white/tick.svg"> 10 Year Warranties </li>
-                                    <li><img src="images/icons/white/tick.svg"> Friendly & Local Installers</li>
-                                </ul>
+
+
+
+    <section class="section_hero">
+
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="large-6 medium-12 small-12">
+                    <h1>
+                        Window & Door Sale
+                    </h1>
+                    <h2>
+                        Unbeatable Prices, Unbeatable Quality
+                    </h2>
+
+                    <div class="reversable">
+                        <p>
+                            @include('partials/ctas/button')
+
+                            <div class="star_container">
+                                <img src="/images/star_gold.svg">
+                                <img src="/images/star_gold.svg">
+                                <img src="/images/star_gold.svg">
+                                <img src="/images/star_gold.svg">
+                                <img src="/images/star_gold.svg">
                             </div>
+
+                        </p>
+                        <div class="selling_points_container">
+                            <ul>
+                                <li class="one"><i class="fa fa-check"></i> Leading Brands, Lowest prices</li>
+                                <li class="two"><i class="fa fa-check"></i> 25+ Years Experience</li>
+                                <li class="three"><i class="fa fa-check"></i> Free Expert Advice</li>
+                                <li class="four"><i class="fa fa-check"></i> 10 Year Warranties</li>
+                                <li class="five"><i class="fa fa-check"></i> Friendly & Local engineers</li>
+                                <li class="six"><i class="fa fa-check"></i> Some nw poine</li>
+                            </ul>
                         </div>
-                        <div class="large-3 small-12 image_container right"></div>
                     </div>
                 </div>
+
+                <div class="large-6 small-12 hero_image_container">
+                    <div class="slant">
+                        <div class="hero_image">
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-    </div>
+        <style>
+            .hero_image_container {
 
-    <div class="swoosh_container">
-        <div class="swoosh">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path class="shape-fill" stroke-width="3" stroke-miterlimit="10" d="M599.996 118.496c-267.698 0-498.59-33.875-604.996-82.771V126h1211V35.256c-105.947 49.149-337.454 83.24-606.004 83.24z"></path>
-            </svg>
-        </div>
-        <div class="cta_swoosh">
-            @include('partials/ctas/button', ['cta_text' => 'Get Prices Now', 'scrolling_text_enabled' => true])
-            <div class="blurb">
-                <ul class="selling_points show-for-small-only">
-                    <li><img src="images/icons/white/tick.svg"> Leading Brands, Lowest prices</li>
-                    <li><img src="images/icons/white/tick.svg"> 25+ Years Experience</li>
-                    <li><img src="images/icons/white/tick.svg"> Free Expert Advice</li>
-                    <li><img src="images/icons/white/tick.svg"> 10 Year Warranties </li>
-                    <li><img src="images/icons/white/tick.svg"> Friendly & Local Installers</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+                overflow: hidden;
+                height:440px;
+                position: relative;
 
-<style>
-    .hero_container .hero {
-        background-color: var(--ca-tertiary);
-        background: #4bb1f3;
-        height: 515px;
-        position: relative;
-    }
-    .hero_container .grid-container {
-        max-width: 95rem;
-    }
-    .hero_container .image_container {
-        padding-top:8rem;
-    }
-    .hero_container .image_container.left {
-        background:url('/images/hero/istockphoto-185692782-1024x1024.jpg');
-        background-size: cover;
-        background-position: -9px -20px;
-    }
-    .hero_container .image_container.right {
-        background:url('/images/hero/kid_full.jpg');
-        background-size: cover;
-        background-position: -200px 0;
-    }
-    .hero_container .swoosh_container {
-        background: #21427f;
-    }
-    .hero_container .swoosh_container .swoosh {
-        margin-top: -125px;
-        z-index: 2;
-        position: relative;
-    }
-    .hero_container .swoosh_container .swoosh svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 125px;
-    }
-    .hero_container .swoosh_container .cta_swoosh .cta_container {
-        text-align: center;
-        margin-top: -2.1rem;
-        position: relative;
-        z-index:3;
-    }
-    .hero_container .swoosh_container .cta_swoosh .cta_container .button {
-        background: #BF0F30;
-        border:2px solid #BF0F30;
-        padding:1.2rem 1.8rem;
-    }
-    .hero_container .swoosh_container .cta_swoosh .cta_container .button:hover {
-        color: #BF0F30;
-        border:2px solid #BF0F30;
-    }
-    .hero_container .swoosh_container .cta_swoosh .cta_container .text_scroller {
-        padding-bottom: 3rem;
-    }
-    .hero_container .swoosh_container .swoosh svg .shape-fill {
-        fill: #21427f;
-        stroke: #BF0F30;
-    }
-    .hero_container .image {
-        position: relative;
-    }
-    .hero_container h2 {
-        font-size:3.6rem;
-        line-height: 4.4rem;
-        text-align: center;
-        padding-right: 0;
-    }
-    .hero_container h3 {
-        font-size:2.2rem;
-        line-height: 2.6rem;
-        text-align: center;
-    }
-    .hero_container .blurb {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        align-content: center;
-    }
-    .hero_container .selling_points_container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        justify-items: center;
-        padding-top:2rem;
-    }
-    .hero_container .blurb ul {
-        list-style:none;
-        margin:0;
-        padding:0 0 2rem 0;
-        text-align: left;
-    }
-    .hero_container .blurb ul li {
-        font-size:1.2rem;
-        color:#FFFFFF;
-    }
-    .hero_container .blurb ul li img {
-        margin-right:5px;
-        height:1.2rem;
-    }
-    .hero_container .cta_container .button {
-        font-size:1.2rem;
-        font-family: "Lato Black";
-        background-color: #BF0F30;
-    }
-    .hero_container .cta_container .button:hover {
-        background: #FFFFFF;
-    }
-    .hero_container .chevron_container {
-        margin-top:-2px;
-    }
-    @media print, screen and (max-width: 80em) {
-        .hero_container .grid-container {
-            max-width: 75rem;
-        }
-    }
-    @media print, screen and (max-width: 64em) {
-        .hero_container {
-            text-align: center;
-        }
-        .hero_container .image_container {
-            display: none !important;
-        }
-        .hero_container .hero > .grid-x > div {
-            width:100%;
-        }
-    }
-    @media print, screen and (max-width: 40em) {
+            }
+            .hero_image_container .slant {
+                transform: rotate(10deg);
 
-        .hero_container .hero {
-            text-align: center;
-            height:auto;
-            padding-bottom: 2.16rem;
-            background-size: 60%;
-        }
-        .hero_container .hero h2 {
-            padding:1rem 1rem 1rem 1rem;
-            font-size:3.2rem;
-            line-height: 3.4rem;
-        }
-        .hero_container .hero h3 {
-            font-size:2rem;
-            line-height: 2.6rem;
-            padding-bottom: 2rem;
-        }
-        .hero_container .hero .blurb {
-            text-align: center;
-            height:auto;
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            justify-items: center;
-            align-items: center;
-            align-content: center;
-        }
+                background: #ffe388;
 
-        .hero_container .hero .blurb .selling_points {
-            text-align: left;
-        }
+                position: absolute;
+                top:-4rem;
+                right:-2rem;
+                height:800px;
+                width:560px;
+                margin-left:0;
+            }
+            .hero_image_container .hero_image {
+                /*https://www.shutterstock.com/image-vector/realistic-pvc-window-open-sash-isolated-2311084423*/
+                background:url('/images/hero/window1.png');
+                background-position: center center;
+                background-size:60%;
+                background-repeat: no-repeat;
+                position: relative;
+                padding:2rem;
+                transform: rotate(-10deg);
+                height:600px;
+                margin-left:-3rem;
+            }
+            .section_hero {
+                padding:0rem !important;
+            }
+            .section_hero h1 {
+                font-size:1.6rem;
+                margin-top:2rem;
+            }
 
-        .hero_container .blurb p {
-            padding:0;
-            text-align: center;
-            height:auto;
-            z-index: 3;
-            margin-bottom: 2rem;
-        }
-        .hero_container .cta_container .button {
-           width:90%;
-            margin-top:-1.8rem;
-        }
+            #van {
+                position: absolute;
+                bottom:1rem;
+                right:1rem;
+                width:40%;
+            }
 
-        .hero_container .image {
-            margin-bottom: 3rem;
-        }
-        .hero_container .swoosh_container .swoosh {
-            margin-top: -89px;
-        }
-        .hero_container .swoosh_container .swoosh svg {
-            height:90px;
-        }
+            .section_hero img {
+                width:70%;
+                text-align: right;
+            }
+            .section_hero ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                list-style: none;
+                margin:0;
+            }
+
+            .section_hero .selling_points_container {
+                display: flex;
+                justify-content: center;
+                margin-bottom:2rem;
+            }
+            .section_hero .selling_points_container i {
+                color: #22bb5b;
+            }
+
+            .section_hero ul li {
+                width:50%;
+                color:#FFFFFF;
+                font-weight: bold;
+            }
+            .section_hero ul li i {
+                margin-right:0.2rem;
+                color: var(--ds-green);
+            }
+            .section_hero {
+                background: #1A90D9;
+
+                padding-bottom: 2rem;
+                background-size: cover;
+            }
+            .section_hero h1 {
+                color:#FFFFFF;
+                font-size:3rem;
+            }
+            .section_hero h2 {
+                color:#FFFFFF;
+                font-size:2rem;
+            }
+            .section_hero .hero_image_container {
+                text-align: right;
+            }
+            .section_hero .button {
+                background:var(--ca-button-primary);
+                border:2px solid var(--ca-button-primary);
+                margin-top:1rem;
+                font-size:1.4rem;
+                font-weight: bold;
+                padding:1rem 4rem;
+                margin-bottom: 0;
+                animation: button_pulse 2s infinite;
+                transition: 0.5s;
+                border-radius: 3rem;
+            }
+            .section_hero .button:hover {
+                background:#FFFFFF;
+                color: var(--ca-button-primary);
+            }
+            .section_hero .button span {
+                display: block;
+                font-size:0.8rem;
+                margin-top:0.4rem;
+            }
+            .section_hero .button i {
+                margin-right:0.3rem;
+            }
 
 
+            .section_hero .star_container {
+                display: flex;
+                flex-direction: row;
+                width:200px;
+                margin-left:3rem;
+                margin-top:1rem;
+            }
+            .section_hero .star_container img {
+                height:35px;
+            }
 
 
-    }
+            @-webkit-keyframes button_pulse {
+                0% {
+                    box-shadow: 0 0 0 0 var(--ds-action);
+                    transform: scale(1);
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(255, 78, 194, 0);
+                    transform: scale(1.1);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(255, 78, 194, 0);
+                    transform: scale(1);
+                }
+            }
 
 
+            @media print, screen and (max-width: 1023px) {
+                .section_hero {
+                    text-align: center;
+                }
+
+                .section_hero .star_container {
+                    margin: 1rem auto auto;
+                    width:200px;
+                }
+
+                .section_hero .hero_image_container {
+                    text-align: center;
+                    display: none;
+                }
+
+            }
 
 
+            @media print, screen and (max-width: 700px) {
 
-</style>
+
+                .section_hero h1 {
+                    margin-top:2rem;
+                    line-height:2.7rem;
+                    font-size:2.1rem;
+                }
+                .section_hero h2 {
+                    line-height:2rem;
+                    font-size:1.83rem;
+                }
+                .section_hero .button {
+                    width:90%;
+                }
+                .section_hero ul {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    margin: 0;
+                    text-align: left;
+                    justify-items: center;
+                }
+                .section_hero ul li {
+                    width:100%;
+                    margin:0.3rem;
+                }
+
+                .section_hero .reversable {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    padding-bottom: 1rem;
+                }
+                .section_hero .reversable .selling_points_container {
+                    padding:0;
+                    margin:0.8rem;
+                }
+                .section_hero .reversable .selling_points_container .five,
+                .section_hero .reversable .selling_points_container .six
+                {
+                    display:none;
+                }
+                .section_hero .reversable .star_container {
+                    padding-top:0;
+                    margin-top:-1rem;
+                    margin-bottom: 0.8rem;
+                }
+            }
+
+        </style>
+    </section>
+

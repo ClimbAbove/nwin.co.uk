@@ -25,6 +25,7 @@ section.made_in_britain .image_container .made_in_britain_badge {
     background:#000000;
     padding:2rem;
     text-align:center;
+    border-radius: 2rem;
 }
 section.made_in_britain .image_container .made_in_britain_badge img {
     height:150px;
