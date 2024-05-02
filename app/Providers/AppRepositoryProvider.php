@@ -26,6 +26,12 @@ class AppRepositoryProvider extends ServiceProvider
 
         $domain = parse_url(request()->root())['host'];
 
+        if($p = request()->input('p') !== null) {
+            if($p == 1) {
+                $domain = 'nwin.localx';
+            }
+        }
+
         switch($domain) {
             case 'nwin.localx':
 
