@@ -1,0 +1,61 @@
+s3:
+  region: 'eu-west-2'
+  access_key_id: ''
+  secret_access_key: ''
+  bucket: 'config.climbabove.co.uk'
+  files:
+    dev:
+      - key: 'dev-drainsure.co.uk.env'
+        target: '.env'
+    prod:
+      - key: 'prod-drainsure.co.uk.env'
+        target: '.env'
+ec2:
+  access_key_id:
+  secret_access_key:
+  deployment_user: 'capistrano'
+  regions:
+    dev: 'eu-west-1'
+    prod: 'eu-west-1'
+  autoscaling:
+    group_names:
+      dev: 'climbabove-nwin'
+      prod: 'climbabove-nwin'
+    amis:   
+      dev:
+        snapshot: true
+        prefix: 'climbabove-nwin-cap'
+        retention: 7
+      prod:
+        snapshot: true
+        prefix: 'climbabove-nwin-cap'
+        retention: 7
+    launch_configurations:
+      dev:
+        name_prefix: 'dev-climbabove-nwin'
+        instance_type: 't2.micro'
+        security_groups:
+          - ''
+        associate_public_ip_address: true
+        instance_monitoring: false
+        key_name: 'id_rsa'
+        block_device_mappings:
+          - device_name: '/dev/sda1'
+            ebs:
+              volume_size: 16
+              volume_type: 'gp2'
+              delete_on_termination: true
+      prod:
+        name_prefix: 'prod-climbabove-nwin'
+        instance_type: 't2.micro'
+        security_groups:
+          - ''
+        associate_public_ip_address: true
+        instance_monitoring: false
+        key_name: 'id_rsa'
+        block_device_mappings:
+          - device_name: '/dev/sda1'
+            ebs:
+              volume_size: 8
+              volume_type: 'gp2'
+              delete_on_termination: true
