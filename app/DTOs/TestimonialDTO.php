@@ -9,6 +9,12 @@ class TestimonialDTO extends AbstractDTO
     protected string $title;
     protected $author;
 
+    protected function setTitle($value)
+    {
+        $this->title = $value;
+    }
+
+
     protected function setAuthor($value)
     {
         $this->author = $value;
@@ -17,6 +23,10 @@ class TestimonialDTO extends AbstractDTO
     protected function setCaption($value)
     {
         $this->caption = $value;
+    }
+    protected function getTitle()
+    {
+        return $this->title;
     }
 
     protected function getAuthor()

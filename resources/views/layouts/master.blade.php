@@ -23,7 +23,7 @@
         {!! $page->getJSInline('top') !!}
         {!! $page->getJS('top') !!}
     </head>
-    <body>
+    <body id="{{$config['partner']}}-body">
         @include('partials/masthead')
         @yield('content')
         @include('partials/footer')

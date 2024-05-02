@@ -47,7 +47,7 @@
     @for($i = 1; $i <= 9; $i++)
         .masonry-with-columns .brick:nth-child({{$i}}) {
             @php
-            $h = (rand(200, 400) + 0);
+            $h = (rand(260, 400) + 0);
             @endphp
             height: {{$h}}px;
             line-height: {{$h}}px;
@@ -84,7 +84,9 @@
     }
     .masonry-with-columns .brick .text .sub_text {
         font-size:1.4rem;
-        padding:1rem 0;
+        margin-top:1rem;
+        line-height: 1.6rem;
+        padding:1rem 2rem;
     }
 
     @media print, screen and (max-width: 1024px) {
@@ -108,11 +110,11 @@
 
         const colHeights = Array(numCols).fill(0);
         const container = document.getElementById('masonry-with-columns');
-        console.log('resize'+window.innerWidth);
+
         if( window.innerWidth < 1025) {
             numCols = 2;
         }
-console.log(getChildNodes(container));console.log(numCols);
+
         Array.from(container.children).forEach((child, i) => {
             const order = i % numCols;
             child.style.order = order;

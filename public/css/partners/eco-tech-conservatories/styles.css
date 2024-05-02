@@ -1,0 +1,15 @@
+:root {
+    --ca-button-primary: #ff4747;
+}
+#eco-tech-conservatories-body .menu_container a {
+    display:none;
+}
+#eco-tech-conservatories-body .masthead .logo_container img  {
+    margin-top:0.5rem;
+    height:80px;
+    width:auto;
+}
+#eco-tech-conservatories-body  .hero_image_container .hero_image {
+    background-image: url('/images/partners/eco-tech-conservatories/hero.png');
+    background-size:cover;
+}

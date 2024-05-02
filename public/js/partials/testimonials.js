@@ -3,7 +3,7 @@ new Glide('.testimonials_glide', {
     startAt: 0,
     perView: 3,
     focusAt: 'center',
-    autoplay: 0,
+    autoplay: 3000,
     rewind: false,
     gap:0,
     hoverpause: true,

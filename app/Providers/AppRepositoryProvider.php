@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Repositories\QuoteQuestionnaires\WindowQuoteRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppRepositoryProvider extends ServiceProvider
@@ -24,8 +23,26 @@ class AppRepositoryProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(WindowQuoteRepository::class, function() {
-           return new WindowQuoteRepository();
-        });
+
+        $domain = parse_url(request()->root())['host'];
+
+        switch($domain) {
+            case 'nwin.localx':
+
+                $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\EcoTechConservatories\WindowQuoteRepository::class);
+                $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\EcoTechConservatories\ContentRepository::class);
+
+                break;
+
+            case 'nwin.local':
+            case 'nwin.co.uk':
+
+                $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\WindowQuoteRepository::class);
+                $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\Nwin\ContentRepository::class);
+
+            break;
+        }
+
+
     }
 }

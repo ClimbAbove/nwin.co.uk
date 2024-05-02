@@ -1,12 +1,34 @@
 <?php
 
-namespace App\Repositories\Content\Nwin;
+namespace App\Repositories\Implementations\Nwin;
+
 
 use App\Repositories\Content\DefaultContentRepository;
 use App\Repositories\Interfaces\ContentRepositoryInterface;
 
 class ContentRepository extends DefaultContentRepository implements ContentRepositoryInterface
 {
+    public function getHero()
+    {
+        $hero = [];
+
+        $hero['h1'] = 'Window & Door Sale';
+        $hero['h2'] = 'Unbeatable Prices, Unbeatable Quality';
+        $hero['hero_image'] = '/images/partners/nwin/hero.png';
+
+        return $hero;
+    }
+    public function getConfig()
+    {
+        $config = [];
+
+
+        $config['partner'] = 'nwin';
+        $config['css'] = '/css/partners/nwin/styles.css';
+        $config['logo'] = '/images/partners/nwin/logo.png';
+        return $config;
+    }
+
 
     public function getMasonry()
     {
@@ -65,11 +87,11 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
     {
 
         return [
-           [
-              'question' => 'Who is NWIN?',
-              'answer' => [
-                  'NWIN - National Window Installer Network. We are the UK’s First Windows and Doors national, powered by the UK’s Best independent installers. Our installers are local in your areas, but operate as a national Group. Although your contract is directly with our Local area partner, they are supported by our large buying power and exclusive group partnerships. Together, NWIN is designed to beat the UK’s current nationals and to change the dated Window and door industry, once and for all!'
-              ]
+            [
+                'question' => 'Who is NWIN?',
+                'answer' => [
+                    'NWIN - National Window Installer Network. We are the UK’s First Windows and Doors national, powered by the UK’s Best independent installers. Our installers are local in your areas, but operate as a national Group. Although your contract is directly with our Local area partner, they are supported by our large buying power and exclusive group partnerships. Together, NWIN is designed to beat the UK’s current nationals and to change the dated Window and door industry, once and for all!'
+                ]
             ],
             [
                 'question' => 'Will uPVC windows save me energy?',
@@ -110,11 +132,6 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             ],
         ];
 
-    }
-
-    public function getTestimonials()
-    {
-        return [];
     }
 
 }

@@ -3,16 +3,27 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Abstracts\AbstractController;
-use App\Repositories\Content\Nwin\ContentRepository;
-use App\Repositories\QuoteQuestionnaires\WindowQuoteRepository;
+
+
+use App\Repositories\Interfaces\ContentRepositoryInterface;
+use App\Repositories\Interfaces\WindowQuoteRepositoryInterface;
+use Illuminate\Http\Request;
 
 class HomepageController extends AbstractController
 {
-    public function index(WindowQuoteRepository $window_quote_repository, ContentRepository $content_respository)
+    public function index(Request $request, WindowQuoteRepositoryInterface $window_quote_repository, ContentRepositoryInterface $content_repository)
     {
+
+
+        $domain = parse_url(request()->root())['host'];
+
         $data = [];
-        $data['masonry'] = $content_respository->getMasonry();
-        $data['faqs'] = $content_respository->getFAQs();
+
+        $data['config']  = $content_repository->getConfig();
+        $data['hero']  = $content_repository->getHero();
+        $data['masonry'] = $content_repository->getMasonry();
+        $data['faqs']    = $content_repository->getFAQs();
+        $data['testimonials']    = $content_repository->getTestimonials();
 
         $data['questionnaire_element'] = $window_quote_repository->getQuestionnaire();
 

@@ -1,16 +1,12 @@
-
-
-
     <section class="section_hero">
-
         <div class="grid-container">
             <div class="grid-x">
                 <div class="large-6 medium-12 small-12">
                     <h1>
-                        Window & Door Sale
+                        {{ $hero['h1'] }}
                     </h1>
                     <h2>
-                        Unbeatable Prices, Unbeatable Quality
+                        {{ $hero['h2'] }}
                     </h2>
 
                     <div class="reversable">
@@ -62,7 +58,7 @@
                 transform: rotate(10deg);
 
                 background: #ffe388;
-
+                overflow:hidden;
                 position: absolute;
                 top:-4rem;
                 right:-2rem;
