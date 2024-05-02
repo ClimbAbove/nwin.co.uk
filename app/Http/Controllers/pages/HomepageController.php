@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Abstracts\AbstractController;
-use App\Repositories\Content\Nwin\ContentRepository;
+use App\Repositories\Content\NwinW\ContentRepository;
 use App\Repositories\QuoteQuestionnaires\WindowQuoteRepository;
 
 class HomepageController extends AbstractController

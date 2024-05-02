@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Content\Nwin;
+namespace App\Repositories\Content\NwinW;
 
 use App\Repositories\Content\DefaultContentRepository;
 
