@@ -13,10 +13,14 @@ class ResultsQuoteController extends AbstractController
     {
         $data = [];
 
-        $session = session()->get('data');
+        $session    = session()->get('data');
+        $quote_type = session()->get('quote_type');
 
-        $data['data'] = $session[0];
+        $data['data']    = $session[0];
         $data['config']  = $content_repository->getConfig();
+        $data['address']               = $content_repository->getAddress();
+
+
         return $this->render('pages/results', $data);
     }
 }

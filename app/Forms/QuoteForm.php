@@ -8,7 +8,6 @@ class QuoteForm extends Form
 {
     public function build()
     {
-
         $this->radio('product_type')->label('What?');
         $this->input('name')->label('Name');
         $this->input('email')->label('Email');

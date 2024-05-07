@@ -35,7 +35,14 @@
         50% {left:100%;transform: translateX(calc(-100% - 4px))}
     }
 
-
+ @media print, screen and (max-width: 700px) {
+     .comp {
+         border-top-left-radius: 1rem;
+         border-top-right-radius: 1rem;
+         border-bottom-left-radius: 0;
+         border-bottom-right-radius: 0;
+     }
+ }
     @media print, screen and (max-width: 40em) {
         .masthead .cta_container {
             display:none !important;

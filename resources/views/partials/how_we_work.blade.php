@@ -18,9 +18,15 @@
                         </div>
                         <div class="cell large-4 card">
                             <div class="image_container">
-                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 250 250">
+
+                                @if($config['partner'] == 'eco-tech-conservatories')
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" xml:space="preserve"><g fill="none" stroke="#333" stroke-width="5" stroke-miterlimit="10"><path stroke-linejoin="round" d="M6.4 154.4h52.8V184H6.4v-29.6zm4.8-80.8h48V152h-48V73.6z"/><path d="M59.2 73.6h41.6V184H59.2V73.6z"/><path d="M100.8 73.6V26.4L59.2 73.6V96h-48V73.6l89.6-47.2"/><path stroke-linejoin="round" d="M141.6 154.4h52V184h-52v-29.6zm0-80.8h47.2V152h-47.2V73.6z"/><path d="M100.8 184h40.8V73.6h-40.8"/><path d="M100.676 26.4 141.6 73.6V96h47.2V73.6l-88.124-47.2"/></g><path fill="#333" d="m100.8 45.467-9.217-16.401 9.093-14.533 10.141 14.533L100.8 45.467z"/><circle stroke="#333" stroke-miterlimit="10" cx="91.3" cy="134.5" r="2.3"/><circle stroke="#333" stroke-miterlimit="10" cx="110.7" cy="134.5" r="2.3"/></svg>
+
+                                @else
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 250 250">
                                     <g stroke="#333" stroke-width="6" stroke-miterlimit="10"><path fill="#2299dd" d="M15 21h221v206H15z"/><path fill="none" d="M15 93h109V21v206M3 235.5l244.5.5"/></g>
                                 </svg>
+                                @endif
                             </div>
                             <p class="title">Pick your Windows, Doors or Products</p>
                             <p>

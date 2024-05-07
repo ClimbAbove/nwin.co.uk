@@ -23,13 +23,10 @@
             Match
         </div>
         <div class="bottom">
-
-                <svg style="max-width:90px" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
-                </svg>
-
+            <svg style="max-width:90px" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
         </div>
     </div>
 </div>
-{!! $page->addCSS('<link rel="stylesheet" href="/assets/css/partials/masthead.min.css">','bottom') !!}
-
+{!! $page->addCSSInline('<link rel="stylesheet" href="/assets/css/partials/masthead.min.css">','top') !!}

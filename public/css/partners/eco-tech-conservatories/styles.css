@@ -13,3 +13,6 @@
     background-image: url('/images/partners/eco-tech-conservatories/hero.png');
     background-size:cover;
 }
+#eco-tech-conservatories-body footer .logo_container a img {
+    height:80px;
+}

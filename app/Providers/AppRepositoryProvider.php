@@ -33,7 +33,7 @@ class AppRepositoryProvider extends ServiceProvider
         }
 
         switch($domain) {
-            case 'nwin.localx':
+            case 'ecotechconservatories.local':
 
                 $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\EcoTechConservatories\WindowQuoteRepository::class);
                 $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\EcoTechConservatories\ContentRepository::class);

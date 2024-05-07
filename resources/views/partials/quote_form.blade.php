@@ -21,7 +21,6 @@
     </div>
 </section>
 <style>
-
     .loading_text {
         margin-bottom: 0.5rem;
         font-weight: bold;
@@ -221,6 +220,22 @@
             border-bottom-right-radius: 2rem;
             border-top-right-radius: 0;
             border-bottom-left-radius: 2rem;
+        }
+    }
+
+    @media print, screen and (max-width: 640px) {
+        .comp {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        section.quote_form .selling_points_container {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
         }
     }
     @media print, screen and (max-width: 40em) {

@@ -30,6 +30,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         max-height: 1200px;
+        width: calc(100% - 15px);
     }
     .masonry-with-columns .brick  {
             flex: 1 0 auto;

@@ -20,7 +20,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         //  $questionnaire_element->getIntegrationConfig([]);
         $questionnaire_element->id = 'window_quote';
         $questionnaire_element->text = 'Window Quote';
-        $questionnaire_element->setSaveAction([QuoteController::class, 'save']);
+        $questionnaire_element->setSaveAction([QuoteController::class, 'saveConservatoryQuote']);
 
         $question = new QuestionElement();
         $question->id = 'product_type';
@@ -49,7 +49,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $answer->id = 'conservatory_roof';
         $answer->value = 'conservatory_roof';
         $answer->text = 'Conservatory Roof';
-        $answer->icon = '/images/icons/conservatory.svg';
+        $answer->icon = '/images/icons/conservatory-roof.svg';
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();
@@ -79,7 +79,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $answer->id = 'roof_line';
         $answer->value = 'roof_line';
         $answer->text = 'Roof Line';
-        $answer->icon = '/images/icons/roofline.svg';
+        $answer->icon = '/images/icons/roof-line.svg';
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();

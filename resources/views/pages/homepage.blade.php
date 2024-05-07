@@ -7,43 +7,36 @@
         @include('partials/selling_points_bar')
         @include('partials/hero')
         @include('partials/quote_form')
+
         @include('partials/how_we_work')
 
         <h3 class="text-center">Our Services</h3>
-        @include('partials/masonry')
+
+        @include('partials/masonry_grid')
         @include('partials/why_customers_love_us')
         @include('partials/price_beater')
         @include('partners/eco-tech-conservatories/partials/benefits')
         @include('partners/eco-tech-conservatories/partials/testimonials')
-
-
-
         @include('partials/faqs', ['faqs', $faqs ?? []])
-
         @include('partials/stalker', [])
-
     @else
-
         @include('partials/selling_points_bar')
         @include('partials/hero')
         @include('partials/quote_form')
         @include('partials/how_we_work')
         @include('partials/price_beater')
-
-        @include('partials/masonry')
+        @include('partials/masonry_grid')
         @include('partials/why_customers_love_us')
         @include('partials/made_in_britain')
         @include('partials/local_to_you')
         @include('partials/faqs', ['faqs', $faqs ?? []])
         @include('partials/savings')
         @include('partials/stalker', [])
-
     @endif
 
 
 
 
-    {!! $page->addCSS('<link rel="stylesheet" href="/assets' . $config['css'] . '">','bottom') !!}
     {!! $page->addJS('<script src="/assets/js/partials/scrolling_text.min.js"></script>','bottom') !!}
     <style>
         .chevron_container .chevron {

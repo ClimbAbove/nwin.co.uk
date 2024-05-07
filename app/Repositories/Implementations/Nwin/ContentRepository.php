@@ -21,14 +21,26 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
     public function getConfig()
     {
         $config = [];
-
-
         $config['partner'] = 'nwin';
         $config['css'] = '/css/partners/nwin/styles.css';
         $config['logo'] = '/images/partners/nwin/logo.png';
+        $config['company_name'] = 'NWIN';
+        $config['company_number'] = '1231312';
+        $config['vat_number'] = '34234234';
         return $config;
     }
 
+    public function getAddress()
+    {
+        return [
+            'NWIN Limited',
+            'Discovery Court Business Centre',
+            'Suite 11',
+            'Wallisdown Rd',
+            'Poole',
+            'Poole',
+        ];
+    }
 
     public function getMasonry()
     {

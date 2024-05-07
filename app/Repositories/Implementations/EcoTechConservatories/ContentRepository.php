@@ -29,8 +29,21 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $config['partner'] = 'eco-tech-conservatories';
         $config['css'] = '/css/partners/eco-tech-conservatories/styles.css';
         $config['logo'] = '/images/partners/eco-tech-conservatories/logo.png';
+        $config['company_name'] = 'MK Developments and Construction Ltd trading as Eco Tech Conservatories';
+        $config['company_number'] = '13943142';
+        $config['vat_number'] = '446852270';
 
         return $config;
+    }
+
+    public function getAddress()
+    {
+        return [
+            'Eco Tech Conservatories',
+            '15 Attoxhall Road',
+            'Coventry',
+            'CV2 5AH',
+        ];
     }
 
 
