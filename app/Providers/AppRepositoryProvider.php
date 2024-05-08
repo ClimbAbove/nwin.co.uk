@@ -28,7 +28,7 @@ class AppRepositoryProvider extends ServiceProvider
 
         if($p = request()->input('p') !== null) {
             if($p == 1) {
-                $domain = 'nwin.localx';
+                $domain = 'ecotechconservatories.local';
             }
         }
 

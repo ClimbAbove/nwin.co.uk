@@ -2,7 +2,7 @@
     <div class="grid-container">
         <div class="grid-x">
             <div class="large-2 medium-12 small-12 image_container">
-                <img src="/images/flares/price-match.png">
+                <img src="/images/flares/price-beater.png">
             </div>
             <div class="large-10 medium-12 small-12 content_container">
                 <h3>Lowest Price Guaranteed</h3>

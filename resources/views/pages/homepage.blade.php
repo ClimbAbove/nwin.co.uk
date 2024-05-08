@@ -24,11 +24,12 @@
         @include('partials/hero')
         @include('partials/quote_form')
         @include('partials/how_we_work')
-        @include('partials/price_beater')
+
         @include('partials/masonry_grid')
         @include('partials/why_customers_love_us')
         @include('partials/made_in_britain')
         @include('partials/local_to_you')
+        @include('partials/price_beater')
         @include('partials/faqs', ['faqs', $faqs ?? []])
         @include('partials/savings')
         @include('partials/stalker', [])
