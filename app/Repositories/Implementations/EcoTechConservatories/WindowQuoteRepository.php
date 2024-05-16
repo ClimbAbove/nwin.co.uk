@@ -27,7 +27,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $question->type = 'tile';
         $question->min_answers = 1;
         $question->text = 'What are you looking for?';
-        $question->sub_text = 'What are you looking for?';
+        $question->sub_text = '';
         $question->next_step = 'form_step_1';
 
         $answer = new AnswerElement();
@@ -39,9 +39,9 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();
-        $answer->id = 'conservatory_repair';
-        $answer->value = 'conservatory_repair';
-        $answer->text = 'Conservatory Repair';
+        $answer->id = 'doors';
+        $answer->value = 'doors';
+        $answer->text = 'Doors';
         $answer->icon = '/images/icons/door.svg';
         $question->pushAnswer($answer);
 
@@ -60,10 +60,10 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();
-        $answer->id = 'doors';
-        $answer->value = 'doors';
-        $answer->text = 'Doors';
-        $answer->icon = '/images/icons/door.svg';
+        $answer->id = 'conservatory_repair';
+        $answer->value = 'conservatory_repair';
+        $answer->text = 'Conservatory Repair';
+        $answer->icon = '/images/icons/conservatory-repair.svg';
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();

@@ -2,7 +2,7 @@
     <div class="grid-container">
         <div class="grid-x">
             <div class="large-12 medium-12 small-12">
-                @include('partials/ctas/button', ['cta_text' => 'Get Prices Now'])
+                @include('partials/ctas/button', ['cta_text' => 'Get Prices Now', 'scrolling_text_enabled' => true])
             </div>
         </div>
     </div>

@@ -1,11 +1,11 @@
 <section id="benefits">
-    <div class="grid-container fluid">
+    <div class="grid-container">
 
-        <div class="grid-x">
-            <div class="sidekick large-6">
+        <div class="grid-x block">
+            <div class="sidekick large-6 medium-6 small-12">
 
             </div>
-            <div class="content large-6">
+            <div class="content large-6 medium-6 small-12">
                 <h3>Benefits of a replacement conservatory roof...</h3>
                 <ul>
                     <li>
@@ -43,7 +43,11 @@
 </section>
 <style>
     #benefits {
-        padding:0;
+        padding:2rem 0;
+    }
+    #benefits .block {
+        border-radius: 1rem;
+        overflow: hidden;
     }
     #benefits .grid-container.fluid {
         padding:0;
@@ -51,22 +55,29 @@
 
     #benefits .sidekick {
         background: url('/images/partners/eco-tech-conservatories/replacement-conservatory-roof.jpg');
-
+        background-position: -80px 1px;
+        background-size:cover;
         height:500px;
         display: flex;
 
     }
     #benefits .content {
-        padding:2rem;
+        padding:0 2rem;
         justify-items: center;
         align-content: center;
+        background:#ECECEC;
+    }
+    #benefits .content h3 {
+        line-height: 3rem;
+        font-size: 2.8rem;
     }
     #benefits .content ul {
         list-style: none;
         margin:0;
+        padding:1rem 0;
     }
     #benefits .content ul li {
-        font-size:1.5rem;
+        font-size:1.2rem;
     }
     #benefits .content ul li i {
         margin-right:1rem;

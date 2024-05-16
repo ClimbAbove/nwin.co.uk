@@ -45,7 +45,13 @@
                     </div>
                 </div>
             </div>
+
+            <div class="large-12 medium-12 small-12 cta_container">
+                @include('partials/ctas/button')
+            </div>
+
         </div>
     </div>
 </section>
+
 {!! $page->addCSS('<link rel="stylesheet" href="/assets/css/partials/how_we_work.min.css">','bottom') !!}

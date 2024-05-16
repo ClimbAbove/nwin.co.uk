@@ -156,8 +156,8 @@
         }
 
         .quote_tool_container .step_container .answer_tiles_container .answer_tile {
-            width:157px;
-            max-width:157px;
+            width:167px;
+            max-width:167px;
             display: block;
             position: relative;
         }

@@ -14,22 +14,33 @@
                             @include('partials/ctas/button')
 
                             <div class="star_container">
-                                <img src="/images/star_gold.svg">
-                                <img src="/images/star_gold.svg">
-                                <img src="/images/star_gold.svg">
-                                <img src="/images/star_gold.svg">
-                                <img src="/images/star_gold.svg">
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
                             </div>
 
                         </p>
                         <div class="selling_points_container">
                             <ul>
-                                <li class="one"><i class="fa fa-check"></i> Leading Brands, Lowest prices</li>
-                                <li class="two"><i class="fa fa-check"></i> 25+ Years Experience</li>
-                                <li class="three"><i class="fa fa-check"></i> Free Expert Advice</li>
-                                <li class="four"><i class="fa fa-check"></i> 10 Year Warranties</li>
-                                <li class="five"><i class="fa fa-check"></i> Friendly & Local engineers</li>
-                                <li class="six"><i class="fa fa-check"></i> Some nw poine</li>
+                                <li class="one"><i class="fa fa-check-circle"></i> Leading Brands</li>
+                                <li class="two"><i class="fa fa-check-circle"></i> Lowest Prices</li>
+                                <li class="three"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
+                                <li class="four"><i class="fa fa-check-circle"></i> Free Expert Advice</li>
+                                <li class="five"><i class="fa fa-check-circle"></i> 10 Year Warranties</li>
+                                <li class="six"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
+
                             </ul>
                         </div>
                     </div>
@@ -42,29 +53,24 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
         <style>
             .hero_image_container {
-
                 overflow: hidden;
                 height:440px;
                 position: relative;
-
             }
             .hero_image_container .slant {
-                transform: rotate(10deg);
-
+                transform: rotate(8deg);
                 background: #ffe388;
-                overflow:hidden;
+                overflow: hidden;
                 position: absolute;
-                top:-4rem;
-                right:-2rem;
-                height:800px;
-                width:560px;
-                margin-left:0;
+                top: -3rem;
+                right: -3rem;
+                height: 800px;
+                width: 613px;
+                margin-left: 0;
             }
             .hero_image_container .hero_image {
                 /*https://www.shutterstock.com/image-vector/realistic-pvc-window-open-sash-isolated-2311084423*/
@@ -74,7 +80,7 @@
                 background-repeat: no-repeat;
                 position: relative;
                 padding:2rem;
-                transform: rotate(-10deg);
+                transform: rotate(-8deg);
                 height:600px;
                 margin-left:-3rem;
             }
@@ -82,8 +88,8 @@
                 padding:0rem !important;
             }
             .section_hero h1 {
-                font-size:1.6rem;
-                margin-top:2rem;
+                font-size:2rem;
+                margin-top:1.2rem;
             }
 
             #van {
@@ -114,14 +120,15 @@
                 color: #22bb5b;
             }
 
-            .section_hero ul li {
+            .section_hero .selling_points_container ul li {
                 width:50%;
                 color:#FFFFFF;
                 font-weight: bold;
+                font-size: 1.2rem;
             }
-            .section_hero ul li i {
+            .section_hero .selling_points_container ul li i {
                 margin-right:0.2rem;
-                color: var(--ds-green);
+                color: #22bb5b;
             }
             .section_hero {
                 background: #1A90D9;
@@ -131,7 +138,8 @@
             }
             .section_hero h1 {
                 color:#FFFFFF;
-                font-size:3rem;
+                font-size:3.3rem;
+                margin-bottom: 0;
             }
             .section_hero h2 {
                 color:#FFFFFF;
@@ -139,6 +147,8 @@
             }
             .section_hero .hero_image_container {
                 text-align: right;
+                height: 460px;
+
             }
             .section_hero .button {
                 background:var(--ca-button-primary);
@@ -169,12 +179,18 @@
             .section_hero .star_container {
                 display: flex;
                 flex-direction: row;
-                width:200px;
-                margin-left:3rem;
-                margin-top:1rem;
+                width:260px;
+                margin-top:2rem;
             }
-            .section_hero .star_container img {
-                height:35px;
+
+            .section_hero .star_container .starbox {
+                background: #22bb5b;
+                border-radius: 0.2rem;
+                text-align: center;
+                margin: 0.3rem;
+            }
+            .section_hero .star_container .starbox img {
+                height:45px;
             }
 
 

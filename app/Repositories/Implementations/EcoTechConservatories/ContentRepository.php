@@ -53,33 +53,33 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             [
                 'text'     => 'Panelled Conservatory Roofs',
                 'sub_text' => 'The benefits of replacing your old conservatory roof panels with insulated panels are plenty! Reduce energy bills, regulate temperature and reduce noise & UV rays. An absolute bonus is it\'s done in a day!',
-                'image'    => '/images/partners/eco-tech-conservatories/solid-dark-grey-conservatory-roof.jpg',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/solid-dark-grey-conservatory-roof-RSTC-380x270.jpg',
             ],
             [
                 'text'     => 'Solid Conservatory Roofs',
                 'sub_text' => 'Turn your conservatory into a room again. Thermal-efficient glass roofs, lightweight tiled roofs - your options and customisations are endless with Ultraframe.',
-                'image'    => '/images/partners/eco-tech-conservatories/tiled-conservatory-roof-ultraroof-interior.jpg',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/tiled-conservatory-roof-ultraroof-interior-RSTC-380x270.jpg',
 
             ],
             [
                 'text'     => 'Conservatories',
                 'sub_text' => 'Conservatories are the perfect way to extend your home and bring the outdoors indoors. At Eco Tech, we offer a huge range of Ultraframe conservatories so there\'s a style to suit everyone.',
-                'image'    => '/images/partners/eco-tech-conservatories/classic-conservatory-roof-with-grey-panels.jpg',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/classic-conservatory-roof-with-grey-panels-RSTC-380x270.jpg',
             ],
             [
                 'text'     => 'Windows',
                 'sub_text' => 'At Eco Tech, we choose REHAU for our uPVC windows. REHAU windows contain a unique compound that guarantees a smooth, high gloss finish meaning that your new windows retain their pristine appearance for years to come. This also means that they will never warp or rot and, of course, will never need painting.',
-                'image'    => '/images/partners/eco-tech-conservatories/upvc-rehaus-windows.jpg',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/upvc-rehaus-windows-RSTC-380x270.jpg',
             ],
             [
                 'text'     => 'Composite Doors',
                 'sub_text' => 'A composite door is an affordable solution to replacing existing pvc and wooden doors. We can supply a huge range of traditional and contemporary ODL composite doors that offer excellent value for money, impressive thermally efficiency, solid security and are made to suit your exact criteria.',
-                'image'    => '/images/partners/eco-tech-conservatories/ODL-composite-door-beige.jpg',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/ODL-composite-door-beige-RSTC-380x270.jpg',
             ],
             [
                 'text'     => 'Patio & French Doors',
                 'sub_text' => 'At Eco Tech we offer a huge range of patio and french doors by REHAU to suit all tastes and budgets. These offer all the benefits of modern uPVC including noise reduction, low maintenance, safety, security and energy efficiency.',
-                'image'    => '/images/partners/eco-tech-conservatories/REHAU-french-door.jpg',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/REHAU-french-door-RSTC-380x270.jpg',
             ],
 
 

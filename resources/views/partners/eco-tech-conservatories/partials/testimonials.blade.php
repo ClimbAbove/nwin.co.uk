@@ -21,12 +21,22 @@
                             <div class="testimonial">
                                 <p>{{ $testimonial_dto->caption }}</p>
                             </div>
-                            <div class="stars">
-                                <div class="star"></div>
-                                <div class="star"></div>
-                                <div class="star"></div>
-                                <div class="star"></div>
-                                <div class="star"></div>
+                            <div class="star_container">
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
+                                <div class="starbox">
+                                    <img src="/images/star_gold.svg">
+                                </div>
                             </div>
                             <p class="author">
                                 {{$testimonial_dto->author}}

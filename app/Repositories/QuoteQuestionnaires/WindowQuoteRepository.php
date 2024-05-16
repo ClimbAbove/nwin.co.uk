@@ -25,7 +25,7 @@ class WindowQuoteRepository extends AbstractRepository
         $question->type = 'tile';
         $question->min_answers = 1;
         $question->text = 'What are you looking for?';
-        $question->sub_text = 'What are you looking for?';
+        $question->sub_text = '';
         $question->next_step = 'form_step_1';
 
         $answer = new AnswerElement();

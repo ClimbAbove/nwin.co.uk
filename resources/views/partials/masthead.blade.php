@@ -12,7 +12,7 @@
                 <a href="">FAQs</a><br>
             </div>
             <div class="large-4 small-10">
-                @include('partials/ctas/button', ['cta_text' => 'Get Price Now!'])
+                @include('partials/ctas/button', ['cta_text' => 'Find Prices Now!'])
             </div>
         </div>
     </div>

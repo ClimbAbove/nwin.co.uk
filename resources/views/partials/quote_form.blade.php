@@ -5,12 +5,13 @@
                 <div class="selling_points_container">
                     <h4>Get Your Free Quote!</h4>
                     <ul>
-                        <li><img src="images/icons/white/tick.svg"> Free No Obligation Quote</li>
-                        <li><img src="images/icons/white/tick.svg"> Leading Brands, Lowest prices</li>
-                        <li><img src="images/icons/white/tick.svg"> 25+ Years Experience</li>
-                        <li><img src="images/icons/white/tick.svg"> Free Expert Advice</li>
-                        <li><img src="images/icons/white/tick.svg"> 10 Year Warranties</li>
-                        <li><img src="images/icons/white/tick.svg"> Friendly & Local Installers</li>
+                        <li><i class="fa fa-check-circle"></i> Free No Obligation Quote</li>
+                        <li><i class="fa fa-check-circle"></i> Leading Brands</li>
+                        <li><i class="fa fa-check-circle"></i> Lowest prices</li>
+                        <li><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
+                        <li><i class="fa fa-check-circle"></i> Free Expert Advice</li>
+                        <li><i class="fa fa-check-circle"></i> 10 Year Warranties</li>
+                        <li><i class="fa fa-check-circle"></i>  Friendly & Local Installers</li>
                     </ul>
                 </div>
             </div>
@@ -56,8 +57,8 @@
         text-align: center;
     }
     .comp {
-        border-top-right-radius: 2rem;
-        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
         overflow:hidden;
     }
     section.quote_form {
@@ -100,6 +101,11 @@
         font-size:2rem;
     }
 
+    section.quote_form .grid-container .grid-x {
+        box-shadow: 0 0 9px 1px rgba(0,0,0,0.19);
+        border-radius: 1rem;
+    }
+
     section.quote_form .selling_points_container {
         background:#21427f;
         height:100%;
@@ -109,8 +115,8 @@
         align-items: center;
         color:#FFFFFF;
         padding:2rem 1rem;
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
     }
     section.quote_form .selling_points_container ul {
         margin:0;
@@ -122,10 +128,11 @@
     section.quote_form .selling_points_container ul li {
         font-size:1.2rem;
     }
-
-    .quote_tool_container {
-
+    section.quote_form .selling_points_container ul li i {
+        color:#00B67A;
     }
+
+
     .quote_tool_container .progress_bar {
         background-color: #CCCCCC;
     }
@@ -160,7 +167,7 @@
     }
     .quote_tool_container  .step_container .answer_tiles_container .answer_tile {
         flex-basis: 280px;
-
+        width: 167px;
         height: 150px;
         background:#FFFFFF;
         margin-right:10px;
@@ -182,7 +189,7 @@
         border-radius: 0.3rem;
         text-align: center;
         margin:0.5rem;
-        width:120px;
+        width:160px;
     }
     .quote_tool_container  .step_container .answer_tiles_container .answer_tile.answered {
         background-color: var(--ca-tertiary);

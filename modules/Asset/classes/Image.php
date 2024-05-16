@@ -157,7 +157,7 @@ class Image
 
         $save_path = ($cache_path . '/' . $this->pathinfo['filename'] . '-' . $this->resize_mode .'-' . $this->resize_width . 'x' . $this->resize_height . '.' . $this->pathinfo['extension']);
 
-        switch($image->mime) {
+        switch($image->exif('FILE.MimeType')) {
             case 'image/png':
                 return $image->save($save_path, 70);
             case 'image/jpeg':
@@ -257,13 +257,12 @@ class Image
      */
     public function resizeToCover()
     {
-        $manager = new ImageManager(['driver' => 'gd']);
+        $manager = new ImageManager(new Driver());
 
-        $image  = $manager->make($this->master_file_path);
+        $image =  $manager->read($this->master_file_path);
+        $image->cover($this->resize_width, $this->resize_height);
 
-        $image->fit($this->resize_width, $this->resize_height, function($c) {
-            $c->upsize();
-        });
+
 
         return $this->save($image);
     }

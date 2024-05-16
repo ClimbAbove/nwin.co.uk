@@ -50,7 +50,12 @@ section {
     background:#000000;
     color:#FFFFFF;
 }
-
+.cta_container .cta.secondary.ghost {
+    border:2px solid var(--ca-button-primary);
+    color:var(--ca-button-primary);
+    background: #FFFFFF;
+    border-radius: 2rem;
+}
 
 .text_scroller {
     color: #fff;

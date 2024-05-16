@@ -10,14 +10,16 @@
 
         @include('partials/how_we_work')
 
-        <h3 class="text-center">Our Services</h3>
 
-        @include('partials/masonry_grid')
+
+        @include('partials/our_services')
         @include('partials/why_customers_love_us')
-        @include('partials/price_beater')
+
         @include('partners/eco-tech-conservatories/partials/benefits')
         @include('partners/eco-tech-conservatories/partials/testimonials')
+        @include('partials/price_beater')
         @include('partials/faqs', ['faqs', $faqs ?? []])
+
         @include('partials/stalker', [])
     @else
         @include('partials/selling_points_bar')
