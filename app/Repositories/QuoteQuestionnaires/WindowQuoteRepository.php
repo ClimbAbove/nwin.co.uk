@@ -89,6 +89,7 @@ class WindowQuoteRepository extends AbstractRepository
         $questionnaire_element->pushStep($question);
 
 
+
         $form_one = new FormElement();
         $form_one->id = 'form_step_1';
         $form_one->name = 'form_step_1';
