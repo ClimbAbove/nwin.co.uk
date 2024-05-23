@@ -100,7 +100,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
 
         $field = new FormFieldElement([
             'name' => 'postcode',
-            'label' => 'Postcode',
+            'label' => 'Please Tell Us Your Postcode, so we can find your prices',
             'type' => 'text',
         ]);
         $form_one->pushField($field);
