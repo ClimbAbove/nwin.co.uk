@@ -1,3 +1,4 @@
+<a id="quote"></a>
 <section class="quote_form">
     <div class="grid-container">
         <div class="grid-x reversible">
@@ -217,7 +218,68 @@
     .quote_tool_container .controls_container .button {
         background:#BF0F30;
     }
-    @media print, screen and (max-width: 1024px) {
+
+    @media print, screen and (max-width: 1250px) {
+
+
+        .quote_tool_container  .step_container .answer_tiles_container {
+            display: grid;
+            grid-template-rows:1fr 1fr 1fr;
+            grid-auto-flow: column;
+            column-gap:1rem;
+            row-gap:10px;
+        }
+        .quote_tool_container  .step_container .answer_tiles_container .answer_tile {
+            width:auto;
+        }
+        .quote_tool_container  .step_container .answer_tiles_container .answer_tile .answer {
+            width:180px;
+            margin:0 auto;
+        }
+    }
+
+    @media print, screen and (max-width: 1023px) {
+
+        .quote_form .reversible {
+            flex-direction: column-reverse;
+        }
+        .comp {
+            border-top-left-radius: 1rem !important;
+            border-top-right-radius: 1rem !important;
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+        section.quote_form .selling_points_container {
+            border-top-left-radius: 0 !important;
+            border-top-right-radius: 0 !important;
+            border-bottom-left-radius: 1rem !important;
+            border-bottom-right-radius: 1rem !important;
+        }
+        .quote_tool_container  .step_container .answer_tiles_container {
+            display: grid;
+            grid-template-rows:repeat(4,150px);
+            grid-auto-flow: column;
+            column-gap:1rem;
+            row-gap:10px;
+        }
+        .quote_tool_container  .step_container .answer_tiles_container .answer_tile {
+            flex-basis: 280px;
+            height: 150px;
+            background:#FFFFFF;
+            margin-right:10px;
+            text-align: center;
+            margin-bottom:10px;
+            border:1px solid #CCCCCC;
+            border-radius: 0.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .quote_tool_container  .step_container .answer_tiles_container .answer_tile .answer {
+            width:auto;
+        }
         section.quote_form .selling_points_container {
             border-top-right-radius: 2rem;
             border-bottom-left-radius: 0;
@@ -227,6 +289,16 @@
             border-bottom-right-radius: 2rem;
             border-top-right-radius: 0;
             border-bottom-left-radius: 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 830px) {
+        .quote_tool_container .step_container .answer_tiles_container {
+            grid-template-columns: 1fr 1fr ;
+            grid-auto-flow: inherit;
+        }
+        .quote_tool_container .step_container .answer_tiles_container .answer_tile {
+            width:auto;
         }
     }
 
@@ -244,21 +316,30 @@
             border-bottom-left-radius: 1rem;
             border-bottom-right-radius: 1rem;
         }
+
+        .quote_tool_container .step_container .answer_tiles_container {
+            grid-template-columns: 1fr;
+
+            grid-auto-flow: inherit;
+        }
+        .quote_tool_container .step_container .answer_tiles_container .answer_tile {
+            width:100%;
+        }
     }
     @media print, screen and (max-width: 40em) {
-        .quote_form .reversible {
+        .xquote_form .reversible {
             flex-direction: column-reverse;
         }
 
 
-        .quote_tool_container  .step_container .answer_tiles_container {
+        .xquote_tool_container  .step_container .answer_tiles_container {
             display: grid;
             grid-template-rows:repeat(4,150px);
             grid-auto-flow: column;
             column-gap:1rem;
             row-gap:10px;
         }
-        .quote_tool_container  .step_container .answer_tiles_container .answer_tile {
+        .xquote_tool_container  .step_container .answer_tiles_container .answer_tile {
             flex-basis: 280px;
 
             height: 150px;

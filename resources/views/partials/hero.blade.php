@@ -143,7 +143,7 @@
             }
             .section_hero h2 {
                 color:#FFFFFF;
-                font-size:2rem;
+                font-size:2rem !important;
             }
             .section_hero .hero_image_container {
                 text-align: right;
@@ -154,13 +154,17 @@
                 background:var(--ca-button-primary);
                 border:2px solid var(--ca-button-primary);
                 margin-top:1rem;
-                font-size:1.4rem;
+                font-size:1.2rem;
                 font-weight: bold;
-                padding:1rem 4rem;
+                padding:1rem 2.5rem;
                 margin-bottom: 0;
-                animation: button_pulse 2s infinite;
+
                 transition: 0.5s;
                 border-radius: 3rem;
+            }
+
+            .section_hero .button.primary.cta {
+                animation: button_pulse 2s infinite;
             }
             .section_hero .button:hover {
                 background:#FFFFFF;
@@ -209,6 +213,36 @@
                 }
             }
 
+            @media print, screen and (max-width: 1225px) {
+                .section_hero h1 {
+                    font-size: 2.6rem;
+                }
+                .section_hero h2 {
+                    font-size:1.8rem !important;
+                }
+                .hero_image_container .slant {
+                    right:-8rem;
+                }
+            }
+
+            @media print, screen and (max-width: 1120px) {
+                .hero_image_container .slant {
+                    right:-10rem;
+                }
+                .section_hero .hero_image_container {
+                    height:525px;
+                }
+                .section_hero h2 {
+                    font-size:1.3rem !important;
+                }
+                .hero_image_container .hero_image {
+                    background-size:130% !important;
+                }
+                .section_hero .cta_container .cta {
+                    padding:1rem 2rem;
+                    font-size:1.1rem;
+                }
+            }
 
             @media print, screen and (max-width: 1023px) {
                 .section_hero {
@@ -223,6 +257,13 @@
                 .section_hero .hero_image_container {
                     text-align: center;
                     display: none;
+                }
+
+                .section_hero .cta_container {
+                    padding:0 2rem;
+                    grid-template-columns: 1fr 1fr;
+                    display: grid;
+                    grid-column-gap: 3rem;
                 }
 
             }
@@ -275,6 +316,16 @@
                     padding-top:0;
                     margin-top:-1rem;
                     margin-bottom: 0.8rem;
+                }
+
+                .section_hero .cta_container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    width:100%;
+                }
+                .section_hero .cta_container .cta {
+                    width:90%;
+                    margin:0.4rem auto;
                 }
             }
 

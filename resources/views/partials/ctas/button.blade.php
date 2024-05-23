@@ -4,7 +4,7 @@ if(($cta_text ?? null) === null) {
 }
 
 if(($cta_href ?? null) === null) {
-    $cta_href = route('page-quote');
+   $cta_href = '/quote';
 }
 
 if(($scrolling_text_data ?? null) === null) {
@@ -14,11 +14,21 @@ if(($scrolling_text_data ?? null) === null) {
         'Leading Prices',
     ];
 }
+
+if(($show_phone ?? null) === null) {
+$show_phone = true;
+}
+
 @endphp
 <div class="cta_container">
     <a class="button primary cta" href="{{$cta_href}}">{{$cta_text}} 👉</a>
 
-    <a class="button secondary cta ghost">Talk to an Expert</a>
+    @if($show_phone)
+    <a class="button secondary cta ghost">
+        Talk to an Expert
+        <i class="fa fa-phone"></i>
+    </a>
+    @endif
 
     @if(($scrolling_text_enabled  ?? false) === true && count($scrolling_text_data))
         <div class="text_scroller">

@@ -36,15 +36,19 @@
     justify-content: flex-end;
     padding-top: 1.7rem;
 }
-.masthead .cta_container .button {
+.masthead .cta_container .button.primary {
     background:var(--ca-button-primary);
     border:2px solid var(--ca-button-primary);
+    font-size:1.2rem;
+    padding:1rem !important;
 }
 .masthead .cta_container .button:hover {
     background:#FFFFFF;
     color: var(--ca-button-primary);
 }
-
+.masthead .cta_container .button.ghost i {
+    font-size:1rem;
+}
 
 .masthead .price_match_container {
     display: flex;
@@ -107,8 +111,20 @@
 @media print, screen and (max-width: 108em) {
 
 
+
+}
+
+@media print, screen and (max-width: 1750px) {
     .masthead .cta_container {
         margin-right:7.4rem;
+
+    }
+    .masthead .ctax {
+        width:74%;
+    }
+
+    .masthead .menu_container {
+       display:none;
     }
 }
 

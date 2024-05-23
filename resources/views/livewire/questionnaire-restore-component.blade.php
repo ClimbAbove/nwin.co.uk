@@ -310,6 +310,7 @@
         }
 
 
+
         @media only screen and (max-width: 960px) {
             .qa_container > div {
 
@@ -322,6 +323,13 @@
 
             .answer_tile {
                 width:80%;
+            }
+        }
+
+        @media only screen and (max-width: 830px) {
+            .quote_tool_container .step_container .answer_tiles_container {
+                grid-template-columns: 1fr 1fr 1fr;
+                background:red;
             }
         }
 

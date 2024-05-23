@@ -1,17 +1,17 @@
 <div class="masthead">
     <div class="grid-container">
         <div class="grid-x">
-            <div class="logo_container large-4 small-2">
+            <div class="logo_container large-3 small-12">
                 <a href="{{route('page-home')}}">
                     <img src="{{$config['logo']}}">
                 </a>
             </div>
-            <div class="large-4 small-10 menu_container">
-                <a href="">Products</a><br>
-                <a href="">About Us</a><br>
-                <a href="">FAQs</a><br>
+            <div class="large-5 small-10 menu_container">
+                <a href="#quote">Products</a><br>
+                <a href="#how-we-work">About Us</a><br>
+                <a href="#faqs">FAQs</a><br>
             </div>
-            <div class="large-4 small-10">
+            <div class="large-4 small-10 ctax">
                 @include('partials/ctas/button', ['cta_text' => 'Find Prices Now!'])
             </div>
         </div>
@@ -29,4 +29,4 @@
         </div>
     </div>
 </div>
-{!! $page->addCSSInline('<link rel="stylesheet" href="/assets/css/partials/masthead.min.css">','top') !!}
+{!! $page->addCSSInline('<link rel="stylesheet" href="/assets/css/partials/masthead.css">','top') !!}

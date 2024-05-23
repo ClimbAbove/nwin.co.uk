@@ -1,3 +1,4 @@
+<a id="how-we-work"></a>
 <section class="how_we_work">
     <div class="grid-container">
         <div class="grid-x">

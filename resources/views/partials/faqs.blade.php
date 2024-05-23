@@ -1,3 +1,4 @@
+<a id="faqs"></a>
 <section class="faqs">
     <div class="grid-container">
         <div class="grid-x">

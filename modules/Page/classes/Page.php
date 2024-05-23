@@ -499,7 +499,7 @@ class Page
         self::$instance->title = trim($title);
 
         if($suffix) {
-            self::$instance->title = trim(self::$instance->title . ' | NWIN');
+            self::$instance->title = trim(self::$instance->title);
         }
     }
 

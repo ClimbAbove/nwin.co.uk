@@ -18,7 +18,7 @@ class ResultsQuoteController extends AbstractController
 
         $data['data']    = $session[0];
         $data['config']  = $content_repository->getConfig();
-        $data['address']               = $content_repository->getAddress();
+        $data['address'] = $content_repository->getAddress();
 
 
         return $this->render('pages/results', $data);

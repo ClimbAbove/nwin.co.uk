@@ -4,23 +4,19 @@
     {{ $page->title('Home') }}
 
     @if($config['partner'] == 'eco-tech-conservatories')
+
         @include('partials/selling_points_bar')
         @include('partials/hero')
         @include('partials/quote_form')
-
         @include('partials/how_we_work')
-
-
-
         @include('partials/our_services')
         @include('partials/why_customers_love_us')
-
         @include('partners/eco-tech-conservatories/partials/benefits')
         @include('partners/eco-tech-conservatories/partials/testimonials')
         @include('partials/price_beater')
         @include('partials/faqs', ['faqs', $faqs ?? []])
-
         @include('partials/stalker', [])
+
     @else
         @include('partials/selling_points_bar')
         @include('partials/hero')
@@ -84,9 +80,41 @@
             font-weight:bold;
         }
 
+        .cta_container {
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 1rem;
+            margin:auto;
+        }
+
+        section h2 {
+            font-size:2.4rem !important;
+        }
+
+        @media (max-width: 1024px)  {
+            .section_hero .selling_points_container ul li {
+                width:100%;
+            }
+        }
+
+
         @media (max-width: 640px)  {
             .generator > div > .grid-x  {
                 flex-direction: column-reverse;
+            }
+
+            section {
+                padding:2rem 1rem !important;
+            }
+            .cta_container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-column-gap: 1rem;
+                margin:auto;
+                width:80%;
+            }
+            .cta_container .cta {
+                width:100%;
             }
         }
     </style>

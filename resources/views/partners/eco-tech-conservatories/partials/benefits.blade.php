@@ -2,11 +2,11 @@
     <div class="grid-container">
 
         <div class="grid-x block">
-            <div class="sidekick large-6 medium-6 small-12">
+            <div class="sidekick large-6 medium-12 small-12">
 
             </div>
-            <div class="content large-6 medium-6 small-12">
-                <h3>Benefits of a replacement conservatory roof...</h3>
+            <div class="content large-6 medium-126 small-12">
+                <h2>Benefits of a replacement conservatory roof...</h2>
                 <ul>
                     <li>
                         <i class="fa fa-check-circle"></i>
@@ -67,9 +67,9 @@
         align-content: center;
         background:#ECECEC;
     }
-    #benefits .content h3 {
+    #benefits .content h2 {
         line-height: 3rem;
-        font-size: 2.8rem;
+
     }
     #benefits .content ul {
         list-style: none;
@@ -83,5 +83,26 @@
         margin-right:1rem;
         padding:0.5rem;
         color:green;
+    }
+
+    @media print, screen and (max-width: 1023px) {
+        #benefits .content {
+            padding:2rem;
+        }
+        #benefits .content ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media print, screen and (max-width: 720px) {
+        #benefits .content {
+            text-align: center;
+        }
+        #benefits .content ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align: left;
+            margin-left:15%;
+        }
     }
 </style>

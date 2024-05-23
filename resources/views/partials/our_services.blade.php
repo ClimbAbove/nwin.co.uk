@@ -2,7 +2,7 @@
     <div class="grid-container">
         <div class="grid-x">
             <div class="large-12 medium-12 small-12">
-                <h3>Our Services</h3>
+                <h2>Our Services</h2>
 
                 <div class="services_grid">
                     @foreach($masonry as $brick)
@@ -35,7 +35,7 @@
     section.our_services {
         text-align: center;
     }
-    section.our_services h3 {
+    section.our_services h2 {
         margin-bottom:2rem;
     }
     section.our_services .services_grid {
@@ -68,7 +68,13 @@
         padding:0.5rem 0;
     }
     section.our_services .services_grid .service .content .sub_text {
-        min-height: 180px;
+        min-height: 210px;
+    }
+    section.our_services .services_grid .service .cta_container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width:100%;
     }
     section.our_services .services_grid .service .cta_container .button {
         background: transparent;
@@ -77,8 +83,45 @@
         width:100%;
         margin-bottom: 0;
     }
+    section.our_services .services_grid .service .cta_container .button.primary {
+        background: var(--ca-button-primary);
+        color:var(--ca-white);
+    }
+    section.our_services .services_grid .service .cta_container .button.primary:hover {
+        background: var(--ca-white);
+        color:var(--ca-button-primary);
+    }
     section.our_services .services_grid .service .cta_container .button:hover {
         background: var(--ca-button-primary);
         color:#FFFFFF;
+    }
+
+    @media print, screen and (max-width: 1023px) {
+        section.our_services .services_grid {
+            grid-template-columns: 1fr  1fr;
+        }
+        section.our_services .services_grid .service .image  {
+            width:100%;
+        }
+        section.our_services .services_grid .service .image img{
+            width:100%;
+        }
+        section.our_services .services_grid .service .sub_text {
+            display: none;
+        }
+    }
+    @media print, screen and (max-width: 760px) {
+        section.our_services .services_grid {
+            grid-template-columns: 1fr;
+        }
+        section.our_services .services_grid .service .image  {
+            width:100%;
+        }
+        section.our_services .services_grid .service .image img{
+            width:100%;
+        }
+        section.our_services .services_grid .service .sub_text {
+            display: none;
+        }
     }
 </style>
