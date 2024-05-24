@@ -319,7 +319,9 @@
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
         }
-
+        section.quote_form h4 {
+            font-size:1.6rem;
+        }
         section.quote_form .selling_points_container {
             border-top-left-radius: 0;
             border-top-right-radius: 0;

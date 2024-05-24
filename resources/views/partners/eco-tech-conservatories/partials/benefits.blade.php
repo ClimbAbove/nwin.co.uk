@@ -128,4 +128,16 @@
             margin-left:15%;
         }
     }
+    @media print, screen and (max-width: 630px) {
+        #benefits .content h2 {
+            font-size:1.6rem !important;;
+            line-height: 2rem;
+        }
+        #benefits .content ul {
+            margin-left: 3%;
+        }
+        #benefits .sidekick {
+            background-position: -200px 1px;
+        }
+    }
 </style>

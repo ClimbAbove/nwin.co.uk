@@ -5,6 +5,9 @@
                 <a href="{{route('page-home')}}">
                     <img src="{{$config['logo']}}">
                 </a>
+                <div class="fensa">
+                    <img src="/images/logos/fensa.png">
+                </div>
             </div>
             <div class="large-5 small-10 menu_container">
                 <a href="#services">Products</a><br>
@@ -13,6 +16,8 @@
             </div>
             <div class="large-4 small-10 ctax">
                 @include('partials/ctas/button', ['cta_text' => 'Find Prices Now!'])
+
+
             </div>
         </div>
     </div>

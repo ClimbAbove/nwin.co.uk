@@ -13,6 +13,9 @@
     height:100px;
     width:80px;
 }
+.masthead .fensa {
+    display:none;
+}
 .masthead .menu_container {
     display: flex;
     flex-direction: row !important;
@@ -143,7 +146,11 @@
     }
 }
 @media print, screen and (max-width: 40em) {
-
+    .masthead .fensa {
+        display:block;
+        text-align: right;
+        margin:auto;
+    }
     .masthead .grid-container .grid-x {
         flex-direction: row;
         justify-content: space-between;
