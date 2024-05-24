@@ -39,6 +39,9 @@
                 </ul>
             </div>
         </div>
+        <div class="large-12 medium-12 small-12 cta_container">
+            @include('partials/ctas/button')
+        </div>
     </div>
 </section>
 <style>
@@ -84,7 +87,27 @@
         padding:0.5rem;
         color:green;
     }
+    #benefits .cta_container {
+        margin-top:1rem;
+    }
+    #benefits .cta_container a {
+        background: var(--ca-button-primary);
+        border: 2px solid var(--ca-button-primary);
+    }
+    #benefits .cta_container a.primary:hover {
+        background: #FFFFFF;
+        color: var(--ca-button-primary);
+        border: 2px solid var(--ca-button-primary);
+    }
+    #benefits .cta_container a.ghost {
+        color: var(--ca-button-primary);
+        background: #FFFFFF;
 
+    }
+    #benefits .cta_container a.ghost:hover {
+        background: var(--ca-button-primary);
+        color: #FFFFFF;
+    }
     @media print, screen and (max-width: 1023px) {
         #benefits .content {
             padding:2rem;

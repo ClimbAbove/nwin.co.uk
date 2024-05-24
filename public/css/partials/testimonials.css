@@ -49,6 +49,7 @@
 
 section.testimonials {
     background-color: #ECECEC;
+    background: #d0e1eb;
     position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -71,7 +72,7 @@ section.testimonials .testimonials_glide ul li {
     padding: 1rem;
 }
 section.testimonials .testimonials_glide ul li .testimonial_card {
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     border:1px solid var(--ca-button-primary);
     background-color: var(--ca-white);
     position: relative;
@@ -123,7 +124,13 @@ section.testimonials .testimonials_glide ul li .testimonial_card .flare_2 {
     height:37px;
     width:37px;
 }
-
+section.testimonials .testimonials_glide ul li .testimonial_card .starbox {
+    background:#22bb5b;
+    margin:2px;
+    text-align: center;
+    border-radius: 2px;
+    padding:2px;
+}
 section.testimonials .testimonials_glide ul li .testimonial_card .star_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

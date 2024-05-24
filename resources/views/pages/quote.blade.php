@@ -6,6 +6,9 @@
     @include('partials/quote_form')
 @endsection
 <style>
+
+
+
      .loading_text {
          margin-bottom: 0.5rem;
          font-weight: bold;
@@ -31,6 +34,10 @@
         background: currentColor;
         animation: l3 1s infinite linear;
     }
+
+     label {
+         font-weight: bold;
+     }
     @keyframes l3 {
         50% {left:100%;transform: translateX(calc(-100% - 4px))}
     }

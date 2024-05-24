@@ -19,6 +19,7 @@
     justify-content: space-around;
     align-items: center;
 }
+
 .masthead .menu_container a {
     color:#222222;
     background: #ECECEC;
@@ -35,6 +36,7 @@
     display: flex;
     justify-content: flex-end;
     padding-top: 1.7rem;
+    gap:1rem;
 }
 .masthead .cta_container .button.primary {
     background:var(--ca-button-primary);

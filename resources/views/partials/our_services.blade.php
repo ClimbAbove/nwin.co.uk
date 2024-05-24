@@ -1,3 +1,4 @@
+<a id="services"></a>
 <section class="our_services">
     <div class="grid-container">
         <div class="grid-x">
@@ -34,6 +35,7 @@
 <style>
     section.our_services {
         text-align: center;
+        background: #d0e1eb;
     }
     section.our_services h2 {
         margin-bottom:2rem;

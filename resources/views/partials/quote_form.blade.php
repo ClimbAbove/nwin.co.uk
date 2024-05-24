@@ -101,7 +101,9 @@
         padding:0;
         font-size:2rem;
     }
-
+    label {
+        font-weight: bold;
+    }
     section.quote_form .grid-container .grid-x {
         box-shadow: 0 0 9px 1px rgba(0,0,0,0.19);
         border-radius: 1rem;
@@ -299,6 +301,14 @@
         }
         .quote_tool_container .step_container .answer_tiles_container .answer_tile {
             width:auto;
+        }
+
+        .quote_tool_container  label {
+            text-align: center;
+        }
+
+        .quote_tool_container  a, button {
+            font-weight: bold;
         }
     }
 

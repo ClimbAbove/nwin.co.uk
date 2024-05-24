@@ -7,8 +7,8 @@
                 </a>
             </div>
             <div class="large-5 small-10 menu_container">
-                <a href="#quote">Products</a><br>
-                <a href="#how-we-work">About Us</a><br>
+                <a href="#services">Products</a><br>
+                <a href="#why-us">About Us</a><br>
                 <a href="#faqs">FAQs</a><br>
             </div>
             <div class="large-4 small-10 ctax">

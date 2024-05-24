@@ -33,15 +33,43 @@
 
                         </p>
                         <div class="selling_points_container">
-                            <ul>
-                                <li class="one"><i class="fa fa-check-circle"></i> Leading Brands</li>
-                                <li class="two"><i class="fa fa-check-circle"></i> Lowest Prices</li>
-                                <li class="three"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
-                                <li class="four"><i class="fa fa-check-circle"></i> Free Expert Advice</li>
-                                <li class="five"><i class="fa fa-check-circle"></i> 10 Year Warranties</li>
-                                <li class="six"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
 
+
+                            <ul class="desktop">
+                                <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
+                                <li class="two"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
+                                <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li>
+                                <li class="four"><i class="fa fa-check-circle"></i> No Deposit Finance</li>
+                                <li class="five"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
+                                <li class="six"><i class="fa fa-check-circle"></i> 10 Year Warranties</li>
                             </ul>
+
+                            <ul class="mobile">
+                                <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
+                                <li class="two"><i class="fa fa-check-circle"></i> No Deposit Finance</li>
+                                <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li
+                                <li class="four"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <div class="star_container mobile">
+                        <div class="starbox">
+                            <img src="/images/star_gold.svg">
+                        </div>
+                        <div class="starbox">
+                            <img src="/images/star_gold.svg">
+                        </div>
+                        <div class="starbox">
+                            <img src="/images/star_gold.svg">
+                        </div>
+                        <div class="starbox">
+                            <img src="/images/star_gold.svg">
+                        </div>
+                        <div class="starbox">
+                            <img src="/images/star_gold.svg">
                         </div>
                     </div>
                 </div>
@@ -49,7 +77,7 @@
                 <div class="large-6 small-12 hero_image_container">
                     <div class="slant">
                         <div class="hero_image">
-
+                            <div class="fensa"></div>
                         </div>
                     </div>
                 </div>
@@ -84,6 +112,16 @@
                 height:600px;
                 margin-left:-3rem;
             }
+            .hero_image_container .hero_image .fensa {
+                position: absolute;
+                right:2rem;
+                bottom:1rem;
+                width:190px;
+                height:170px;
+                background: url('/images/logos/fensa.png');
+                background-repeat: no-repeat;
+
+            }
             .section_hero {
                 padding:0rem !important;
             }
@@ -115,6 +153,9 @@
                 display: flex;
                 justify-content: center;
                 margin-bottom:2rem;
+            }
+            .section_hero .selling_points_container .mobile {
+                display: none;
             }
             .section_hero .selling_points_container i {
                 color: #22bb5b;
@@ -186,7 +227,10 @@
                 width:260px;
                 margin-top:2rem;
             }
+            .section_hero .star_container.mobile {
+                display: none;
 
+            }
             .section_hero .star_container .starbox {
                 background: #22bb5b;
                 border-radius: 0.2rem;
@@ -251,9 +295,8 @@
 
                 .section_hero .star_container {
                     margin: 1rem auto auto;
-                    width:200px;
+                    width: 283px;
                 }
-
                 .section_hero .hero_image_container {
                     text-align: center;
                     display: none;
@@ -270,7 +313,25 @@
 
 
             @media print, screen and (max-width: 700px) {
+                .section_hero .star_container {
+                    display: none;
+                }
+                .section_hero .star_container.mobile{
+                    display: flex;
+                    padding-top:0;
+                    margin-top:-0.5rem;
+                    margin-bottom: 1rem;
 
+                }
+
+                .section_hero .selling_points_container.desktop {
+
+                    display: none;
+                }
+                .section_hero .selling_points_container.mobile {
+                    display: flex;
+
+                }
 
                 .section_hero h1 {
                     margin-top:2rem;
@@ -301,11 +362,11 @@
                 .section_hero .reversable {
                     display: flex;
                     flex-direction: column-reverse;
-                    padding-bottom: 1rem;
+
                 }
                 .section_hero .reversable .selling_points_container {
                     padding:0;
-                    margin:0.8rem;
+                    margin:0;
                 }
                 .section_hero .reversable .selling_points_container .five,
                 .section_hero .reversable .selling_points_container .six
