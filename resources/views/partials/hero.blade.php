@@ -321,7 +321,10 @@
                     padding-top:0;
                     margin-top:-0.5rem;
                     margin-bottom: 1rem;
-
+                    align-items: center;
+                    align-items: center;
+                    justify-content: center;
+                    justify-items: center;
                 }
 
                 .section_hero .selling_points_container.desktop {
