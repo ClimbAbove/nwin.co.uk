@@ -313,6 +313,9 @@
     }
 
     @media print, screen and (max-width: 640px) {
+        section#quote_form {
+            padding:0;
+        }
         .comp {
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;

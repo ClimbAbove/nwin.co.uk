@@ -106,6 +106,9 @@
             section {
                 padding:2rem 1rem !important;
             }
+            section#quote_tool {
+                padding:0 !important;
+            }
             .cta_container {
                 display: grid;
                 grid-template-columns: 1fr;
