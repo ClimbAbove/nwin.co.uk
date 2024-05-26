@@ -111,7 +111,11 @@
 .masthead .price_match_container .bottom .shape-fill {
     fill:var(--ca-button-primary);
 }
-
+.masthead .fensa img {
+    display:block;
+    height:65px;
+    width:auto;
+}
 
 @media print, screen and (max-width: 108em) {
 
@@ -156,11 +160,16 @@
         justify-content: space-between;
     }
     .masthead .logo_container {
-        display:flex;
+        display: grid;
+        grid-template-columns: auto 1fr;
         text-align: center;
+        justify-content: space-between;
+        margin-left:1rem;
     }
-
-
-
-
+    .masthead .logo_container a {
+        text-align: left;
+    }
+    .masthead .logo_container .fensa {
+        text-align: right;
+    }
 }

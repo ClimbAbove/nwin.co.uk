@@ -16,8 +16,6 @@
             </div>
             <div class="large-4 small-10 ctax">
                 @include('partials/ctas/button', ['cta_text' => 'Find Prices Now!'])
-
-
             </div>
         </div>
     </div>
