@@ -371,4 +371,13 @@
             cursor: pointer;
         }
     }
+
+    @media print, screen and (max-width: 500px) {
+        section.quote_form h4 {
+            font-size: 1.3rem;
+        }
+        section.quote_form .selling_points_container ul li {
+            font-size: 1rem;
+        }
+    }
 </style>

@@ -70,4 +70,21 @@
         padding-bottom:0;
     }
 }
-
+@media print, screen and (max-width: 500px) {
+    .why_customers_love_us .card {
+        flex-direction: column;
+        text-align: center;
+        padding:0;
+    }
+    .why_customers_love_us .card .image {
+        margin-right:0;
+    }
+    .why_customers_love_us .card p.title,
+    .why_customers_love_us .card .blurb {
+        text-align: center;
+        width:100%;
+    }
+    .why_customers_love_us .card .blurb {
+        padding:1rem 0;
+    }
+}

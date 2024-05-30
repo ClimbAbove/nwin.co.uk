@@ -14,8 +14,7 @@ class QuoteController extends AbstractController
     {
         $data = [];
         $data['config']  = $content_repository->getConfig();
-        $data['address']               = $content_repository->getAddress();
-
+        $data['address'] = $content_repository->getAddress();
         $data['questionnaire_element'] = $window_quote_repository->getQuestionnaire();
 
         return $this->render('pages/quote' ,$data);

@@ -28,3 +28,15 @@
     background: var(--ca-white);
     color:var(--ca-button-primary);
 }
+@media print, screen and (max-width: 420px) {
+    .how_we_work .cta_container {
+        padding:0.5rem;
+        width:100%;
+    }
+    .how_we_work .cta_container .cta_container {
+        padding:0;
+    }
+    .how_we_work .cta_container .cta_container a {
+        font-size:1.1rem;
+    }
+}

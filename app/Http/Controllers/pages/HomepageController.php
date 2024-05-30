@@ -25,6 +25,8 @@ class HomepageController extends AbstractController
         $data['testimonials']          = $content_repository->getTestimonials();
         $data['questionnaire_element'] = $window_quote_repository->getQuestionnaire();
 
+
+     //   return $this->render('pages/round/index', $data);
         return $this->render('pages/homepage', $data);
     }
 }

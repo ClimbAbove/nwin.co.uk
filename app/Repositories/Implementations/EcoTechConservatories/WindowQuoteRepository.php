@@ -35,14 +35,6 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $answer->text = 'New Conservatory';
         $answer->value = 'new_conservatory';
         $answer->icon = '/images/icons/conservatory.svg';
-
-        $question->pushAnswer($answer);
-
-        $answer = new AnswerElement();
-        $answer->id = 'doors';
-        $answer->value = 'doors';
-        $answer->text = 'Doors';
-        $answer->icon = '/images/icons/door.svg';
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();
@@ -53,17 +45,24 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();
-        $answer->id = 'windows';
-        $answer->value = 'windows';
-        $answer->text = 'Windows';
-        $answer->icon = '/images/icons/window.svg';
-        $question->pushAnswer($answer);
-
-        $answer = new AnswerElement();
         $answer->id = 'conservatory_repair';
         $answer->value = 'conservatory_repair';
         $answer->text = 'Conservatory Repair';
         $answer->icon = '/images/icons/conservatory-repair.svg';
+        $question->pushAnswer($answer);
+
+        $answer = new AnswerElement();
+        $answer->id = 'doors';
+        $answer->value = 'doors';
+        $answer->text = 'Doors';
+        $answer->icon = '/images/icons/door.svg';
+        $question->pushAnswer($answer);
+
+        $answer = new AnswerElement();
+        $answer->id = 'windows';
+        $answer->value = 'windows';
+        $answer->text = 'Windows';
+        $answer->icon = '/images/icons/window.svg';
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();
@@ -72,8 +71,6 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $answer->text = 'Orangeries';
         $answer->icon = '/images/icons/orangery.svg';
         $question->pushAnswer($answer);
-
-
 
         $answer = new AnswerElement();
         $answer->id = 'roof_line';
@@ -89,9 +86,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $answer->icon = '/images/icons/garden-room.svg';
         $question->pushAnswer($answer);
 
-
         $questionnaire_element->pushStep($question);
-
 
         $form_one = new FormElement();
         $form_one->id = 'form_step_1';
@@ -100,7 +95,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
 
         $field = new FormFieldElement([
             'name' => 'postcode',
-            'label' => 'Please Tell Us Your Postcode, so we can find your prices',
+            'label' => 'Please tell us your postcode, so we can find your prices',
             'type' => 'text',
         ]);
         $form_one->pushField($field);
@@ -128,21 +123,21 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
 
         $field = new FormFieldElement([
             'name' => 'name',
-            'label' => 'Your Name',
+            'label' => 'Enter Your Name',
             'type' => 'text',
         ]);
         $form_two->pushField($field);
 
         $field = new FormFieldElement([
             'name' => 'email',
-            'label' => 'Your Email',
+            'label' => 'Enter Your Email',
             'type' => 'text',
         ]);
         $form_two->pushField($field);
 
         $field = new FormFieldElement([
             'name' => 'telephone',
-            'label' => 'Your Telephone',
+            'label' => 'Enter Your Telephone',
             'type' => 'text',
         ]);
         $form_two->pushField($field);

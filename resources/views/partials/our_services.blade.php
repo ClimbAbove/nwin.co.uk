@@ -126,4 +126,22 @@
             display: none;
         }
     }
+
+    @media print, screen and (max-width: 420px) {
+        section.our_services .cta_container {
+            padding:0.5rem;
+            width:100%;
+        }
+        section.our_services .cta_container .cta_container {
+            padding:0;
+        }
+        section.our_services .services_grid .service .cta_container .button {
+            font-size:1.1rem;
+        }
+
+        section.our_services .services_grid .service .cta_container {
+            padding:0;
+        }
+    }
+
 </style>

@@ -169,7 +169,7 @@
             }
             .section_hero .selling_points_container ul li i {
                 margin-right:0.2rem;
-                color: #22bb5b;
+                color: #F4EB2A;
             }
             .section_hero {
                 background: #1A90D9;

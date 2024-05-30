@@ -20,7 +20,6 @@ class ResultsQuoteController extends AbstractController
         $data['config']  = $content_repository->getConfig();
         $data['address'] = $content_repository->getAddress();
 
-
         return $this->render('pages/results', $data);
     }
 }

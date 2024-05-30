@@ -1,7 +1,6 @@
 :root {
     --ca-button-primary: #ff4747;
 }
-
 #eco-tech-conservatories-body .masthead .logo_container img  {
     margin-top:0.5rem;
     height:80px;
@@ -13,4 +12,16 @@
 }
 #eco-tech-conservatories-body footer .logo_container a img {
     height:80px;
+}
+@media print, screen and (max-width: 420px) {
+    #eco-tech-conservatories-body .masthead .logo_container img  {
+        margin-top:0.5rem;
+        height:60px;
+        width:auto;
+    }
+    #eco-tech-conservatories-body .masthead .fensa img  {
+        margin-top:0.5rem;
+        height:40px;
+        width:auto;
+    }
 }

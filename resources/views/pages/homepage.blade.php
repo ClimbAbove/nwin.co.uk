@@ -120,6 +120,22 @@
                 width:100%;
             }
         }
+
+
+        @media print, screen and (max-width: 420px) {
+            .section_hero .cta_container .cta {
+                padding: 0.8rem 1.6rem;
+                font-size: 0.9rem;
+            }
+            .cta_container {
+                padding:0;
+            }
+            .section_hero .cta_container {
+                padding:0 0.5rem;
+            }
+
+
+        }
     </style>
 @endsection
 

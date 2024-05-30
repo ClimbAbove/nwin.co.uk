@@ -209,3 +209,15 @@ section.testimonials .testimonials_glide ul li .testimonial_card .author {
     }
 
 }
+@media print, screen and (max-width: 500px) {
+    section.testimonials .testimonials_glide ul li {
+        padding:1rem 0.5rem;
+    }
+    section.testimonials .testimonials_glide ul li .testimonial_card .title {
+        padding:2rem 1rem 1rem 1rem;
+    }
+    section.testimonials .testimonials_glide ul li .testimonial_card .testimonial {
+        padding:1rem;
+    }
+
+}
