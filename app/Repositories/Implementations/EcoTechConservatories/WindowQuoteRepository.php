@@ -120,6 +120,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $form_two = new FormElement();
         $form_two->id = 'form_step_2';
         $form_two->name = 'form_step_2';
+        $form_two->text = 'Please can you provide us the following information';
 
         $field = new FormFieldElement([
             'name' => 'name',

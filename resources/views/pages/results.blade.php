@@ -48,7 +48,14 @@
                                     @endswitch
                                 </div>
                                 <div class="cells large-6 medium-12 small-12 detail">
-                                    <p style="text-align: center; font-weight: bold">We can supply and install your new {{ str_replace(['-','_', 'new'], '', $data['product_type']['answer']) }}</p>
+
+                                    @if($data['product_type']['answer'] == 'conservatory_repair')
+                                        <p style="text-align: center; font-weight: bold">We can undertake your {{ str_replace(['-','_', 'new'], ' ', $data['product_type']['answer']) }}</p>
+                                    @else
+                                        <p style="text-align: center; font-weight: bold">We can supply and install your new {{ str_replace(['-','_', 'new'], '', $data['product_type']['answer']) }}</p>
+                                    @endif
+
+
                                     <div class="price_container">
                                         <div class="text">From as little as</div>
 
@@ -154,7 +161,7 @@
                                         <h3>Step Two</h3>
                                         <h6>You Choose</h6>
                                         <p>
-                                            You select from the options we provide
+                                            You can choose to accept your fixed price quote
                                         </p>
                                     </div>
                                     @break
@@ -196,7 +203,7 @@
                                         <h3>Step Two</h3>
                                         <h6>You Choose</h6>
                                         <p>
-                                            You select from the options we provide
+                                            You can choose to accept your fixed price quote
                                         </p>
                                     </div>
                                     @break
@@ -223,7 +230,7 @@
                                         <h3>Step Two</h3>
                                         <h6>You Choose</h6>
                                         <p>
-                                            You select from the options we provide
+                                            You can choose to accept your fixed price quote
                                         </p>
                                     </div>
 
@@ -251,7 +258,7 @@
                                         <h3>Step Two</h3>
                                         <h6>You Choose</h6>
                                         <p>
-                                            You select from the options we provide
+                                            You can choose to accept your fixed price quote
                                         </p>
                                     </div>
 
@@ -309,10 +316,12 @@
                     <style>
                         section.what_happens_next {
                             text-align: center;
+                            font-family: "lato";
                         }
                         section.what_happens_next h2 {
                             font-size: 3rem;
                             margin-bottom: 0.5rem;
+                            font-family: "lato";
                         }
                         section.what_happens_next .step {
                             position: relative;
@@ -328,7 +337,7 @@
                             flex-direction: column;
                             background: #000;
                             justify-content: center;
-                            font-family: radial;
+                            font-family: "lato";
                             font-weight: bold;
                             font-size: 2.2rem;
                         }
@@ -347,12 +356,12 @@
 
                         section.what_happens_next .step h3 {
                             font-size: 1.1rem;
-                            font-family: radial;
+                            font-family: "lato";
                         }
                         section.what_happens_next .step h6 {
                             font-weight: bold;
                             font-size: 1.4rem;
-                            font-family: radial;
+                            font-family: "lato";
                         }
 
 

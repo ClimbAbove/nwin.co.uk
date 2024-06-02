@@ -225,7 +225,7 @@
                 display: flex;
                 flex-direction: row;
                 width:260px;
-                margin-top:2rem;
+                margin:1.4rem auto auto auto;
             }
             .section_hero .star_container.mobile {
                 display: none;
@@ -307,6 +307,7 @@
                     grid-template-columns: 1fr 1fr;
                     display: grid;
                     grid-column-gap: 3rem;
+                    justify-items: center;
                 }
 
             }

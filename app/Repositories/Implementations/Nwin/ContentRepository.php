@@ -5,6 +5,7 @@ namespace App\Repositories\Implementations\Nwin;
 
 use App\Repositories\Content\DefaultContentRepository;
 use App\Repositories\Interfaces\ContentRepositoryInterface;
+use Carbon\Carbon;
 
 class ContentRepository extends DefaultContentRepository implements ContentRepositoryInterface
 {
@@ -27,6 +28,29 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $config['company_name'] = 'NWIN';
         $config['company_number'] = '1231312';
         $config['vat_number'] = '34234234';
+
+        // Times
+        $config['opening_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 8:00:00');
+        $config['closing_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 18:00:00');
+
+        if(Carbon::now()->setTimezone('Europe/London')->between($config['opening_time_carbon'],  $config['closing_time_carbon'])) {
+            $config['contact_mode'] = 'telephone';
+            $config['telephone'] = [
+                'international' =>  '+447368558274',
+                'number' => '07369558274',
+            ];
+
+        } else {
+            $config['contact_mode'] = 'form';
+            $config['contact_url'] = route('page-quote');
+
+            $config['telephone'] = [
+                'international' =>  '+447368558274',
+                'number' => '07369558274',
+            ];
+        }
+
+
         return $config;
     }
 

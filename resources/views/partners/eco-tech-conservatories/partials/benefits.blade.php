@@ -65,7 +65,7 @@
 
     }
     #benefits .content {
-        padding:0 2rem;
+        padding:2rem 2rem;
         justify-items: center;
         align-content: center;
         background:#ECECEC;
@@ -85,7 +85,7 @@
     #benefits .content ul li i {
         margin-right:1rem;
         padding:0.5rem;
-        color:#F4EB2A;
+        color:green;
 
     }
     #benefits .cta_container {

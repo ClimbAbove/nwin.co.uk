@@ -51,7 +51,8 @@
     section.quote_form .error {
         color: #cc4b37;
         margin-top:-5px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
+        text-align: center;
     }
     section.quote_form section.quote_tool .loading {
         width:100%;
@@ -74,6 +75,11 @@
         width:100%;
         text-align: center;
     }
+    .quote_tool_container  label {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-size:1.2rem;
+    }
     section.quote_form section.quote_tool .button_container button {
         border-radius: 2rem;
         color:#FFFFFF;
@@ -88,9 +94,13 @@
 
     section.quote_form section.quote_tool .previous_question {
         color:#ccc;
+        border: 1px solid #cccccc;
+        border-radius: 2rem;
+        padding:1rem 2rem;
     }
     section.quote_form section.quote_tool .previous_question:hover {
         color:#333;
+        border-color:#333;
     }
     section.quote_form .reversible .large-8 {
         min-height: 325px;
@@ -212,11 +222,10 @@
     }
     .quote_tool_container .controls_container {
         padding:1rem;
-        margin-top:1rem;
+
+        margin-bottom:1rem;
         text-align: center;
     }
-
-
 
     .quote_tool_container .controls_container .button {
         background:#BF0F30;

@@ -7,6 +7,7 @@ use App\DTOs\TestimonialDTO;
 use App\DTOs\TestimonialsDTO;
 use App\Repositories\Content\DefaultContentRepository;
 use App\Repositories\Interfaces\ContentRepositoryInterface;
+use Carbon\Carbon;
 
 class ContentRepository extends DefaultContentRepository implements ContentRepositoryInterface
 {
@@ -32,6 +33,29 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $config['company_name'] = 'MK Developments and Construction Ltd trading as Eco Tech Conservatories';
         $config['company_number'] = '13943142';
         $config['vat_number'] = '446852270';
+
+
+
+        // Times
+        $config['opening_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 8:00:00');
+        $config['closing_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 18:00:00');
+
+        if(Carbon::now()->setTimezone('Europe/London')->between($config['opening_time_carbon'],  $config['closing_time_carbon'])) {
+            $config['contact_mode'] = 'telephone';
+            $config['telephone'] = [
+                'international' =>  '+447368558274',
+                'number' => '07369558274',
+            ];
+
+        } else {
+            $config['contact_mode'] = 'form';
+            $config['contact_url'] = route('page-quote');
+
+            $config['telephone'] = [
+                'international' =>  '+447368558274',
+                'number' => '07369558274',
+            ];
+        }
 
         return $config;
     }

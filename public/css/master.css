@@ -40,11 +40,17 @@ h3 {
 section {
     padding:2rem 0;
 }
+.cta_container.single {
+    grid-template-columns: 1fr;
+    display: grid;
+    justify-items: center;
+}
 
 
 .cta_container .button {
     font-size:1.2rem;
     font-weight: bold;
+    width:270px;
 }
 .cta_container .button:hover {
     background:#000000;
@@ -55,6 +61,7 @@ section {
     color:var(--ca-button-primary);
     background: #FFFFFF;
     border-radius: 2rem;
+
 }
 
 .text_scroller {
@@ -100,7 +107,6 @@ section {
 
 
 @media print, screen and (max-width: 40em) {
-    .cta_container .button {
-        width:90%;
-    }
+
+
 }

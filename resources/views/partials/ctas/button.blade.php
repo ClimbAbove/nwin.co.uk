@@ -14,20 +14,26 @@ if(($scrolling_text_data ?? null) === null) {
         'Leading Prices',
     ];
 }
-
-if(($show_phone ?? null) === null) {
-$show_phone = true;
+$show_phone = false;
+if(($contact_mode ?? null) === 'telephone') {
+   $show_phone = true;
 }
 
 @endphp
-<div class="cta_container">
-    <a class="button primary cta" href="{{$cta_href}}">{{$cta_text}} 👉</a>
 
-    @if($show_phone)
-    <a class="button secondary cta ghost">
-        Talk to an Expert
-        <i class="fa fa-phone"></i>
-    </a>
+
+    @if($show_phone === true)
+        <div class="cta_container double">
+        <a class="button primary cta double" href="{{$cta_href}}">{{$cta_text}} 👉</a>
+    @else
+                <div class="cta_container single">
+        <a class="button primary cta single" href="{{$cta_href}}">{{$cta_text}} 👉</a>
+    @endif
+    @if($show_phone === true)
+        <a class="button secondary cta ghost open_dialog cta_telephone" href="tel:{{$telephone['international'] }}" data-dialog="dialog_book">
+            Talk to an Expert
+            <i class="fa fa-phone"></i>
+        </a>
     @endif
 
     @if(($scrolling_text_enabled  ?? false) === true && count($scrolling_text_data))
