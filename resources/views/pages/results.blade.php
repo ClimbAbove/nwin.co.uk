@@ -132,7 +132,7 @@
                                             <path fill="none" stroke="#21427F" stroke-miterlimit="10" d="M212.414 284.625L211.25 284.709"/>
                                             <path fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M139.365 267.835L133.276 278.307 127.967 275.88"/>
 
-                                        </svg>
+            q                            </svg>
                                     </div>
                                     <h3>Step One</h3>
                                     <h6>We'll be in touch</h6>

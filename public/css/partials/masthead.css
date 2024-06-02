@@ -174,3 +174,14 @@
     }
 }
 
+@media print, screen and (max-width: 360px) {
+    .masthead .logo_container {
+        margin-left:0;
+    }
+    .masthead .logo_container .fensa {
+        float: right;
+        position: absolute;
+        right: 0.5rem;
+        top:1rem;
+    }
+}

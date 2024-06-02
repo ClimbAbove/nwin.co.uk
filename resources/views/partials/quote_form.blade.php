@@ -132,7 +132,8 @@
         font-size:1.2rem;
     }
     section.quote_form .selling_points_container ul li i {
-        color:#00B67A;
+
+        color:#F4EB2A;
     }
 
 

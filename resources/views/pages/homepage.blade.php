@@ -136,6 +136,11 @@
 
 
         }
+        @media print, screen and (max-width: 400px) {
+            .stalker .cta_container .button {
+                font-size:1rem;
+            }
+        }
     </style>
 @endsection
 

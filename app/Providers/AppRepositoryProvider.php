@@ -34,6 +34,7 @@ class AppRepositoryProvider extends ServiceProvider
 
         switch($domain) {
             case 'ecotechconservatories.local':
+            case 'ecoconservatories.local':
             case 'ecoconservatories.co.uk':
             case 'www.ecoconservatories.co.uk':
 

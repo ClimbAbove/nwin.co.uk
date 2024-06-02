@@ -85,7 +85,8 @@
     #benefits .content ul li i {
         margin-right:1rem;
         padding:0.5rem;
-        color:green;
+        color:#F4EB2A;
+
     }
     #benefits .cta_container {
         margin-top:1rem;

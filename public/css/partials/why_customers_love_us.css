@@ -88,3 +88,12 @@
         padding:1rem 0;
     }
 }
+@media print, screen and (max-width: 400px) {
+    .why_customers_love_us h2 {
+        font-size:1.5rem !important;
+    }
+    .why_customers_love_us .card p.title,
+    .why_customers_love_us .card .blurb {
+        font-size:1.2rem;
+    }
+}
