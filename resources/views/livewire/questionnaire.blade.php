@@ -244,7 +244,7 @@
                     @endif
 
                     @if($questionnaire->hasHistory() > 0)
-                        <a class="previous_question" href="" wire:click.prevent="back()")>Back</a>
+
                     @endif
 
                 </div>

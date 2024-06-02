@@ -293,25 +293,30 @@ class QuestionnaireElement extends AbstractQuestionnaireElement
 
         foreach($this->steps as $step_index => $step)
         {
-            if($step->id === $last_step->id) {
 
+            if($last_step !== null) {
+                if($step->id === $last_step->id) {
 
-                foreach($step->answers as $answer_index => $answer) {
+                    foreach($step->answers as $answer_index => $answer) {
                         $this->steps[$step_index]->answered = false;
                         $this->steps[$step_index]->answers[$answer_index]->answered = false;
                         $this->steps[$step_index]->answers[$answer_index]->value = null;
 
+                    }
+
+                    $this->steps[$step_index]->answered = false;
+
+
+                    return true;
+
                 }
-
+            } else {
                 $this->steps[$step_index]->answered = false;
-
-
                 return true;
-
             }
         }
 
-        dd('not found');
+
 
 
     }
