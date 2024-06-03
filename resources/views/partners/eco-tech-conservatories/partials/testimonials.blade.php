@@ -1,7 +1,6 @@
 <a id="testimonials"></a>
 <script src="/js/glide.js"></script>
-<div class="slant top">
-</div>
+
 <section class="testimonials">
     <div class="testimonials_glide">
         <h2 class="text-center">What Our Clients Are Saying</h2>
@@ -63,8 +62,7 @@
         </div>
     </div>
 </section>
-<div class="slant bottom">
-</div>
+
 {!! $page->addCSS('<link rel="stylesheet" href="/assets/css/partials/testimonials.min.css">','bottom') !!}
 {!! $page->addJS('<script src="/assets/js/partials/testimonials.min.js"></script>','bottom') !!}
 <script>

@@ -249,12 +249,17 @@
             font-size:2rem;
             font-weight:bold;
         }
-
+.cta_wrapper {
+    margin:auto;
+}
         .cta_container {
             display: flex;
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 1rem;
             margin:auto;
+        }
+        .cta_container.single {
+            grid-template-columns: 1fr;
         }
 
         section h2 {

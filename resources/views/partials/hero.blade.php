@@ -389,7 +389,7 @@
                     width:100%;
                 }
                 .section_hero .cta_container .cta {
-                    width:90%;
+                    width:100%;
                     margin:0.4rem auto;
                 }
             }

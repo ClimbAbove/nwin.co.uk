@@ -21,6 +21,7 @@ if(($contact_mode ?? null) === 'telephone') {
 
 @endphp
 
+<div class="cta_wrapper">
 
     @if($show_phone === true)
         <div class="cta_container double">
@@ -35,7 +36,7 @@ if(($contact_mode ?? null) === 'telephone') {
             <i class="fa fa-phone"></i>
         </a>
     @endif
-
+                </div>
     @if(($scrolling_text_enabled  ?? false) === true && count($scrolling_text_data))
         <div class="text_scroller">
             @foreach($scrolling_text_data as $index => $text)
