@@ -13,7 +13,13 @@
 #eco-tech-conservatories-body footer .logo_container a img {
     height:80px;
 }
+#eco-tech-conservatories-body .masthead .logo_container {
+    margin-left:0 !important;
+}
+
+
 @media print, screen and (max-width: 420px) {
+
     #eco-tech-conservatories-body .masthead .logo_container img  {
         margin-top:0.5rem;
         height:60px;

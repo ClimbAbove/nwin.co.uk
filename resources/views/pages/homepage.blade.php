@@ -271,7 +271,6 @@
                 width:100%;
             }
         }
-
         @media (max-width: 720px) {
             .section_hero h1 {
                 margin-top:0.8rem;

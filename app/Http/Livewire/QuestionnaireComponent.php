@@ -212,6 +212,7 @@ class QuestionnaireComponent extends AbstractComponent
             $this->questionnaire->setCurrentStep($next_step);
         }
 
+
     }
 
     /**

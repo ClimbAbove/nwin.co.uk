@@ -12,7 +12,7 @@
                             <div class="image_container">
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 200 200"><path fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" d="M160.8 166.4c0 5.301-4.298 9.6-9.6 9.6H42.4c-5.301 0-9.6-4.299-9.6-9.6V28c0-5.302 4.299-9.6 9.6-9.6h108.8a9.6 9.6 0 0 1 9.6 9.6v138.4z"/><path fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" d="M45.6 35.2h103.2v117.6H45.6V35.2z"/><g fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="5"><path stroke-linecap="square" d="M59.2 51.2H72m10.4 0h47.2M59.2 62.4h47.2"/><path stroke-linecap="round" d="m71.539 72.667-7.197 11.128-5.142-4.319m25.983-6.809L97.315 84m-12.132 0 12.133-11.333"/></g><g fill="none" stroke-miterlimit="10" stroke-width="5"><path stroke="#29D" stroke-linecap="square" d="M58.4 99.2h12.8m10.4 0h47.2m-70.4 11.2h47.2"/><path stroke="#29D" stroke-linecap="round" d="m70.739 120.667-7.198 11.126-5.142-4.316"/><path stroke="#333" stroke-linecap="round" d="M84.382 120.667 96.516 132m-12.134 0 12.134-11.333"/></g><path fill="none" stroke="#29D" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6" d="m158.455 135.461 7.145 15.473"/><path fill="#FFF" stroke="#29D" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" d="m158.053 134.631 6.364 13.152m26.153 33.522c-1.208-2.494-2.013-6.954-.072-9.568l-.336.531c2.719-4.021 3.313-10.698-2.667-23.057l-.329-.681-6.363-13.153.402.832c-.988-2.133-3.713-9.117-8.966-6.576-2.532 1.225-3.287 4.386-1.934 7.185l-1.023-2.116c-.989-2.134-3.522-9.21-8.966-6.577-2.797 1.353-3.215 4.538-1.86 7.337-.989-2.135-3.523-9.21-8.966-6.577-2.305 1.116-3.074 4.283-1.72 7.083l5.968 12.878.291.604-14.262-29.48.402.832c-.989-2.134-3.523-9.209-8.966-6.576-2.306 1.115-3.075 4.283-1.72 7.082l14.09 29.19c1.346 2.609 3.483 6.803 1.553 7.737-2.128 1.029-3.175 1.536-4.976.57l.458.217c-4.398-2.489-13.865-8.124-18.691-5.229l.397-.192c-2.551 1.234-6.188 5.14 1.095 7.647l-.499-.147c8.458 2.826 16.114 13.121 18.733 14.348 3.377 1.659 12.576 2.162 14.227 5.575l6.584 13.606m6.828-59.929 6.559 13.432"/><path fill="none" stroke="#29D" stroke-linecap="round" stroke-miterlimit="10" stroke-width="5" d="m154.029 149.45 1.598 3.149m2.828-17.138 6.608 13.664"/></svg>
                             </div>
-                            <p class="title">Complete a Simple Form</p>
+                            <p class="title">Complete a simple form</p>
                             <p>
                                 Let us know a few details about your Home through our online platform.
                             </p>
@@ -29,9 +29,9 @@
                                 </svg>
                                 @endif
                             </div>
-                            <p class="title">Pick your Windows, Doors or Products</p>
+                            <p class="title">Pick your windows, doors or products</p>
                             <p>
-                                No Salesman involved, a friendly expert will give you a call and arrange a Home visit or confirm your fixed price quote over the phone.
+                                No salesman involved. A friendly expert will give you a call and arrange a home visit or confirm your fixed price quote over the phone.
                             </p>
                         </div>
                         <div class="cell large-4 card">
@@ -40,7 +40,7 @@
                             </div>
                             <p class="title">Installed by an expert</p>
                             <p>
-                                We will arrange your complete stress free installation, completed by our experts. A Fully Vetted & Professional installer will arrive on the date we promise!
+                                We will arrange your complete stress free installation, completed by our experts. A fully vetted and  professional installer will arrive on the date we promise.
                             </p>
                         </div>
                     </div>

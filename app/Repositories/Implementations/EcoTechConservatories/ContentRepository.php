@@ -147,7 +147,7 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             [
                 'question' => 'What products do Eco Tech Conservatories offer?',
                 'answer' => [
-                    'Eco Tech offer a huge range of conservatory products, including traditional conservatories built from scratch, solid conservatory roof replacements such as Ultraframe’s Livinroof, Ultraroof or Performance glass roofs. We also offer insulated conservatory roof panels where you maintain the structure of your roof and replace only the panels. Finally we also offer uPVC windows, doors and composite doors.'
+                    'Eco Tech offer a huge range of conservatory products, including traditional conservatories built from scratch, solid conservatory roof replacements such as Ultraframe’s Livinroof, Ultraroof or performance glass roofs. We also offer insulated conservatory roof panels where you maintain the structure of your roof and replace only the panels. Finally we also offer uPVC windows, doors and composite doors.'
                 ]
             ],
             [

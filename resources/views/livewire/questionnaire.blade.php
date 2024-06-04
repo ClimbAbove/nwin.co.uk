@@ -267,6 +267,13 @@ $wire.on('stepTaken', () => {
         let actual_height = document.getElementById('quote_tool').scrollHeight;
         parent.postMessage('{"type":"resize", "height":' + actual_height + '}', "*");
     }, 1);
+
+    let rect = document.getElementById('quote_tool').getBoundingClientRect();
+
+    if (rect.top < 0) {
+        document.getElementById('quote_tool').scrollIntoView();
+    }
+
 });
 $wire.on('redirect', (event) => {
     setTimeout(() => {

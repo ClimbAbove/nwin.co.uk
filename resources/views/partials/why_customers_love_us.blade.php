@@ -17,7 +17,7 @@
                             <div class="blurb">
                                 <p class="title">Longest Product Warranty</p>
                                 <p>
-                                    All our Products are provided with leading market warranty for your peace of Mind.
+                                    All our products are provided with leading market warranty for your peace of mind.
                                 </p>
                             </div>
                         </div>
@@ -28,9 +28,9 @@
                                 </div>
                             </div>
                             <div class="blurb">
-                                <p class="title">Sales Now On</p>
+                                <p class="title">Sale Now On</p>
                                 <p>
-                                    Take Advantage of our Lowest ever prices, with our Sales now on.
+                                    Take advantage of our lowest ever prices, with our sale now on.
                                 </p>
                             </div>
                         </div>
@@ -41,9 +41,9 @@
                                 </div>
                             </div>
                             <div class="blurb">
-                                <p class="title">Quality Control - 100%</p>
+                                <p class="title">Quality Control</p>
                                 <p>
-                                    of our installations are audited to ensure your complete satisfaction.
+                                    100% of our installations are audited to ensure complete satisfaction.
                                 </p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                             <div class="blurb">
-                                <p class="title">Workmanship warranty</p>
+                                <p class="title">Workmanship Warranty</p>
                                 <p>
                                     All our installations come with a 24 month workmanship warranty.
                                 </p>
@@ -82,7 +82,7 @@
                             <div class="blurb">
                                 <p class="title">Leading Products</p>
                                 <p>
-                                    We pride ourselves in installing Quality products which you will still be proud of year’s after installation
+                                    We pride ourselves on installing quality products which you will still be satisfied with years after the installation.
                                 </p>
                             </div>
                         </div>
