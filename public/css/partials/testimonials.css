@@ -209,6 +209,30 @@ section.testimonials .testimonials_glide ul li .testimonial_card .author {
     }
 
 }
+@media print, screen and (max-width: 640px) {
+    section.testimonials .cta_container {
+        padding:0 !important;
+    }
+    section.testimonials .cta_wrapper {
+        margin:0;
+    }
+}
+@media print, screen and (max-width: 600px) {
+    section.testimonials {
+        padding:2rem 0 !important;
+    }
+    section.testimonials h2 {
+        font-size:1.5rem !important;
+        padding:0 1rem !important;
+    }
+    section.testimonials .testimonials_glide ul li .testimonial_card .star_container {
+        width:120px;
+    }
+    section.testimonials .testimonials_glide {
+        padding:0;
+    }
+}
+
 @media print, screen and (max-width: 500px) {
     section.testimonials .testimonials_glide ul li {
         padding:1rem 0.5rem;

@@ -126,14 +126,15 @@
 @media print, screen and (max-width: 1750px) {
     .masthead .cta_container {
         margin-right:7.4rem;
-
     }
     .masthead .ctax {
         width:74%;
     }
-
     .masthead .menu_container {
        display:none;
+    }
+    .masthead .grid-container {
+        max-width: 75rem !important;
     }
 }
 

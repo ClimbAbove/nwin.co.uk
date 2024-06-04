@@ -28,6 +28,15 @@
     background: var(--ca-white);
     color:var(--ca-button-primary);
 }
+
+@media print, screen and (max-width: 600px) {
+    .how_we_work .cta_container {
+        padding:0 !important;
+    }
+    .how_we_work .cta_wrapper {
+        margin:0;
+    }
+}
 @media print, screen and (max-width: 420px) {
     .how_we_work .cta_container {
         padding:0.5rem;

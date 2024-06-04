@@ -388,7 +388,7 @@
                     grid-template-columns: 1fr;
                     width:100%;
                 }
-                .section_hero .cta_container .cta {
+                master.section_hero .cta_container .cta {
                     width:100%;
                     margin:0.4rem auto;
                 }

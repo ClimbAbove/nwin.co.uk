@@ -1,5 +1,7 @@
 <html>
     <head>
+        <meta charset="utf-8"/>
+        <meta id="_viewport" name="viewport" content="width=device-width, initial-scale=1.0"/>
         {!! $page->getTitle() !!}
         {!! $page->getMeta() !!}
         <link rel="apple-touch-icon" sizes="180x180" href="/partners/{{$config['partner']}}/apple-touch-icon.png">
@@ -12,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
         <link href="/css/fontawesome/css/all.min.css" rel="stylesheet">
+
         <style>
             :root {
                 --ca-action: #BF0F30;

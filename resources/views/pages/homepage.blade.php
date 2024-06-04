@@ -272,6 +272,24 @@
             }
         }
 
+        @media (max-width: 720px) {
+            .section_hero h1 {
+                margin-top:0.8rem;
+            }
+
+            .section_hero .cta_wrapper {
+                margin: 0.3rem;
+            }
+
+            .section_hero .cta_wrapper .button {
+                min-height: 55px;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                justify-items: center;
+            }
+        }
 
         @media (max-width: 640px)  {
             .generator > div > .grid-x  {
@@ -312,8 +330,11 @@
 
         }
         @media print, screen and (max-width: 400px) {
+
+
             .stalker .cta_container .button {
                 font-size:1rem;
+
             }
         }
     </style>

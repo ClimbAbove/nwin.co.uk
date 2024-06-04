@@ -1,5 +1,5 @@
 <a id="testimonials"></a>
-<script src="/js/glide.js"></script>
+
 
 <section class="testimonials">
     <div class="testimonials_glide">
@@ -63,12 +63,55 @@
     </div>
 </section>
 
+
 {!! $page->addCSS('<link rel="stylesheet" href="/assets/css/partials/testimonials.min.css">','bottom') !!}
-{!! $page->addJS('<script src="/assets/js/partials/testimonials.min.js"></script>','bottom') !!}
+{!! $page->addJS('<script src="/assets/js/glide.min.js"></script>','top') !!}
+
 <script>
+
+    new Glide('.testimonials_glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 3,
+        focusAt: 'center',
+        autoplay: 3000,
+        rewind: false,
+        gap:0,
+        hoverpause: true,
+        breakpoints: {
+            400: {
+                perView: 1,
+                peek: {
+                    before:0,
+                    after:0
+                }
+            },
+            860: {
+                perView: 1
+            },
+            1400: {
+                perView: 2
+            },
+            1680: {
+                perView: 2,
+                peek: {
+                    before:200,
+                    after:200
+                }
+            },
+            3600: {
+                perView: 3,
+                gap:0,
+                peak: {
+                    before: 200,
+                    after: 200
+                }
+            },
+        }
+    }).mount();
+
     let rrms = document.getElementsByClassName('review_read_more');
     let rcrms = document.getElementsByClassName('review_close_read_more');
-
 
     for(let i = 0; i < rrms.length; i++) {
         rrms[i].addEventListener('click', function(e) {

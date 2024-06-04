@@ -25,18 +25,28 @@ if(($contact_mode ?? null) === 'telephone') {
 
     @if($show_phone === true)
         <div class="cta_container double">
-        <a class="button primary cta double" href="{{$cta_href}}">{{$cta_text}} 👉</a>
     @else
-                <div class="cta_container single">
-        <a class="button primary cta single" href="{{$cta_href}}">{{$cta_text}} 👉</a>
+        <div class="cta_container single">
     @endif
-    @if($show_phone === true)
-        <a class="button secondary cta ghost open_dialog cta_telephone" href="tel:{{$telephone['international'] }}" data-dialog="dialog_book">
-            Talk to an Expert
-            <i class="fa fa-phone"></i>
-        </a>
-    @endif
-                </div>
+
+        @if($show_phone === true)
+            <a class="button primary cta double" href="{{$cta_href}}">{{$cta_text}} 👉</a>
+        @else
+            <a class="button primary cta single" href="{{$cta_href}}">{{$cta_text}} 👉</a>
+        @endif
+
+        @if($show_phone === true)
+            <a class="button secondary cta ghost open_dialog cta_telephone" href="tel:{{$telephone['international'] }}" data-dialog="dialog_book">
+                Talk to an Expert
+                <i class="fa fa-phone"></i>
+            </a>
+            <a class="display_none minimal button secondary cta ghost open_dialog cta_telephone" href="tel:{{$telephone['international'] }}" data-dialog="dialog_book">
+                <i class="fa fa-phone"></i>
+            </a>
+        @endif
+
+    </div>
+
     @if(($scrolling_text_enabled  ?? false) === true && count($scrolling_text_data))
         <div class="text_scroller">
             @foreach($scrolling_text_data as $index => $text)

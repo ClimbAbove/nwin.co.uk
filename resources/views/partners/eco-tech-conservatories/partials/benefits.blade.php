@@ -141,6 +141,14 @@
             background-position: -200px 1px;
         }
     }
+    @media print, screen and (max-width: 640px) {
+        #benefits .cta_wrapper {
+            margin: 0;
+        }
+        #benefits .cta_container {
+            width:100%;
+        }
+    }
 
     @media print, screen and (max-width: 500px) {
         #benefits .content {
@@ -152,9 +160,7 @@
         #benefits .content ul li i {
             margin-right:0;
         }
-        #benefits .cta_container {
-            width:100%;
-        }
+
         #benefits .cta_container .button {
             font-size:1.1rem;
         }
