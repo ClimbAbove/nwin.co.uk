@@ -2,6 +2,9 @@
     <div class="grid-container">
         <div class="grid-x">
             <div class="logo_container large-3 small-12">
+                <a href="{{route('page-home')}}">
+                    <img src="{{$config['logo']}}">
+                </a>
 
             </div>
             <div class="large-5 small-10 menu_container">
