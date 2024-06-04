@@ -2620,3 +2620,316 @@
   INFO [724c2177] Running /usr/bin/env echo "Branch master (at ebe793964967a483bca556f445c09bef42c502a5) deployed as release 20240604160354 by callum" >> /var/www/nwin.co.uk/prod/revisions.log as capistrano@18.171.82.232
  DEBUG [724c2177] Command: cd /var/www/nwin.co.uk/prod/releases && /usr/bin/env echo "Branch master (at ebe793964967a483bca556f445c09bef42c502a5) deployed as release 20240604160354 by callum" >> /var/www/nwin.co.uk/prod/revisions.log
   INFO [724c2177] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2024-06-04 20:34:42 +0100 cap prod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e4dc43ea] Running /usr/bin/env mkdir -p /tmp as capistrano@18.171.82.232
+ DEBUG [e4dc43ea] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e4dc43ea] Finished in 0.753 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-f1bc105322183c4dac8b.sh 0.0%
+  INFO Uploading /tmp/git-ssh-f1bc105322183c4dac8b.sh 100.0%
+  INFO [f950b389] Running /usr/bin/env chmod 700 /tmp/git-ssh-f1bc105322183c4dac8b.sh as capistrano@18.171.82.232
+ DEBUG [f950b389] Command: /usr/bin/env chmod 700 /tmp/git-ssh-f1bc105322183c4dac8b.sh
+  INFO [f950b389] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [9321a666] Running /usr/bin/env git ls-remote git@github.com:ClimbAbove/nwin.co.uk.git HEAD as capistrano@18.171.82.232
+ DEBUG [9321a666] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f1bc105322183c4dac8b.sh" ; /usr/bin/env git ls-remote git@github.com:ClimbAbove/nwin.co.uk.git HEAD )
+ DEBUG [9321a666] 	b54bccf71f474fbe5353eb347e99af4698490a98	HEAD
+  INFO [9321a666] Finished in 1.446 seconds with exit status 0 (successful).
+  INFO [e210f35b] Running /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/shared /var/www/nwin.co.uk/prod/releases as capistrano@18.171.82.232
+ DEBUG [e210f35b] Command: /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/shared /var/www/nwin.co.uk/prod/releases
+  INFO [e210f35b] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [89732e9f] Running [ -f /var/www/nwin.co.uk/prod/current/REVISION ] as capistrano@18.171.82.232
+ DEBUG [89732e9f] Command: [ -f /var/www/nwin.co.uk/prod/current/REVISION ]
+ DEBUG [89732e9f] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [eac0d90f] Running /usr/bin/env cat /var/www/nwin.co.uk/prod/current/REVISION 2>/dev/null as capistrano@18.171.82.232
+ DEBUG [eac0d90f] Command: /usr/bin/env cat /var/www/nwin.co.uk/prod/current/REVISION 2>/dev/null
+ DEBUG [eac0d90f] 	ebe793964967a483bca556f445c09bef42c502a5
+ DEBUG [eac0d90f] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [32eb7cc8] Running [ -f /var/www/nwin.co.uk/prod/repo/HEAD ] as capistrano@18.171.82.232
+ DEBUG [32eb7cc8] Command: [ -f /var/www/nwin.co.uk/prod/repo/HEAD ]
+ DEBUG [32eb7cc8] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nwin.co.uk/prod/repo
+ DEBUG [ebf3cca6] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [ebf3cca6] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [ebf3cca6] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [0213585e] Running /usr/bin/env git remote set-url origin git@github.com:ClimbAbove/nwin.co.uk.git as capistrano@18.171.82.232
+ DEBUG [0213585e] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f1bc105322183c4dac8b.sh" ; /usr/bin/env git remote set-url origin git@github.com:ClimbAbove/nwin.co.uk.git )
+  INFO [0213585e] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [8d45a4a5] Running /usr/bin/env git remote update --prune as capistrano@18.171.82.232
+ DEBUG [8d45a4a5] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f1bc105322183c4dac8b.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8d45a4a5] 	Fetching origin
+ DEBUG [8d45a4a5] 	From github.com:ClimbAbove/nwin.co.uk
+   ebe79396..b54bccf7  master     -> master
+  INFO [8d45a4a5] Finished in 1.567 seconds with exit status 0 (successful).
+ DEBUG [43e149c7] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [43e149c7] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [43e149c7] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [d8ecf16b] Running /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/releases/20240604193444 as capistrano@18.171.82.232
+ DEBUG [d8ecf16b] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f1bc105322183c4dac8b.sh" ; /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/releases/20240604193444 )
+  INFO [d8ecf16b] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [e5afb2e5] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nwin.co.uk/prod/releases/20240604193444 as capistrano@18.171.82.232
+ DEBUG [e5afb2e5] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f1bc105322183c4dac8b.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nwin.co.uk/prod/releases/20240604193444 )
+  INFO [e5afb2e5] Finished in 1.063 seconds with exit status 0 (successful).
+ DEBUG [c93305dd] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [c93305dd] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [c93305dd] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [815e28ce] Running /usr/bin/env git rev-list --max-count=1 master as capistrano@18.171.82.232
+ DEBUG [815e28ce] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f1bc105322183c4dac8b.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [815e28ce] 	b54bccf71f474fbe5353eb347e99af4698490a98
+ DEBUG [815e28ce] Finished in 0.032 seconds with exit status 0 (successful).
+ DEBUG [5c2489ec] Running if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193444; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193444'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [5c2489ec] Command: if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193444; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193444'" 1>&2; false; fi
+ DEBUG [5c2489ec] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [6a6834db] Running /usr/bin/env echo "b54bccf71f474fbe5353eb347e99af4698490a98" > REVISION as capistrano@18.171.82.232
+ DEBUG [6a6834db] Command: cd /var/www/nwin.co.uk/prod/releases/20240604193444 && /usr/bin/env echo "b54bccf71f474fbe5353eb347e99af4698490a98" > REVISION
+  INFO [6a6834db] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG Uploading .env-1717529687.tmp 0.0%
+  INFO Uploading .env-1717529687.tmp 100.0%
+  INFO [c7ba8798] Running setfacl -Rdm u:capistrano:rwx,u:www-data:rwx /var/www/nwin.co.uk/prod/releases/20240604193444/storage/ as capistrano@18.171.82.232
+ DEBUG [c7ba8798] Command: setfacl -Rdm u:capistrano:rwx,u:www-data:rwx /var/www/nwin.co.uk/prod/releases/20240604193444/storage/
+  INFO [c7ba8798] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [dce54187] Running setfacl -Rm u:capistrano:rwX,u:www-data:rwX /var/www/nwin.co.uk/prod/releases/20240604193444/storage/ as capistrano@18.171.82.232
+ DEBUG [dce54187] Command: setfacl -Rm u:capistrano:rwX,u:www-data:rwX /var/www/nwin.co.uk/prod/releases/20240604193444/storage/
+  INFO [dce54187] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [153a16fc] Running if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193444; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193444'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [153a16fc] Command: if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193444; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193444'" 1>&2; false; fi
+ DEBUG [153a16fc] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [8d75017e] Running /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader as capistrano@18.171.82.232
+ DEBUG [8d75017e] Command: cd /var/www/nwin.co.uk/prod/releases/20240604193444 && /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader
+  INFO [8d75017e] Finished in 5.120 seconds with exit status 0 (successful).
+  INFO [52d33b85] Running /usr/bin/env ln -s /var/www/nwin.co.uk/prod/releases/20240604193444 /var/www/nwin.co.uk/prod/releases/current as capistrano@18.171.82.232
+ DEBUG [52d33b85] Command: /usr/bin/env ln -s /var/www/nwin.co.uk/prod/releases/20240604193444 /var/www/nwin.co.uk/prod/releases/current
+  INFO [52d33b85] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [e36adbd3] Running /usr/bin/env mv /var/www/nwin.co.uk/prod/releases/current /var/www/nwin.co.uk/prod as capistrano@18.171.82.232
+ DEBUG [e36adbd3] Command: /usr/bin/env mv /var/www/nwin.co.uk/prod/releases/current /var/www/nwin.co.uk/prod
+  INFO [e36adbd3] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [73549c3c] Running /usr/bin/env ls -x /var/www/nwin.co.uk/prod/releases as capistrano@18.171.82.232
+ DEBUG [73549c3c] Command: /usr/bin/env ls -x /var/www/nwin.co.uk/prod/releases
+ DEBUG [73549c3c] 	20240602210511	20240602211526	20240603084504	20240603112014	20240604160354
+20240604193444
+ DEBUG [73549c3c] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 18.171.82.232
+ DEBUG [c0d39b77] Running [ -d /var/www/nwin.co.uk/prod/current ] as capistrano@18.171.82.232
+ DEBUG [c0d39b77] Command: [ -d /var/www/nwin.co.uk/prod/current ]
+ DEBUG [c0d39b77] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [e656a035] Running /usr/bin/env readlink /var/www/nwin.co.uk/prod/current as capistrano@18.171.82.232
+ DEBUG [e656a035] Command: /usr/bin/env readlink /var/www/nwin.co.uk/prod/current
+ DEBUG [e656a035] 	/var/www/nwin.co.uk/prod/releases/20240604193444
+ DEBUG [e656a035] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [6e735504] Running /usr/bin/env rm -rf /var/www/nwin.co.uk/prod/releases/20240602210511 as capistrano@18.171.82.232
+ DEBUG [6e735504] Command: /usr/bin/env rm -rf /var/www/nwin.co.uk/prod/releases/20240602210511
+  INFO [6e735504] Finished in 1.575 seconds with exit status 0 (successful).
+ DEBUG [67bc83a5] Running if test ! -d /var/www/nwin.co.uk/prod/releases; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [67bc83a5] Command: if test ! -d /var/www/nwin.co.uk/prod/releases; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases'" 1>&2; false; fi
+ DEBUG [67bc83a5] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [29e610c2] Running /usr/bin/env echo "Branch master (at b54bccf71f474fbe5353eb347e99af4698490a98) deployed as release 20240604193444 by callum" >> /var/www/nwin.co.uk/prod/revisions.log as capistrano@18.171.82.232
+ DEBUG [29e610c2] Command: cd /var/www/nwin.co.uk/prod/releases && /usr/bin/env echo "Branch master (at b54bccf71f474fbe5353eb347e99af4698490a98) deployed as release 20240604193444 by callum" >> /var/www/nwin.co.uk/prod/revisions.log
+  INFO [29e610c2] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2024-06-04 20:36:25 +0100 cap prod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7af680e0] Running /usr/bin/env mkdir -p /tmp as capistrano@18.171.82.232
+ DEBUG [7af680e0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7af680e0] Finished in 0.896 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-0fbf1bbbae709a0511b9.sh 0.0%
+  INFO Uploading /tmp/git-ssh-0fbf1bbbae709a0511b9.sh 100.0%
+  INFO [2a2d17f1] Running /usr/bin/env chmod 700 /tmp/git-ssh-0fbf1bbbae709a0511b9.sh as capistrano@18.171.82.232
+ DEBUG [2a2d17f1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-0fbf1bbbae709a0511b9.sh
+  INFO [2a2d17f1] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [4e9ba429] Running /usr/bin/env git ls-remote git@github.com:ClimbAbove/nwin.co.uk.git HEAD as capistrano@18.171.82.232
+ DEBUG [4e9ba429] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0fbf1bbbae709a0511b9.sh" ; /usr/bin/env git ls-remote git@github.com:ClimbAbove/nwin.co.uk.git HEAD )
+ DEBUG [4e9ba429] 	b54bccf71f474fbe5353eb347e99af4698490a98	HEAD
+  INFO [4e9ba429] Finished in 1.371 seconds with exit status 0 (successful).
+  INFO [1237445a] Running /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/shared /var/www/nwin.co.uk/prod/releases as capistrano@18.171.82.232
+ DEBUG [1237445a] Command: /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/shared /var/www/nwin.co.uk/prod/releases
+  INFO [1237445a] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [332b081c] Running [ -f /var/www/nwin.co.uk/prod/current/REVISION ] as capistrano@18.171.82.232
+ DEBUG [332b081c] Command: [ -f /var/www/nwin.co.uk/prod/current/REVISION ]
+ DEBUG [332b081c] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [70ba2c77] Running /usr/bin/env cat /var/www/nwin.co.uk/prod/current/REVISION 2>/dev/null as capistrano@18.171.82.232
+ DEBUG [70ba2c77] Command: /usr/bin/env cat /var/www/nwin.co.uk/prod/current/REVISION 2>/dev/null
+ DEBUG [70ba2c77] 	b54bccf71f474fbe5353eb347e99af4698490a98
+ DEBUG [70ba2c77] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [5f6f30bb] Running [ -f /var/www/nwin.co.uk/prod/repo/HEAD ] as capistrano@18.171.82.232
+ DEBUG [5f6f30bb] Command: [ -f /var/www/nwin.co.uk/prod/repo/HEAD ]
+ DEBUG [5f6f30bb] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nwin.co.uk/prod/repo
+ DEBUG [fa63837c] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [fa63837c] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [fa63837c] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [99bc4e78] Running /usr/bin/env git remote set-url origin git@github.com:ClimbAbove/nwin.co.uk.git as capistrano@18.171.82.232
+ DEBUG [99bc4e78] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0fbf1bbbae709a0511b9.sh" ; /usr/bin/env git remote set-url origin git@github.com:ClimbAbove/nwin.co.uk.git )
+  INFO [99bc4e78] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [1209552c] Running /usr/bin/env git remote update --prune as capistrano@18.171.82.232
+ DEBUG [1209552c] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0fbf1bbbae709a0511b9.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1209552c] 	Fetching origin
+  INFO [1209552c] Finished in 1.327 seconds with exit status 0 (successful).
+ DEBUG [587c2ef3] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [587c2ef3] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [587c2ef3] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [56f6d89a] Running /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/releases/20240604193627 as capistrano@18.171.82.232
+ DEBUG [56f6d89a] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0fbf1bbbae709a0511b9.sh" ; /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/releases/20240604193627 )
+  INFO [56f6d89a] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [d201c6a8] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nwin.co.uk/prod/releases/20240604193627 as capistrano@18.171.82.232
+ DEBUG [d201c6a8] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0fbf1bbbae709a0511b9.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nwin.co.uk/prod/releases/20240604193627 )
+  INFO [d201c6a8] Finished in 0.938 seconds with exit status 0 (successful).
+ DEBUG [bd799ac6] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [bd799ac6] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [bd799ac6] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [c54006c5] Running /usr/bin/env git rev-list --max-count=1 master as capistrano@18.171.82.232
+ DEBUG [c54006c5] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0fbf1bbbae709a0511b9.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c54006c5] 	b54bccf71f474fbe5353eb347e99af4698490a98
+ DEBUG [c54006c5] Finished in 0.035 seconds with exit status 0 (successful).
+ DEBUG [c2193d6c] Running if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193627; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193627'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [c2193d6c] Command: if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193627; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193627'" 1>&2; false; fi
+ DEBUG [c2193d6c] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [91a77ff5] Running /usr/bin/env echo "b54bccf71f474fbe5353eb347e99af4698490a98" > REVISION as capistrano@18.171.82.232
+ DEBUG [91a77ff5] Command: cd /var/www/nwin.co.uk/prod/releases/20240604193627 && /usr/bin/env echo "b54bccf71f474fbe5353eb347e99af4698490a98" > REVISION
+  INFO [91a77ff5] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG Uploading .env-1717529790.tmp 0.0%
+  INFO Uploading .env-1717529790.tmp 100.0%
+  INFO [f05c9859] Running setfacl -Rdm u:capistrano:rwx,u:www-data:rwx /var/www/nwin.co.uk/prod/releases/20240604193627/storage/ as capistrano@18.171.82.232
+ DEBUG [f05c9859] Command: setfacl -Rdm u:capistrano:rwx,u:www-data:rwx /var/www/nwin.co.uk/prod/releases/20240604193627/storage/
+  INFO [f05c9859] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [b2a305b7] Running setfacl -Rm u:capistrano:rwX,u:www-data:rwX /var/www/nwin.co.uk/prod/releases/20240604193627/storage/ as capistrano@18.171.82.232
+ DEBUG [b2a305b7] Command: setfacl -Rm u:capistrano:rwX,u:www-data:rwX /var/www/nwin.co.uk/prod/releases/20240604193627/storage/
+  INFO [b2a305b7] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [8f894394] Running if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193627; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193627'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [8f894394] Command: if test ! -d /var/www/nwin.co.uk/prod/releases/20240604193627; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604193627'" 1>&2; false; fi
+ DEBUG [8f894394] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [954ac172] Running /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader as capistrano@18.171.82.232
+ DEBUG [954ac172] Command: cd /var/www/nwin.co.uk/prod/releases/20240604193627 && /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader
+  INFO [954ac172] Finished in 4.552 seconds with exit status 0 (successful).
+  INFO [6857671a] Running /usr/bin/env ln -s /var/www/nwin.co.uk/prod/releases/20240604193627 /var/www/nwin.co.uk/prod/releases/current as capistrano@18.171.82.232
+ DEBUG [6857671a] Command: /usr/bin/env ln -s /var/www/nwin.co.uk/prod/releases/20240604193627 /var/www/nwin.co.uk/prod/releases/current
+  INFO [6857671a] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [63d22d8d] Running /usr/bin/env mv /var/www/nwin.co.uk/prod/releases/current /var/www/nwin.co.uk/prod as capistrano@18.171.82.232
+ DEBUG [63d22d8d] Command: /usr/bin/env mv /var/www/nwin.co.uk/prod/releases/current /var/www/nwin.co.uk/prod
+  INFO [63d22d8d] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [587cc953] Running /usr/bin/env ls -x /var/www/nwin.co.uk/prod/releases as capistrano@18.171.82.232
+ DEBUG [587cc953] Command: /usr/bin/env ls -x /var/www/nwin.co.uk/prod/releases
+ DEBUG [587cc953] 	20240602211526	20240603084504	20240603112014	20240604160354	20240604193444
+20240604193627
+ DEBUG [587cc953] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 18.171.82.232
+ DEBUG [32043978] Running [ -d /var/www/nwin.co.uk/prod/current ] as capistrano@18.171.82.232
+ DEBUG [32043978] Command: [ -d /var/www/nwin.co.uk/prod/current ]
+ DEBUG [32043978] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [a15ab8c9] Running /usr/bin/env readlink /var/www/nwin.co.uk/prod/current as capistrano@18.171.82.232
+ DEBUG [a15ab8c9] Command: /usr/bin/env readlink /var/www/nwin.co.uk/prod/current
+ DEBUG [a15ab8c9] 	/var/www/nwin.co.uk/prod/releases/20240604193627
+ DEBUG [a15ab8c9] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [b11bb2d7] Running /usr/bin/env rm -rf /var/www/nwin.co.uk/prod/releases/20240602211526 as capistrano@18.171.82.232
+ DEBUG [b11bb2d7] Command: /usr/bin/env rm -rf /var/www/nwin.co.uk/prod/releases/20240602211526
+  INFO [b11bb2d7] Finished in 1.509 seconds with exit status 0 (successful).
+ DEBUG [07b6e4aa] Running if test ! -d /var/www/nwin.co.uk/prod/releases; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [07b6e4aa] Command: if test ! -d /var/www/nwin.co.uk/prod/releases; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases'" 1>&2; false; fi
+ DEBUG [07b6e4aa] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [48e73377] Running /usr/bin/env echo "Branch master (at b54bccf71f474fbe5353eb347e99af4698490a98) deployed as release 20240604193627 by callum" >> /var/www/nwin.co.uk/prod/revisions.log as capistrano@18.171.82.232
+ DEBUG [48e73377] Command: cd /var/www/nwin.co.uk/prod/releases && /usr/bin/env echo "Branch master (at b54bccf71f474fbe5353eb347e99af4698490a98) deployed as release 20240604193627 by callum" >> /var/www/nwin.co.uk/prod/revisions.log
+  INFO [48e73377] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2024-06-04 20:41:11 +0100 cap prod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a90375e2] Running /usr/bin/env mkdir -p /tmp as capistrano@18.171.82.232
+ DEBUG [a90375e2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a90375e2] Finished in 0.748 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-b1c8501ab282109f2b1d.sh 0.0%
+  INFO Uploading /tmp/git-ssh-b1c8501ab282109f2b1d.sh 100.0%
+  INFO [6bdc3777] Running /usr/bin/env chmod 700 /tmp/git-ssh-b1c8501ab282109f2b1d.sh as capistrano@18.171.82.232
+ DEBUG [6bdc3777] Command: /usr/bin/env chmod 700 /tmp/git-ssh-b1c8501ab282109f2b1d.sh
+  INFO [6bdc3777] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [e8cefaac] Running /usr/bin/env git ls-remote git@github.com:ClimbAbove/nwin.co.uk.git HEAD as capistrano@18.171.82.232
+ DEBUG [e8cefaac] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b1c8501ab282109f2b1d.sh" ; /usr/bin/env git ls-remote git@github.com:ClimbAbove/nwin.co.uk.git HEAD )
+ DEBUG [e8cefaac] 	e354ede921312e182c535bc8460bce0dc2a5017c	HEAD
+  INFO [e8cefaac] Finished in 1.303 seconds with exit status 0 (successful).
+  INFO [5eb4de93] Running /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/shared /var/www/nwin.co.uk/prod/releases as capistrano@18.171.82.232
+ DEBUG [5eb4de93] Command: /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/shared /var/www/nwin.co.uk/prod/releases
+  INFO [5eb4de93] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [398ffc8b] Running [ -f /var/www/nwin.co.uk/prod/current/REVISION ] as capistrano@18.171.82.232
+ DEBUG [398ffc8b] Command: [ -f /var/www/nwin.co.uk/prod/current/REVISION ]
+ DEBUG [398ffc8b] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [4a44d1b2] Running /usr/bin/env cat /var/www/nwin.co.uk/prod/current/REVISION 2>/dev/null as capistrano@18.171.82.232
+ DEBUG [4a44d1b2] Command: /usr/bin/env cat /var/www/nwin.co.uk/prod/current/REVISION 2>/dev/null
+ DEBUG [4a44d1b2] 	b54bccf71f474fbe5353eb347e99af4698490a98
+ DEBUG [4a44d1b2] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [51041315] Running [ -f /var/www/nwin.co.uk/prod/repo/HEAD ] as capistrano@18.171.82.232
+ DEBUG [51041315] Command: [ -f /var/www/nwin.co.uk/prod/repo/HEAD ]
+ DEBUG [51041315] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nwin.co.uk/prod/repo
+ DEBUG [1c106306] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [1c106306] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [1c106306] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [79934d05] Running /usr/bin/env git remote set-url origin git@github.com:ClimbAbove/nwin.co.uk.git as capistrano@18.171.82.232
+ DEBUG [79934d05] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b1c8501ab282109f2b1d.sh" ; /usr/bin/env git remote set-url origin git@github.com:ClimbAbove/nwin.co.uk.git )
+  INFO [79934d05] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [d7228c07] Running /usr/bin/env git remote update --prune as capistrano@18.171.82.232
+ DEBUG [d7228c07] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b1c8501ab282109f2b1d.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d7228c07] 	Fetching origin
+ DEBUG [d7228c07] 	From github.com:ClimbAbove/nwin.co.uk
+   b54bccf7..e354ede9  master     -> master
+  INFO [d7228c07] Finished in 1.545 seconds with exit status 0 (successful).
+ DEBUG [d1726cbb] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [d1726cbb] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [d1726cbb] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [2dfe6608] Running /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/releases/20240604194113 as capistrano@18.171.82.232
+ DEBUG [2dfe6608] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b1c8501ab282109f2b1d.sh" ; /usr/bin/env mkdir -p /var/www/nwin.co.uk/prod/releases/20240604194113 )
+  INFO [2dfe6608] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [4077b571] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nwin.co.uk/prod/releases/20240604194113 as capistrano@18.171.82.232
+ DEBUG [4077b571] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b1c8501ab282109f2b1d.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nwin.co.uk/prod/releases/20240604194113 )
+  INFO [4077b571] Finished in 0.909 seconds with exit status 0 (successful).
+ DEBUG [1ab82d06] Running if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [1ab82d06] Command: if test ! -d /var/www/nwin.co.uk/prod/repo; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/repo'" 1>&2; false; fi
+ DEBUG [1ab82d06] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [38f73d8e] Running /usr/bin/env git rev-list --max-count=1 master as capistrano@18.171.82.232
+ DEBUG [38f73d8e] Command: cd /var/www/nwin.co.uk/prod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b1c8501ab282109f2b1d.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [38f73d8e] 	e354ede921312e182c535bc8460bce0dc2a5017c
+ DEBUG [38f73d8e] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [39350d24] Running if test ! -d /var/www/nwin.co.uk/prod/releases/20240604194113; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604194113'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [39350d24] Command: if test ! -d /var/www/nwin.co.uk/prod/releases/20240604194113; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604194113'" 1>&2; false; fi
+ DEBUG [39350d24] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [508ca11e] Running /usr/bin/env echo "e354ede921312e182c535bc8460bce0dc2a5017c" > REVISION as capistrano@18.171.82.232
+ DEBUG [508ca11e] Command: cd /var/www/nwin.co.uk/prod/releases/20240604194113 && /usr/bin/env echo "e354ede921312e182c535bc8460bce0dc2a5017c" > REVISION
+  INFO [508ca11e] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG Uploading .env-1717530076.tmp 0.0%
+  INFO Uploading .env-1717530076.tmp 100.0%
+  INFO [a3c6082e] Running setfacl -Rdm u:capistrano:rwx,u:www-data:rwx /var/www/nwin.co.uk/prod/releases/20240604194113/storage/ as capistrano@18.171.82.232
+ DEBUG [a3c6082e] Command: setfacl -Rdm u:capistrano:rwx,u:www-data:rwx /var/www/nwin.co.uk/prod/releases/20240604194113/storage/
+  INFO [a3c6082e] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [3823cf13] Running setfacl -Rm u:capistrano:rwX,u:www-data:rwX /var/www/nwin.co.uk/prod/releases/20240604194113/storage/ as capistrano@18.171.82.232
+ DEBUG [3823cf13] Command: setfacl -Rm u:capistrano:rwX,u:www-data:rwX /var/www/nwin.co.uk/prod/releases/20240604194113/storage/
+  INFO [3823cf13] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [261dec16] Running if test ! -d /var/www/nwin.co.uk/prod/releases/20240604194113; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604194113'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [261dec16] Command: if test ! -d /var/www/nwin.co.uk/prod/releases/20240604194113; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases/20240604194113'" 1>&2; false; fi
+ DEBUG [261dec16] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [d2cbb773] Running /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader as capistrano@18.171.82.232
+ DEBUG [d2cbb773] Command: cd /var/www/nwin.co.uk/prod/releases/20240604194113 && /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader
+  INFO [d2cbb773] Finished in 4.502 seconds with exit status 0 (successful).
+  INFO [fff0e1ef] Running /usr/bin/env ln -s /var/www/nwin.co.uk/prod/releases/20240604194113 /var/www/nwin.co.uk/prod/releases/current as capistrano@18.171.82.232
+ DEBUG [fff0e1ef] Command: /usr/bin/env ln -s /var/www/nwin.co.uk/prod/releases/20240604194113 /var/www/nwin.co.uk/prod/releases/current
+  INFO [fff0e1ef] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [45c01b0e] Running /usr/bin/env mv /var/www/nwin.co.uk/prod/releases/current /var/www/nwin.co.uk/prod as capistrano@18.171.82.232
+ DEBUG [45c01b0e] Command: /usr/bin/env mv /var/www/nwin.co.uk/prod/releases/current /var/www/nwin.co.uk/prod
+  INFO [45c01b0e] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [cc5a775f] Running /usr/bin/env ls -x /var/www/nwin.co.uk/prod/releases as capistrano@18.171.82.232
+ DEBUG [cc5a775f] Command: /usr/bin/env ls -x /var/www/nwin.co.uk/prod/releases
+ DEBUG [cc5a775f] 	20240603084504	20240603112014	20240604160354	20240604193444	20240604193627
+20240604194113
+ DEBUG [cc5a775f] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 18.171.82.232
+ DEBUG [2abbaa45] Running [ -d /var/www/nwin.co.uk/prod/current ] as capistrano@18.171.82.232
+ DEBUG [2abbaa45] Command: [ -d /var/www/nwin.co.uk/prod/current ]
+ DEBUG [2abbaa45] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [3160369a] Running /usr/bin/env readlink /var/www/nwin.co.uk/prod/current as capistrano@18.171.82.232
+ DEBUG [3160369a] Command: /usr/bin/env readlink /var/www/nwin.co.uk/prod/current
+ DEBUG [3160369a] 	/var/www/nwin.co.uk/prod/releases/20240604194113
+ DEBUG [3160369a] Finished in 0.032 seconds with exit status 0 (successful).
+  INFO [e00034db] Running /usr/bin/env rm -rf /var/www/nwin.co.uk/prod/releases/20240603084504 as capistrano@18.171.82.232
+ DEBUG [e00034db] Command: /usr/bin/env rm -rf /var/www/nwin.co.uk/prod/releases/20240603084504
+  INFO [e00034db] Finished in 1.233 seconds with exit status 0 (successful).
+ DEBUG [9d9e4226] Running if test ! -d /var/www/nwin.co.uk/prod/releases; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases'" 1>&2; false; fi as capistrano@18.171.82.232
+ DEBUG [9d9e4226] Command: if test ! -d /var/www/nwin.co.uk/prod/releases; then echo "Directory does not exist '/var/www/nwin.co.uk/prod/releases'" 1>&2; false; fi
+ DEBUG [9d9e4226] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [7c4a9425] Running /usr/bin/env echo "Branch master (at e354ede921312e182c535bc8460bce0dc2a5017c) deployed as release 20240604194113 by callum" >> /var/www/nwin.co.uk/prod/revisions.log as capistrano@18.171.82.232
+ DEBUG [7c4a9425] Command: cd /var/www/nwin.co.uk/prod/releases && /usr/bin/env echo "Branch master (at e354ede921312e182c535bc8460bce0dc2a5017c) deployed as release 20240604194113 by callum" >> /var/www/nwin.co.uk/prod/revisions.log
+  INFO [7c4a9425] Finished in 0.030 seconds with exit status 0 (successful).
