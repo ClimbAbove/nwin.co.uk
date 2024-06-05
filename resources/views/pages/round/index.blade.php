@@ -55,7 +55,7 @@
                                     <i class="fa fa-check-circle"></i> 25+ Years Experience
                                 </li>
                                 <li>
-                                    <i class="fa fa-check-circle"></i> No Deposit Finance
+                                    <i class="fa fa-check-circle"></i> Finance Available
                                 </li>
                                 <li>
                                     <i class="fa fa-check-circle"></i> 10 Year Warranties

@@ -39,14 +39,14 @@
                                 <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
                                 <li class="two"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
                                 <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li>
-                                <li class="four"><i class="fa fa-check-circle"></i> No Deposit Finance</li>
+                                <li class="four"><i class="fa fa-check-circle"></i> Finance Available</li>
                                 <li class="five"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
                                 <li class="six"><i class="fa fa-check-circle"></i> 10 Year Warranties</li>
                             </ul>
 
                             <ul class="mobile">
                                 <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
-                                <li class="two"><i class="fa fa-check-circle"></i> No Deposit Finance</li>
+                                <li class="two"><i class="fa fa-check-circle"></i> Finance Available</li>
                                 <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li
                                 <li class="four"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
                             </ul>

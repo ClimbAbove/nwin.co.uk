@@ -44,7 +44,7 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             $config['contact_mode'] = 'telephone';
             $config['telephone'] = [
                 'international' =>  '+447368558274',
-                'number' => '07369558274',
+                'number' => '07368558274',
             ];
 
         } else {
