@@ -62,28 +62,28 @@
 
                                         @switch($data['product_type']['answer'])
                                             @case('new_conservatory')
-                                                <div class="price">£4,995</div>
+                                                <div class="price">£14,995</div>
                                                 @break
                                             @case('doors')
-                                                <div class="price">£595</div>
+                                                <div class="price">£995</div>
                                                 @break
                                             @case('conservatory_roof')
                                                 <div class="price">£2,995</div>
                                                 @break
                                             @case('windows')
-                                                <div class="price">£995</div>
+                                                <div class="price">£495</div>
                                                 @break
                                             @case('conservatory_repair')
-                                                <div class="price">£995</div>
+                                                <div class="price">£499</div>
                                                 @break
                                             @case('orangeries')
-                                                <div class="price">£4995</div>
+                                                <div class="price">£29,995</div>
                                                 @break
                                             @case('garden_room')
-                                                <div class="price">£3995</div>
+                                                <div class="price">£14,995</div>
                                                 @break
                                             @case('roof_line')
-                                                <div class="price">£2995</div>
+                                                <div class="price">£1995</div>
                                                 @break
                                             @default
 
