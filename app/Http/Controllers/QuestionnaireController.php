@@ -23,12 +23,13 @@ class QuestionnaireController extends AbstractController
         session()->push('data', $questionnaire_element->getData());
 
         $data = $questionnaire_element->getData();
-          $recipient = 'hello@climbabove.co.uk';
+         // $recipient = 'hello@climbabove.co.uk';
         // $recipient = 'mailspringie@gmail.com';
-        //$recipient = 'info@southerndrainageandwater.co.uk';
+        $recipient = 'info@ecotechconservatories.co.uk';
 
         Mail::to($recipient)
             ->bcc([
+                'hello@climbabove.co.uk',
                 'mailspringie@gmail.com'
             ])
             ->send(new ContactUs([
