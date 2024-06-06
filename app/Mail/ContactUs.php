@@ -32,7 +32,7 @@ class ContactUs extends Mailable
     {
         return new Envelope(
             from: new Address('no-reply@climbabove.co.uk', 'Climb Above'),
-            subject: 'Climb Above - Drainage Lead Submission',
+            subject: 'Climb Above - Lead Submission',
         );
     }
 
