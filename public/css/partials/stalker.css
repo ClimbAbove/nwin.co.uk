@@ -45,7 +45,9 @@
     height:55px !important;
     border-radius: 27px !important;
 }
-
+.stalker .cta_container .button i {
+    margin-left:-2px;
+}
 @media (max-width: 720px) {
     .stalker .cta_wrapper {
         align-items: center;
