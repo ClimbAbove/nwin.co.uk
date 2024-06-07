@@ -14,13 +14,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
         <link href="/css/fontawesome/css/all.min.css" rel="stylesheet">
-
         <style>
             :root {
                 --ca-action: #BF0F30;
             }
         </style>
-        <script src="https://www.googletagmanager.com/gtag/js?id=AW-16506920005#google-wcc-debug"></script>
+        <script src="https://www.googletagmanager.com/gtag/js?id=AW-16506920005"></script>
         <script>
             window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16506920005');
             gtag('config', 'AW-16506920005/PZCXCLns0bAZEMW4jr89', {

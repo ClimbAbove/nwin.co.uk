@@ -1,6 +1,12 @@
 @extends('layouts/master')
 
 @section('content')
+    @if(($tracking_send_to ?? null) !== null)
+            <script>
+                gtag('event', 'conversion', {'send_to': '{{$tracking_send_to}}'});
+            </script>
+    @endswitch
+
     {{ $page->title('Your Results') }}
     @include('partials/selling_points_bar')
 

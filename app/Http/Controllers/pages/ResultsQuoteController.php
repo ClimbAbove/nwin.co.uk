@@ -20,6 +20,17 @@ class ResultsQuoteController extends AbstractController
         $data['config']  = $content_repository->getConfig();
         $data['address'] = $content_repository->getAddress();
 
+        $data['tracking_send_to'] = null;
+
+        switch($data['config']['tracking_product']) {
+            case 'windows_and_doors':
+                $data['tracking_send_to'] = 'AW-16506920005/qaNYCMnT17AZEMW4jr89';
+            break;
+            case 'conservatory':
+                $data['tracking_send_to'] = 'AW-16506920005/8LA2CMzT17AZEMW4jr89';
+            break;
+        }
+
         return $this->render('pages/results', $data);
     }
 }

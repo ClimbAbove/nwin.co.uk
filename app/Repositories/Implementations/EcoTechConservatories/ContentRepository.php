@@ -27,14 +27,13 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
     public function getConfig()
     {
         $config = [];
-        $config['partner'] = 'eco-tech-conservatories';
-        $config['css'] = '/css/partners/eco-tech-conservatories/styles.css';
-        $config['logo'] = '/images/partners/eco-tech-conservatories/logo.png';
-        $config['company_name'] = 'MK Developments and Construction Ltd trading as Eco Tech Conservatories';
-        $config['company_number'] = '13943142';
-        $config['vat_number'] = '446852270';
-
-
+        $config['partner']          = 'eco-tech-conservatories';
+        $config['css']              = '/css/partners/eco-tech-conservatories/styles.css';
+        $config['logo']             = '/images/partners/eco-tech-conservatories/logo.png';
+        $config['company_name']     = 'MK Developments and Construction Ltd trading as Eco Tech Conservatories';
+        $config['company_number']   = '13943142';
+        $config['vat_number']       = '446852270';
+        $config['tracking_product'] = 'conservatory';
 
         // Times
         $config['opening_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 7:00:00');

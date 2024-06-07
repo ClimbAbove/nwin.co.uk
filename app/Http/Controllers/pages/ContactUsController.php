@@ -19,6 +19,7 @@ class ContactUsController extends AbstractController
         $form = new ContactForm();
         $data['form'] = $form->build();
         $data['config']  = $content_repository->getConfig();
+
         return $this->render('pages/contact_us', $data);
     }
 

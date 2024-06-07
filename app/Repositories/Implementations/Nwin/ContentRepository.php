@@ -28,6 +28,7 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $config['company_name'] = 'NWIN';
         $config['company_number'] = '1231312';
         $config['vat_number'] = '34234234';
+        $config['tracking_product'] = 'windows_and_doors';
 
         // Times
         $config['opening_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 8:00:00');
