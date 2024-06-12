@@ -5,7 +5,7 @@
             <script>
                 gtag('event', 'conversion', {'send_to': '{{$tracking_send_to}}'});
             </script>
-    @endswitch
+    @endif
 
     {{ $page->title('Your Results') }}
     @include('partials/selling_points_bar')
