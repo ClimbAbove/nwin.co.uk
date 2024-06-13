@@ -21,14 +21,18 @@
         </style>
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16506920005"></script>
         <script>
-            window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16506920005');
+            window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments);}
+            gtag('js', new Date()); gtag('config', 'AW-16506920005');
             gtag('config', 'AW-16506920005/KkZACP7n17AZEMW4jr89', {
                 'phone_conversion_number':  '{{$config['telephone']['number']}}',
                 'phone_conversion_css_class': 'cta_telephone'
             });
         </script>
-
-
+        @if(($tracking_send_to ?? null) !== null)
+            <script>
+                gtag('event', 'conversion', {'send_to': '{{$tracking_send_to}}'});
+            </script>
+        @endif
         <link rel="stylesheet" href="/css/master.css">
         {!! $page->getCSSInline('top') !!}
         {!! $page->getCSS('top') !!}
