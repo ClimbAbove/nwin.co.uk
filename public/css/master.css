@@ -31,12 +31,6 @@ h3 {
     border-radius:2rem;
     padding:1rem 2rem;
 }
-
-
-
-
-
-
 section {
     padding:2rem 0;
 }
@@ -50,7 +44,7 @@ section {
 .cta_container .button {
     font-size:1.2rem;
     font-weight: bold;
-    width:270px;
+    width:305px;
 }
 .cta_container .button:hover {
     background:#000000;
@@ -60,10 +54,20 @@ section {
     border:2px solid var(--ca-button-primary);
     color:var(--ca-button-primary);
     background: #FFFFFF;
-    border-radius: 2rem;
-
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width:56px;
+    height:56px;
 }
-
+.cta_container .cta.secondary.ghost:hover {
+    border:2px solid var(--ca-button-primary);
+    color:#FFFFFF;
+    background: var(--ca-button-primary);
+}
 .text_scroller {
     color: #fff;
     position: relative;

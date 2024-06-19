@@ -24,7 +24,6 @@ class QuestionnaireController extends AbstractController
 
         $data = $questionnaire_element->getData();
 
-
         if($data['email']['answer'] == 'mailspringie@gmail.com') {
 
             $recipient = 'mailspringie@gmail.com';
@@ -44,8 +43,7 @@ class QuestionnaireController extends AbstractController
 
         } else {
 
-            // $recipient = 'hello@climbabove.co.uk';
-            // $recipient = 'mailspringie@gmail.com';
+
             $recipient = 'info@ecotechconservatories.co.uk';
 
             Mail::to($recipient)

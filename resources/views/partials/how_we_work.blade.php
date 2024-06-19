@@ -29,7 +29,7 @@
                                 </svg>
                                 @endif
                             </div>
-                            <p class="title">Pick your windows, doors or products</p>
+                            <p class="title">Pick your products</p>
                             <p>
                                 No salesman involved. A friendly expert will give you a call and arrange a home visit or confirm your fixed price quote over the phone.
                             </p>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="large-12 medium-12 small-12 cta_container">
-                @include('partials/ctas/button')
+                @include('partials/ctas/button', ['scrolling_text_enabled' => true])
             </div>
 
         </div>

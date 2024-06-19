@@ -49,21 +49,8 @@
             <a href="tel:{{$telephone['international'] }}" class="button primary"><i class="fa fa-phone-alt"></i><span class="cta_telephone">{{$telephone['number']}}</span></a>
         </p>
         <div class="star_container">
-            <div class="star_box">
-                <img src="/images/star_gold.svg">
-            </div>
-            <div class="star_box">
-                <img src="/images/star_gold.svg">
-            </div>
-            <div class="star_box">
-                <img src="/images/star_gold.svg">
-            </div>
-            <div class="star_box">
-                <img src="/images/star_gold.svg">
-            </div>
-            <div class="star_box">
-                <img src="/images/star_gold.svg">
-            </div>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 512 96" style="enable-background:new 0 0 512 96" xml:space="preserve"><style>.st0{fill:#00b67a}.st2{fill:#fff}</style><g id="Trustpilot_ratings_4halfstar-RGB"><path id="Rectangle-path" class="st0" d="M0 0h96v96H0z"/><path class="st0" d="M104 0h96v96h-96zM208 0h96v96h-96zM312 0h96v96h-96z"/><g id="Half"><path style="fill:#dcdce6" d="M48 0h48v96H48z" transform="translate(416)"/><path class="st0" d="M0 0h48v96H0z" transform="translate(416)"/></g><path id="Shape" class="st2" d="M48 64.7 62.6 61l6.1 18.8L48 64.7zm33.6-24.3H55.9L48 16.2l-7.9 24.2H14.4l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15z"/><path class="st2" d="m152 64.7 14.6-3.7 6.1 18.8L152 64.7zm33.6-24.3h-25.7L152 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15zM256 64.7l14.6-3.7 6.1 18.8L256 64.7zm33.6-24.3h-25.7L256 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15zM360 64.7l14.6-3.7 6.1 18.8L360 64.7zm33.6-24.3h-25.7L360 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15zM464 64.7l14.6-3.7 6.1 18.8L464 64.7zm33.6-24.3h-25.7L464 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15z"/></g></svg>
+
         </div>
 
 
@@ -237,6 +224,11 @@
 
             height:600px;
         }
+        .section_hero .cta_container .cta.secondary.ghost {
+            height:72px;
+            width:72px;
+            padding:1rem;
+        }
         .hero .blurb {
             display: flex;
             flex-direction: column;
@@ -251,9 +243,9 @@
             font-size:2rem;
             font-weight:bold;
         }
-.cta_wrapper {
-    margin:auto;
-}
+        .cta_wrapper {
+            margin:auto;
+        }
         .cta_container {
             display: flex;
             grid-template-columns: 1fr 1fr;
@@ -284,7 +276,6 @@
 
             .section_hero .cta_wrapper .button {
                 min-height: 55px;
-                display: flex;
                 align-items: center;
                 align-content: center;
                 justify-content: center;
@@ -308,7 +299,12 @@
                 grid-template-columns: 1fr;
                 grid-column-gap: 1rem;
                 margin:auto;
-                width:80%;
+
+
+                display: flex;
+                justify-items: center;
+                justify-content: center;
+
             }
             .cta_container .cta {
                 width:100%;

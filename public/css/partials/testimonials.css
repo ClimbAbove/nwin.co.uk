@@ -133,7 +133,7 @@ section.testimonials .testimonials_glide ul li .testimonial_card .starbox {
 }
 section.testimonials .testimonials_glide ul li .testimonial_card .star_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     width:200px;
     margin:auto;
 }

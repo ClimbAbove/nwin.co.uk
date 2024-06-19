@@ -32,4 +32,9 @@ class HomepageController extends AbstractController
      //   return $this->render('pages/round/index', $data);
         return $this->render('pages/homepage', $data);
     }
+
+    public function alt()
+    {
+
+    }
 }

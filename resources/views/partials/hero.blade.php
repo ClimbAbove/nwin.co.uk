@@ -10,31 +10,19 @@
                     </h2>
 
                     <div class="reversable">
-                        <p>
-                            @include('partials/ctas/button')
 
-                            <div class="star_container">
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
+
+                        <div class="star_container">
+                            <div class="box" style="text-align: center;">
+                                <img src="/images/logos/trustpilot-stars-60.png">
                             </div>
+                            <div class="box" style="text-align: center;">
+                                <img src="/images/logos/google-reviews-60.png">
+                            </div>
+                        </div>
+                        @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => true])
 
-                        </p>
                         <div class="selling_points_container">
-
-
                             <ul class="desktop">
                                 <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
                                 <li class="two"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
@@ -46,9 +34,10 @@
 
                             <ul class="mobile">
                                 <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
-                                <li class="two"><i class="fa fa-check-circle"></i> Finance Available</li>
-                                <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li
-                                <li class="four"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
+                                <li class="two"><i class="fa fa-check-circle"></i> Rated "Excellent" on TrustPilot</li>
+                                <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li>
+                                <li class="four"><i class="fa fa-check-circle"></i> Low Monthly Finance</li>
+                                <li class="five"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
                             </ul>
                         </div>
 
@@ -56,20 +45,11 @@
                     </div>
 
                     <div class="star_container mobile">
-                        <div class="starbox">
-                            <img src="/images/star_gold.svg">
+                        <div class="box" style="text-align: center;">
+                            <img src="/images/logos/trustpilot-stars-60.png">
                         </div>
-                        <div class="starbox">
-                            <img src="/images/star_gold.svg">
-                        </div>
-                        <div class="starbox">
-                            <img src="/images/star_gold.svg">
-                        </div>
-                        <div class="starbox">
-                            <img src="/images/star_gold.svg">
-                        </div>
-                        <div class="starbox">
-                            <img src="/images/star_gold.svg">
+                        <div class="box" style="text-align: center;">
+                            <img src="/images/logos/google-reviews-60.png">
                         </div>
                     </div>
                 </div>
@@ -84,6 +64,11 @@
             </div>
         </div>
         <style>
+            .section_hero .reversable {
+                display: flex;
+                flex-direction: column-reverse;
+
+            }
             .hero_image_container {
                 overflow: hidden;
                 height:440px;
@@ -138,8 +123,7 @@
             }
 
             .section_hero img {
-                width:70%;
-                text-align: right;
+                                text-align: right;
             }
             .section_hero ul {
                 display: flex;
@@ -152,7 +136,6 @@
             .section_hero .selling_points_container {
                 display: flex;
                 justify-content: center;
-                margin-bottom:2rem;
             }
             .section_hero .selling_points_container .mobile {
                 display: none;
@@ -204,7 +187,7 @@
                 border-radius: 3rem;
             }
 
-            .section_hero .button.primary.cta {
+            .section_hero .button.primary.ctax {
                 animation: button_pulse 2s infinite;
             }
             .section_hero .button:hover {
@@ -220,8 +203,28 @@
                 margin-right:0.3rem;
             }
 
-
             .section_hero .star_container {
+                display: grid;
+                flex-direction: row;
+                grid-template-columns: 1fr 1fr;
+                gap:1rem;
+                vertical-align: center;
+                align-items: center;
+                margin:0;
+            }
+            .section_hero .star_container .box {
+                height:90px;
+                display:flex;
+                vertical-align: center;
+                align-items: center;
+                align-content: center;
+                padding:0.8rem;
+            }
+            .section_hero .star_container .box img {
+                margin: auto;
+                height:60px;
+            }
+            .section_hero .star_containerx {
                 display: flex;
                 flex-direction: row;
                 width:260px;
@@ -229,8 +232,11 @@
             }
             .section_hero .star_container.mobile {
                 display: none;
-
             }
+            .section_hero .star_container svg {
+                width:50%;
+            }
+
             .section_hero .star_container .starbox {
                 background: #22bb5b;
                 border-radius: 0.2rem;
@@ -241,7 +247,9 @@
                 height:45px;
             }
 
-
+            .section_hero .cta_container {
+                justify-content: center;
+            }
             @-webkit-keyframes button_pulse {
                 0% {
                     box-shadow: 0 0 0 0 var(--ds-action);
@@ -267,6 +275,10 @@
                 .hero_image_container .slant {
                     right:-8rem;
                 }
+
+                .hero_image_container .hero_image .fensa {
+                    right:6rem;
+                }
             }
 
             @media print, screen and (max-width: 1120px) {
@@ -274,18 +286,24 @@
                     right:-10rem;
                 }
                 .section_hero .hero_image_container {
-                    height:525px;
+                    height: 414px;
                 }
                 .section_hero h2 {
                     font-size:1.3rem !important;
                 }
                 .hero_image_container .hero_image {
                     background-size:130% !important;
+                    height:480px;
                 }
                 .section_hero .cta_container .cta {
                     padding:1rem 2rem;
                     font-size:1.1rem;
                 }
+                .hero_image_container .hero_image .fensa {
+                    right:8rem;
+                    bottom:-4rem;
+                }
+
             }
 
             @media print, screen and (max-width: 1023px) {
@@ -294,8 +312,8 @@
                 }
 
                 .section_hero .star_container {
-                    margin: 1rem auto auto;
-                    width: 283px;
+                    margin: 1rem auto 0 auto;
+
                 }
                 .section_hero .hero_image_container {
                     text-align: center;
@@ -304,10 +322,23 @@
 
                 .section_hero .cta_container {
                     padding:0 2rem;
-                    grid-template-columns: 1fr 1fr;
-                    display: grid;
-                    grid-column-gap: 3rem;
+                    justify-content: center;
+                    display: flex;
+
                     justify-items: center;
+                }
+                .section_hero .selling_points_container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    justify-items: center;
+                    align-content: center;
+                    align-items: center;
+                }
+                .section_hero ul.desktop {
+
+                    text-align: left;
+                    width:300px;
                 }
 
             }
@@ -328,13 +359,17 @@
                     justify-items: center;
                 }
 
-                .section_hero .selling_points_container.desktop {
-
+                .section_hero .selling_points_container .desktop {
                     display: none;
                 }
-                .section_hero .selling_points_container.mobile {
+                .section_hero .selling_points_container .mobile {
                     display: flex;
-
+                }
+                .section_hero .selling_points_container .mobile li {
+                    font-size:0.9rem;
+                }
+                .section_hero .selling_points_container ul li {
+                    margin:0 !important;
                 }
 
                 .section_hero h1 {
@@ -372,7 +407,7 @@
                     padding:0;
                     margin:0;
                 }
-                .section_hero .reversable .selling_points_container .five,
+
                 .section_hero .reversable .selling_points_container .six
                 {
                     display:none;
@@ -383,15 +418,30 @@
                     margin-bottom: 0.8rem;
                 }
 
+                .section_hero .star_container.mobile svg {
+                    width:50%;
+                }
+
                 .section_hero .cta_container {
-                    display: grid;
-                    grid-template-columns: 1fr;
+                    display: flex;
+
                     width:100%;
                 }
                 master.section_hero .cta_container .cta {
                     width:100%;
                     margin:0.4rem auto;
                 }
+
+                .section_hero .cta_container .cta.ghost {
+                    width:81px !important;
+                }
+            }
+
+            @media print, screen and (max-width: 700px) {
+                .section_hero .star_container .box img {
+                    height:35px;
+                }
+
             }
 
         </style>

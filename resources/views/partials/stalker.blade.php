@@ -3,9 +3,9 @@
         <div class="grid-x">
             <div class="large-12 medium-12 small-12">
                 @if(($contact_mode ?? null) === 'telephone')
-                    @include('partials/ctas/button', ['cta_text' => 'Get Prices Now', 'scrolling_text_enabled' => false])
+                    @include('partials/ctas/button', ['cta_text' => 'Find Out Prices Now', 'scrolling_text_enabled' => true])
                 @else
-                    @include('partials/ctas/button', ['cta_text' => 'Get Prices Now', 'scrolling_text_enabled' => true])
+                    @include('partials/ctas/button', ['cta_text' => 'Find Out Prices Now', 'scrolling_text_enabled' => true])
                 @endif
             </div>
         </div>

@@ -117,7 +117,12 @@
     height:65px;
     width:auto;
 }
-
+.masthead.desktop {
+    display:block !important;
+}
+.masthead.mobile {
+    display:none !important;
+}
 @media print, screen and (max-width: 108em) {
 
 
@@ -137,6 +142,32 @@
     .masthead .grid-container {
         max-width: 75rem !important;
     }
+
+}
+@media print, screen and (max-width: 1024px) {
+    .masthead .ctax {
+        width: 50%;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        justify-items: flex-end;
+        align-items: center;
+        align-content: center;
+    }
+    .masthead .fensa {
+        display: inline-block;
+        height:50px;
+    }
+
+
+    .masthead .cta_wrapper {
+        display: inline-block;
+        margin:2rem 1rem 0 1rem;
+    }
+    .masthead .cta_container {
+        margin-top:0;
+        padding-top:0;
+    }
 }
 
 @media print, screen and (max-width: 64em) {
@@ -148,7 +179,9 @@
     }
     .masthead .cta_container {
         margin-right:0;
-        display: none;
+    }
+    .masthead .cta_container .primary {
+        display:none;
     }
 }
 @media print, screen and (max-width: 40em) {
@@ -175,8 +208,27 @@
         text-align: right;
     }
 }
+@media print, screen and (max-width: 640px) {
+    .masthead.desktop {
+        display:none !important;
+    }
+    .masthead.mobile {
+        display:flex !important;
+        flex-direction: row;
+    }
+    .masthead.mobile > .grid-container  {
+        width:100%;
+    }
+    .masthead.mobile .inner  {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-@media print, screen and (max-width: 360px) {
+
+}
+@media print, screen and (max-width: 420px) {
     .masthead .logo_container {
         margin-left:0;
     }
@@ -185,5 +237,19 @@
         position: absolute;
         right: 0.5rem;
         top:1rem;
+    }
+
+    .masthead .cta_container {
+        padding-top:1rem;
+    }
+    .cta_container .cta.secondary.ghost {
+        margin-bottom:0;
+    }
+    .masthead .cta_wrapper {
+        margin-top:0;
+    }
+
+    .masthead .fensa {
+        display:none;
     }
 }

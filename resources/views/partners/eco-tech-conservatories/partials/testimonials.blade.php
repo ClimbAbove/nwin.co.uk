@@ -36,21 +36,7 @@
 
                             </div>
                             <div class="star_container">
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
-                                <div class="starbox">
-                                    <img src="/images/star_gold.svg">
-                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 96"><g fill-rule="nonzero" fill="none"><path fill="#00B67A" d="M0 0h96v96H0zM104 0h96v96h-96zM208 0h96v96h-96zM312 0h96v96h-96zM416 0h96v96h-96z"/><path d="M48 64.7 62.6 61l6.1 18.8L48 64.7Zm33.6-24.3H55.9L48 16.2l-7.9 24.2H14.4l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15ZM152 64.7l14.6-3.7 6.1 18.8L152 64.7Zm33.6-24.3h-25.7L152 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15ZM256 64.7l14.6-3.7 6.1 18.8L256 64.7Zm33.6-24.3h-25.7L256 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15ZM360 64.7l14.6-3.7 6.1 18.8L360 64.7Zm33.6-24.3h-25.7L360 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15ZM464 64.7l14.6-3.7 6.1 18.8L464 64.7Zm33.6-24.3h-25.7L464 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2 20.7-15Z" fill="#FFF"/></g></svg>
                             </div>
                             <p class="author">
                                 {{$testimonial_dto->author}}

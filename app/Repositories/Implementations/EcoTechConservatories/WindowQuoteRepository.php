@@ -28,7 +28,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $question->min_answers = 1;
         $question->text = 'What are you looking for?';
         $question->sub_text = '';
-        $question->next_step = 'form_step_1';
+        $question->next_step = 'form_step_2';
 
         $answer = new AnswerElement();
         $answer->id = 'new_conservatory';
@@ -120,7 +120,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $form_two = new FormElement();
         $form_two->id = 'form_step_2';
         $form_two->name = 'form_step_2';
-        $form_two->text = 'Please can you provide us the following information';
+        $form_two->text = 'Last step to receive your prices…';
 
         $field = new FormFieldElement([
             'name' => 'name',

@@ -1,44 +1,51 @@
 @php
-if(($cta_text ?? null) === null) {
-    $cta_text = 'Find Prices Now!';
-}
 
-if(($cta_href ?? null) === null) {
-   $cta_href = '/quote';
-}
+    if(($cta_text ?? null) === null) {
+        $cta_text = 'Find Out Prices Now!';
+    }
+    if(($cta_href ?? null) === null) {
+       $cta_href = '/quote';
+    }
+    if(($scrolling_text_data ?? null) === null) {
+        $scrolling_text_data = [
+            'Great service',
+            'Local & Friendly',
+            'Leading Prices',
+        ];
+    }
 
-if(($scrolling_text_data ?? null) === null) {
-    $scrolling_text_data = [
-        'Great service',
-        'Local & Friendly',
-        'Leading Prices',
-    ];
-}
-$show_phone = false;
-if(($contact_mode ?? null) === 'telephone') {
-   $show_phone = true;
-}
+
+//50p
+    if(($contact_mode ?? null) === 'telephone') {
+       //$show_phone = false;
+    }
 
 @endphp
 
 <div class="cta_wrapper">
 
-    @if($show_phone === true)
+    @if(($show_phone ?? false) === true)
         <div class="cta_container double">
     @else
         <div class="cta_container single">
     @endif
 
-        @if($show_phone === true)
-            <a class="button primary cta double" href="{{$cta_href}}">{{$cta_text}} 👉</a>
-        @else
-            <a class="button primary cta single" href="{{$cta_href}}">{{$cta_text}} 👉</a>
+    @if(($show_phone ?? false) === true)
+        <a class="button primary cta double" href="{{$cta_href}}">{{$cta_text}} 👉
+        @if($seconds ?? false)
+            <span>It takes less than 60 seconds</span>
         @endif
+        </a>
+    @else
+        <a class="button primary cta single" href="{{$cta_href}}">{{$cta_text}} 👉</a>
+    @endif
 
-        @if($show_phone === true)
+        @if(($show_phone ?? false) === true)
             <a class="button secondary cta ghost open_dialog cta_telephone" href="tel:{{$telephone['international'] }}" data-dialog="dialog_book">
-                Talk to an Expert
-                <i class="fa fa-phone"></i>
+                <span style="display: block; font-size:1rem; margin-top:0;">
+
+                    <i class="fa fa-phone"></i>
+                </span>
             </a>
             <a class="display_none minimal button secondary cta ghost open_dialog cta_telephone" href="tel:{{$telephone['international'] }}" data-dialog="dialog_book">
                 <i class="fa fa-phone"></i>
@@ -47,7 +54,7 @@ if(($contact_mode ?? null) === 'telephone') {
 
     </div>
 
-    @if(($scrolling_text_enabled  ?? false) === true && count($scrolling_text_data))
+    @if(($scrolling_text_enabled ?? false) === true && count($scrolling_text_data))
         <div class="text_scroller">
             @foreach($scrolling_text_data as $index => $text)
                 @if($index == 0)

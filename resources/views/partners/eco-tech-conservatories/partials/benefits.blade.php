@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="large-12 medium-12 small-12 cta_container">
-            @include('partials/ctas/button')
+            @include('partials/ctas/button',['scrolling_text_enabled' => true])
         </div>
     </div>
 </section>
@@ -108,6 +108,9 @@
     #benefits .cta_container a.ghost:hover {
         background: var(--ca-button-primary);
         color: #FFFFFF;
+    }
+    #benefits .text_scroller {
+        color:#000000;
     }
     @media print, screen and (max-width: 1023px) {
         #benefits .content {

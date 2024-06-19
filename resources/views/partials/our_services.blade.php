@@ -19,7 +19,7 @@
                                     {{$brick['sub_text']}}
                                 </div>
                                 <div class="cta_container">
-                                    @include('partials/ctas/button')
+                                    @include('partials/ctas/button',['scrolling_text_enabled' => true])
                                 </div>
                             </div>
 
@@ -57,6 +57,7 @@
         border-radius: 1rem;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        width:100%;
     }
     section.our_services .services_grid .service .content {
         padding:1rem;
@@ -72,17 +73,21 @@
     section.our_services .services_grid .service .content .sub_text {
         min-height: 210px;
     }
+
     section.our_services .services_grid .service .cta_container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
         width:100%;
+        justify-content: center;
+        justify-items: center;
     }
+
     section.our_services .services_grid .service .cta_container .button {
         background: transparent;
         border:2px solid var(--ca-button-primary);
         color:var(--ca-button-primary);
-        width:100%;
+
         margin-bottom: 0;
     }
     section.our_services .services_grid .service .cta_container .button.primary {
@@ -97,7 +102,9 @@
         background: var(--ca-button-primary);
         color:#FFFFFF;
     }
-
+    section.our_services .text_scroller {
+        color:#000000;
+    }
     @media print, screen and (max-width: 1023px) {
         section.our_services .services_grid {
             grid-template-columns: 1fr  1fr;

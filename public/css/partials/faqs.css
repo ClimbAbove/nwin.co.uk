@@ -47,6 +47,31 @@ section.faqs dt a span {
 section.faqs dt .icon {
     position: static;
 }
+
+#faqs_cta .cta_container .cta {
+    color: #FFFFFF;
+    background: var(--ca-button-primary);
+    border: 2px solid var(--ca-button-primary);
+}
+#faqs_cta .cta_container .cta:hover {
+    background: #FFFFFF;
+    color: var(--ca-button-primary);
+    border: 2px solid var(--ca-button-primary);
+}
+#faqs_cta .cta_container .cta.ghost {
+    color: var(--ca-button-primary);
+    background:  #FFFFFF;
+    border: 2px solid var(--ca-button-primary);
+}
+#faqs_cta .cta_container .cta.ghost:hover {
+    color: #FFFFFF;
+    background: var(--ca-button-primary);
+    border: 2px solid var(--ca-button-primary);
+}
+
+#faqs_cta .text_scroller {
+    color:#000000;
+}
 @media print, screen and (max-width: 40em) {
     section.faqs {
         text-align: center;
