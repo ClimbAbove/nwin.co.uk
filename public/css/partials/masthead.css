@@ -255,6 +255,11 @@
         width:65px;
     }
 }
+@media print, screen and (max-width: 360px) {
+    #eco-tech-conservatories-body .masthead .logo_container img {
+        height:38px;
+    }
+}
 @media print, screen and (max-width: 318px) {
     .masthead .fensa {
 display:none;
