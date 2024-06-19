@@ -20,6 +20,10 @@ class ResultsQuoteController extends AbstractController
         $data['config']  = $content_repository->getConfig();
         $data['address'] = $content_repository->getAddress();
 
+        $data['contact_mode'] = $data['config']['contact_mode'];
+        $data['telephone']['international'] = $data['config']['telephone']['international'];
+        $data['telephone']['number'] = $data['config']['telephone']['number'];
+
         $data['tracking_send_to'] = null;
 
         switch($data['config']['tracking_product']) {

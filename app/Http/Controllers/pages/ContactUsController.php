@@ -20,6 +20,10 @@ class ContactUsController extends AbstractController
         $data['form'] = $form->build();
         $data['config']  = $content_repository->getConfig();
 
+        $data['contact_mode'] = $data['config']['contact_mode'];
+        $data['telephone']['international'] = $data['config']['telephone']['international'];
+        $data['telephone']['number'] = $data['config']['telephone']['number'];
+
         return $this->render('pages/contact_us', $data);
     }
 

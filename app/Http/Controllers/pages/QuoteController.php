@@ -17,6 +17,10 @@ class QuoteController extends AbstractController
         $data['address'] = $content_repository->getAddress();
         $data['questionnaire_element'] = $window_quote_repository->getQuestionnaire();
 
+        $data['contact_mode'] = $data['config']['contact_mode'];
+        $data['telephone']['international'] = $data['config']['telephone']['international'];
+        $data['telephone']['number'] = $data['config']['telephone']['number'];
+
         return $this->render('pages/quote' ,$data);
     }
 
