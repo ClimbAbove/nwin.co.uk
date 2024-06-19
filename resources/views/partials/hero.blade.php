@@ -137,6 +137,10 @@
                 display: flex;
                 justify-content: center;
             }
+
+            .section_hero .selling_points_container .desktop {
+                margin:1rem 0;
+            }
             .section_hero .selling_points_container .mobile {
                 display: none;
             }
@@ -250,6 +254,11 @@
             .section_hero .cta_container {
                 justify-content: center;
             }
+
+            .section_hero .text_scroller {
+                margin-top:0.6rem;
+            }
+
             @-webkit-keyframes button_pulse {
                 0% {
                     box-shadow: 0 0 0 0 var(--ds-action);

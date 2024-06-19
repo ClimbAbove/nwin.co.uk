@@ -27,6 +27,8 @@
                 'phone_conversion_number':  '{{$config['telephone']['number']}}',
                 'phone_conversion_css_class': 'cta_telephone'
             });
+
+
         </script>
         @if(($tracking_send_to ?? null) !== null)
             <script>
