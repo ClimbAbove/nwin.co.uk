@@ -248,8 +248,15 @@
     .masthead .cta_wrapper {
         margin-top:0;
     }
-
+    #eco-tech-conservatories-body .masthead .logo_container img {
+        height:45px;
+    }
     .masthead .fensa {
-        display:none;
+        width:65px;
+    }
+}
+@media print, screen and (max-width: 318px) {
+    .masthead .fensa {
+display:none;
     }
 }

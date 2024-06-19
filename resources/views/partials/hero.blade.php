@@ -448,7 +448,7 @@
 
             @media print, screen and (max-width: 700px) {
                 .section_hero .star_container .box img {
-                    height:35px;
+                    height:50px;
                 }
 
             }

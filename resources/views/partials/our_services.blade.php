@@ -104,6 +104,7 @@
     }
     section.our_services .text_scroller {
         color:#000000;
+        margin-top:0.8rem
     }
     @media print, screen and (max-width: 1023px) {
         section.our_services .services_grid {
