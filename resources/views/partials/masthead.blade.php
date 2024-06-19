@@ -18,7 +18,7 @@
                 </div>
                 @include('partials/ctas/button', [
                     'cta_text' => 'Find Out Prices Now!',
-                    'show_phone' => true,
+                    'show_phone' => ($contact_mode == 'telephone'),
                     'scrolling_text_enabled' => false,
                 ])
             </div>
