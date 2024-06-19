@@ -40,7 +40,7 @@
         <a class="button primary cta single" href="{{$cta_href}}">{{$cta_text}} 👉</a>
     @endif
 
-        @if(($show_phone ?? false) === true)
+        @if(($show_phone ?? false) === true && isset($telephone))
             <a class="button secondary cta ghost open_dialog cta_telephone" href="tel:{{$telephone['international'] }}" data-dialog="dialog_book">
                 <span style="display: block; font-size:1rem; margin-top:0;">
 
