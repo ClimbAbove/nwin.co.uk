@@ -86,6 +86,7 @@
         width:100%;
         border:2px solid var(--ca-button-primary);
         background: var(--ca-button-primary);
+        margin-top:2rem;
     }
     section.quote_form section.quote_tool .button_container button:hover {
         background: #FFFFFF;
