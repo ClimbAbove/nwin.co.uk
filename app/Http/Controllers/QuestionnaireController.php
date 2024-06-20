@@ -48,7 +48,7 @@ class QuestionnaireController extends AbstractController
 
             Mail::to($recipient)
                 ->bcc([
-                    'hello@climbabove.co.uk',
+                    'accounts@climbabove.co.uk',
                     'mailspringie@gmail.com'
                 ])
                 ->send(

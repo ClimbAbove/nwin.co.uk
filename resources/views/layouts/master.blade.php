@@ -28,11 +28,17 @@
                 'phone_conversion_css_class': 'cta_telephone'
             });
 
-
+            (function(w,d,t,r,u) { var f,n,i; w[u]=w[u]||[],f=function() { var o={ti:"97130056", enableAutoSpaTracking: true}; o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad") }, n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function() { var s=this.readyState; s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null) }, i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i) }) (window,document,"script","//bat.bing.com/bat.js","uetq");
         </script>
         @if(($tracking_send_to ?? null) !== null)
             <script>
                 gtag('event', 'conversion', {'send_to': '{{$tracking_send_to}}'});
+                window.uetq = window.uetq || [];
+                window.uetq.push('set', { 'pid': {
+                        'em': '{{$tidy_email}}',
+                        'ph': '{{$tidy_phone}}',
+                    } });
+                window.uetq = window.uetq || [];window.uetq.push('event', 'submit_lead_form', {});
             </script>
         @endif
         <link rel="stylesheet" href="/css/master.css">

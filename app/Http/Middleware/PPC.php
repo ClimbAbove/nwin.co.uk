@@ -1,19 +1,21 @@
 <?php
 
 namespace App\Http\Middleware;
-
-use App\Providers\RouteServiceProvider;
-
+use App\DTOs\PPCDTO;
 use Closure;
+use Illuminate\Http\Response;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class PPC
 {
-    public function handle(Request $request, Closure $next, ...$guards)
+    public function handle(Request $request, Closure $next): Response
     {
 
+        $PPCDTO = new PPCDTO();
+
+        session(['_ppc' => serialize($PPCDTO)]);
 
         return $next($request);
     }
+
 }
