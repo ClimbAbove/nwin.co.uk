@@ -48,6 +48,11 @@
 .stalker .cta_container .button i {
     margin-left:-2px;
 }
+
+.stalker .seconds {
+    padding: 0.5rem 0 0 0;
+    color:#FFFFFF;
+}
 @media (max-width: 720px) {
     .stalker .cta_wrapper {
         align-items: center;

@@ -20,7 +20,7 @@
                                 <img src="/images/logos/google-reviews-60.png">
                             </div>
                         </div>
-                        @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => true])
+                        @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => false])
 
                         <div class="selling_points_container">
                             <ul class="desktop">
@@ -257,6 +257,16 @@
 
             .section_hero .text_scroller {
                 margin-top:0.6rem;
+            }
+
+            .section_hero .seconds {
+                padding: 0.5rem 0 0 0;
+                color:#FFFFFF;
+                display:block;
+                text-align: center;
+            }
+            .seconds {
+                font-size:0.9rem;
             }
 
             @-webkit-keyframes button_pulse {

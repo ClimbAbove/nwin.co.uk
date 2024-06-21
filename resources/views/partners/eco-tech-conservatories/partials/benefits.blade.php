@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="large-12 medium-12 small-12 cta_container">
-            @include('partials/ctas/button',['scrolling_text_enabled' => true])
+            @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => false])
         </div>
     </div>
 </section>

@@ -1,6 +1,6 @@
 <div id="faqs_cta" class="large-12 medium-12 small-12 cta_container" style="padding-top:2rem;">
     <div class="cta_wrapper">
-    @include('partials/ctas/button',['scrolling_text_enabled' => true])
+        @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => false])
     </div>
 </div>
 <a id="faqs"></a>

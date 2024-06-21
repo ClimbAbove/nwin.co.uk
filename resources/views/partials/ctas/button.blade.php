@@ -32,9 +32,6 @@
 
     @if(($show_phone ?? false) === true)
         <a class="button primary cta double" href="{{$cta_href}}">{{$cta_text}} 👉
-        @if($seconds ?? false)
-            <span>It takes less than 60 seconds</span>
-        @endif
         </a>
     @else
         <a class="button primary cta single" href="{{$cta_href}}">{{$cta_text}} 👉</a>
@@ -54,6 +51,8 @@
 
     </div>
 
+
+
     @if(($scrolling_text_enabled ?? false) === true && count($scrolling_text_data))
         <div class="text_scroller">
             @foreach($scrolling_text_data as $index => $text)
@@ -65,4 +64,8 @@
             @endforeach
         </div>
     @endif
+
+                @if($seconds ?? false)
+                    <span class="seconds">Find out how much it costs in 30 seconds <i class="fa fa-clock"></i></span>
+                @endif
 </div>

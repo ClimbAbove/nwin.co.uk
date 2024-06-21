@@ -19,7 +19,7 @@
                                     {{$brick['sub_text']}}
                                 </div>
                                 <div class="cta_container">
-                                    @include('partials/ctas/button',['scrolling_text_enabled' => true])
+                                    @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => false])
                                 </div>
                             </div>
 
@@ -105,6 +105,11 @@
     section.our_services .text_scroller {
         color:#000000;
         margin-top:0.8rem
+    }
+     section.our_services .seconds {
+        padding: 0.8rem 0 0 0;
+         color:#000000;
+         display:block;
     }
     @media print, screen and (max-width: 1023px) {
         section.our_services .services_grid {
