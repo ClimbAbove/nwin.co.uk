@@ -52,7 +52,7 @@ class ResultsQuoteController extends AbstractController
             break;
         }
 
-
+/*
         $untidy_email = $data['email']['answer'] ;
         $untidy_email = strtolower($untidy_email);
         $untidy_email = $this->removeAccents($untidy_email);
@@ -60,9 +60,9 @@ class ResultsQuoteController extends AbstractController
         list($email, $domain) = explode('@', $untidy_email);
         $untidy_email = preg_replace('/\./','', $email) . '@'. preg_replace('/\.$/','',$domain);
         $untidy_email = preg_replace('/\+([^\@]+)/','', $untidy_email);
-
-        $data['tidy_email'] = $untidy_email;
-        $data['tidy_phone'] = $data['telephone']['answer'];
+*/
+        $data['tidy_email'] = $untidy_email ?? '';
+        $data['tidy_phone'] = $data['telephone']['answer'] ?? '';
 
         return $this->render('pages/results', $data);
     }
