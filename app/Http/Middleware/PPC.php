@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class PPC
 {
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
 
         $PPCDTO = new PPCDTO();
