@@ -24,9 +24,13 @@ class QuestionnaireController extends AbstractController
 
         $data = $questionnaire_element->getData();
 
-        if($data['email']['answer'] == 'mailspringie@gmail.com') {
+        if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
 
-            $recipient = 'mailspringie@gmail.com';
+            if($data['email']['answer'] == 'mailspringie@gmail.com') {
+                $recipient = 'mailspringie@gmail.com';
+            } else {
+                $recipient = 'hello@climbabove.co.uk';
+            }
 
             Mail::to($recipient)
                 ->bcc([
@@ -48,7 +52,7 @@ class QuestionnaireController extends AbstractController
 
             Mail::to($recipient)
                 ->bcc([
-                    'accounts@climbabove.co.uk',
+                    'hello@climbabove.co.uk',
                     'mailspringie@gmail.com'
                 ])
                 ->send(
