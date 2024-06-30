@@ -8,9 +8,7 @@
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-if (['ire', 'prod'].include? "#{fetch(:stage)}") == true && (['hotfix', 'master', 'main'].include? "#{fetch(:branch)}") == false
-    abort("You may only deploy hotfix, master or main to #{fetch(:stage)}")
-end
+
 
 # PROJECT SPECIFIC SETTINGS
 # =========================

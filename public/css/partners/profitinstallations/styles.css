@@ -55,6 +55,8 @@
     }
 }
 
+
+
 @media print, screen and (max-width: 705px) {
 #profitinstallations-body .section_hero .selling_points_container {
     margin-left:0;
@@ -71,7 +73,21 @@
     .masthead .fensa img {
         display: none!important;
     }
+    .masthead.mobile .inner {
+        display:block;
+    }
+    .masthead .fensa {
+        display:none;
+    }
+    .masthead.mobile {
+        display: flex !important;
+        flex-direction: row;
 
+    }
+    .masthead .cta_wrapper {
+        margin:0;
+        display: none;
+    }
     .masthead .logo_container {
         width: 100%;
         display:block;
