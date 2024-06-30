@@ -17,20 +17,18 @@
         @include('partials/faqs', ['faqs', $faqs ?? []])
         @include('partials/stalker', [])
 
-
     @else
+
         @include('partials/selling_points_bar')
         @include('partials/hero')
         @include('partials/quote_form')
         @include('partials/how_we_work')
-
-        @include('partials/masonry_grid')
+        @include('partials/our_services')
         @include('partials/why_customers_love_us')
-        @include('partials/made_in_britain')
-        @include('partials/local_to_you')
+        @include('partials/benefits')
+        @include('partners/eco-tech-conservatories/partials/testimonials')
         @include('partials/price_beater')
         @include('partials/faqs', ['faqs', $faqs ?? []])
-        @include('partials/savings')
         @include('partials/stalker', [])
 
     @endif
@@ -56,12 +54,9 @@
 
         <div class="selling_points_container">
             <ul>
-                <li><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
-                <li><i class="fa fa-check-circle"></i> Free Expert Advice</li>
-                <li><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
-                <li><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
-                <li><i class="fa fa-check-circle"></i> Finance Available</li>
-                <li><i class="fa fa-check-circle"></i> 10 Year Warranties</li>
+                @foreach($hero['hero_selling_points'] as $selling_point)
+                    <li><i class="fa fa-check-circle"></i> {{$selling_point}}</li>
+                @endforeach
             </ul>
         </div>
     </dialog>

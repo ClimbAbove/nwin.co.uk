@@ -109,17 +109,21 @@ section.testimonials .testimonials_glide ul li .testimonial_card .flare .circle 
     justify-content: center;
     align-items: center;
 }
-section.testimonials .testimonials_glide ul li .testimonial_card .flare_0 {
+section.testimonials .testimonials_glide ul li .testimonial_card .flare_0,
+section.testimonials .testimonials_glide ul li .testimonial_card .flare_3 {
     background: url('/images/flares/thumbs.png') center center no-repeat;
     height:37px;
     width:33px;
 }
-section.testimonials .testimonials_glide ul li .testimonial_card .flare_1 {
+section.testimonials .testimonials_glide ul li .testimonial_card .flare_1,
+section.testimonials .testimonials_glide ul li .testimonial_card .flare_4 {
     background: url('/images/flares/rosette.png') center center no-repeat;
     height:38px;
     width:36px;
 }
-section.testimonials .testimonials_glide ul li .testimonial_card .flare_2 {
+section.testimonials .testimonials_glide ul li .testimonial_card .flare_2,
+section.testimonials .testimonials_glide ul li .testimonial_card .flare_5
+{
     background: url('/images/flares/smile.png') center center no-repeat;
     height:37px;
     width:37px;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Pages;
 
+use App\Forms\InlineForm;
 use App\Http\Controllers\Abstracts\AbstractController;
 
 
@@ -36,6 +37,13 @@ class HomepageController extends AbstractController
         $data['faqs']                  = $content_repository->getFAQs();
         $data['testimonials']          = $content_repository->getTestimonials();
         $data['questionnaire_element'] = $window_quote_repository->getQuestionnaire();
+
+        $form = new InlineForm();
+
+
+        $form->action('/thank-you');
+        $data['inline_form'] = $form->build();
+
 
         if($this->opening_hours_logic === false) {
             $data['contact_mode'] = 'form';

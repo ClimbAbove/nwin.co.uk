@@ -11,7 +11,71 @@
 
                     <div class="reversable">
 
+                        @if(($hero['review_partners'] ?? null) !== null)
+                            <div class="star_container">
+                                @foreach($hero['review_partners'] as $review_partner)
+                                <div class="box" style="text-align: center;">
+                                    @if(($review_partner['href'] ?? null) !== null)
+                                        <a target="_blank" href="{{$review_partner['href']}}">
+                                            <img src="{{$review_partner['image']}}">
+                                        </a>
+                                    @else
+                                        <img src="{{$review_partner['image']}}">
+                                    @endif
+                                </div>
+                                @endforeach
+                            </div>
+                        @else
+                            <div class="star_container">
+                                <div class="box" style="text-align: center;">
+                                    <img src="/images/logos/trustpilot-stars-60.png">
+                                </div>
+                                <div class="box" style="text-align: center;">
+                                    <img src="/images/logos/google-reviews-60.png">
+                                </div>
+                            </div>
+                        @endif
 
+
+                        @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => false])
+
+                        <div class="selling_points_container">
+                            <ul class="desktop">
+                                @foreach($hero['hero_selling_points'] as $index => $selling_point)
+                                    <li class="point-{{$index}}">
+                                        <i class="fa fa-check-circle"></i> {{$selling_point}}
+                                    </li>
+                                @endforeach
+                            </ul>
+
+                            <ul class="mobile">
+                                @foreach($hero['hero_selling_points_mobile'] as $index => $selling_point)
+                                    <li class="point-{{$index}}">
+                                        <i class="fa fa-check-circle"></i> {{$selling_point}}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+                    @if(($hero['review_partners'] ?? null) !== null)
+                        <div class="star_container mobile">
+                            @foreach($hero['review_partners'] as $review_partner)
+                                <div class="box" style="text-align: center;">
+                                    @if(($review_partner['href'] ?? null) !== null)
+                                        <a target="_blank" href="{{$review_partner['href']}}">
+                                            <img src="{{$review_partner['image']}}">
+                                        </a>
+                                    @else
+                                        <img src="{{$review_partner['image']}}">
+                                    @endif
+                                </div>
+                            @endforeach
+                        </div>
+                    @else
                         <div class="star_container">
                             <div class="box" style="text-align: center;">
                                 <img src="/images/logos/trustpilot-stars-60.png">
@@ -20,38 +84,8 @@
                                 <img src="/images/logos/google-reviews-60.png">
                             </div>
                         </div>
-                        @include('partials/ctas/button', ['seconds' => true, 'scrolling_text_enabled' => false])
+                    @endif
 
-                        <div class="selling_points_container">
-                            <ul class="desktop">
-                                <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
-                                <li class="two"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
-                                <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li>
-                                <li class="four"><i class="fa fa-check-circle"></i> Finance Available</li>
-                                <li class="five"><i class="fa fa-check-circle"></i> Friendly & Local Installers</li>
-                                <li class="six"><i class="fa fa-check-circle"></i> 10 Year Warranties</li>
-                            </ul>
-
-                            <ul class="mobile">
-                                <li class="one"><i class="fa fa-check-circle"></i> Guaranteed Lowest Price</li>
-                                <li class="two"><i class="fa fa-check-circle"></i> Rated "Excellent" on TrustPilot</li>
-                                <li class="three"><i class="fa fa-check-circle"></i> Free Expert Advice</li>
-                                <li class="four"><i class="fa fa-check-circle"></i> Low Monthly Finance</li>
-                                <li class="five"><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-
-                    <div class="star_container mobile">
-                        <div class="box" style="text-align: center;">
-                            <img src="/images/logos/trustpilot-stars-60.png">
-                        </div>
-                        <div class="box" style="text-align: center;">
-                            <img src="/images/logos/google-reviews-60.png">
-                        </div>
-                    </div>
                 </div>
 
                 <div class="large-6 small-12 hero_image_container">
@@ -223,6 +257,9 @@
                 align-items: center;
                 align-content: center;
                 padding:0.8rem;
+            }
+            .section_hero .star_container .box a {
+                width:100%;
             }
             .section_hero .star_container .box img {
                 margin: auto;

@@ -41,6 +41,30 @@ class ContactUsController extends AbstractController
             $data['telephone']['number']        = $data['config']['telephone']['number'];
         }
 
+        $recipient = 'mailspringie@gmail.com';
+
+        Mail::to($recipient)
+            ->bcc([
+            ])
+            ->send(new ContactUs([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'telephone_number' => $request->input('telephone_number'),
+            ]));
+
+        $data['name'] = trim($request->input('name'));
+
+        $untidy_email = $request->input('email');
+        $untidy_email = strtolower($untidy_email);
+        $untidy_email = $this->removeAccents($untidy_email);
+        $untidy_email = preg_replace('/\s+/','', $untidy_email);
+        list($email, $domain) = explode('@', $untidy_email);
+        $untidy_email = preg_replace('/\./','', $email) . '@'. preg_replace('/\.$/','',$domain);
+        $untidy_email = preg_replace('/\+([^\@]+)/','', $untidy_email);
+
+        $data['tidy_email'] = $untidy_email;
+        $data['tidy_phone'] = trim($request->input('telephone_number'));
+
         return $this->render('pages/contact_us', $data);
     }
 

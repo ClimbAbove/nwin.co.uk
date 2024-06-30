@@ -20,6 +20,30 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $hero['h1'] = 'Conservatories Experts';
         $hero['h2'] = 'Unbeatable Prices, Unbeatable Quality';
         $hero['hero_image'] = '/images/partners/eco-tech-conservatories/hero.png';
+        $hero['hero_selling_points'] = [
+            'Guaranteed Lowest Price',
+            'Free Expert Advice',
+            'Friendly & Local Installers',
+            '25+ Years Experience',
+            'Finance Available',
+            '10 Year Warranties',
+        ];
+        $hero['hero_selling_points_mobile'] = [
+            'Rated "Excellent" on TrustPilot',
+            'Free Expert Advice',
+            'Low Monthly Finance',
+            '25+ Years Experience',
+        ];
+        $hero['review_partners'] = [
+            [
+                'image' => "/images/logos/trustpilot-stars-60.png",
+                'href' => null,
+            ],
+            [
+                'image' => "/images/logos/google-reviews-60.png",
+                'href' => null,
+            ]
+        ];
 
         return $hero;
     }
@@ -32,6 +56,7 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $config['logo']             = '/images/partners/eco-tech-conservatories/logo.png';
         $config['company_name']     = 'MK Developments and Construction Ltd trading as Eco Tech Conservatories';
         $config['company_number']   = '13943142';
+        $config['company_email']   = 'info@ecotechconservatories.co.uk';
         $config['vat_number']       = '446852270';
         $config['tracking_product'] = 'conservatory';
 

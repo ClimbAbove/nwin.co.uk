@@ -25,8 +25,8 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $question->id = 'product_type';
         $question->type = 'tile';
         $question->min_answers = 1;
-        $question->text = 'What are you looking for?';
-        $question->sub_text = 'What are you looking for?';
+        $question->text = 'Get a Quick Quote in 30 Seconds';
+        $question->sub_text = '';
         $question->next_step = 'form_step_1';
 
         $answer = new AnswerElement();

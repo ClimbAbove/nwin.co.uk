@@ -1,0 +1,80 @@
+:root {
+    --ca-button-primary: #ff4747;
+}
+.masthead .logo_container img {
+    height:75px;
+    width:auto;
+    margin-top:1.2rem;
+}
+#profitinstallations-body .hero_image_container .hero_image {
+    background-image: url('/images/partners/eco-tech-conservatories/hero.png');
+    background-size:cover;
+}
+#profitinstallations-body .section_hero h1 {
+    text-align: center;
+}
+#profitinstallations-body .section_hero h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+#profitinstallations-body .section_hero .hero_image_container {
+    text-align: right;
+    height: 490px;
+}
+#profitinstallations-body .section_hero .hero_image_container .slant {
+    right:-4rem;
+}
+#profitinstallations-body .section_hero .selling_points_container {
+    margin-left:3.7rem;
+}
+#profitinstallations-body footer .logo_container img {
+    height:80px;
+}
+#profitinstallations-body footer p.copyright {
+    text-align: center;
+}
+@media print, screen and (max-width: 1210px) {
+    #profitinstallations-body  .section_hero .selling_points_container ul li {
+        font-size:1rem !important;
+
+    }
+    #profitinstallations-body .section_hero .hero_image_container {
+        height:455px;
+    }
+    #profitinstallations-body .section_hero .hero_image_container .slant {
+        right:-6rem;
+    }
+}
+@media print, screen and (max-width: 1120px) {
+    #profitinstallations-body .hero_image_container .hero_image {
+        background-size: 130% !important;
+        height: 506px;
+    }
+    #profitinstallations-body .section_hero .hero_image_container .slant {
+        right:-8rem;
+    }
+}
+
+@media print, screen and (max-width: 705px) {
+#profitinstallations-body .section_hero .selling_points_container {
+    margin-left:0;
+}
+}
+
+
+
+@media print, screen and (max-width: 460px) {
+    footer .ca {
+        line-height: 1rem;
+        font-size:0.8rem;
+    }
+    .masthead .fensa img {
+        display: none!important;
+    }
+
+    .masthead .logo_container {
+        width: 100%;
+        display:block;
+        text-align: center;
+    }
+}

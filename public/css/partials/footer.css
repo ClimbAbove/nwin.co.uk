@@ -63,6 +63,35 @@ footer p.copyright {
     font-size: 0.6rem;
     margin-top:1rem;
 }
+
+footer .ca {
+    color:#F2F2F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+    font-size:0.8rem;
+}
+footer .ca img {
+    height:20px;
+    margin: 0.4rem;
+    vertical-align: center;
+}
+footer .ca a {
+    color:#F2F2F2;
+    text-decoration: underline;
+}
+
+footer .block .content a {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+footer .block .content a:hover {
+    color:#FFFFFF;
+    text-decoration: underline;
+}
 @media print, screen and (max-width: 40em) {
     footer {
         text-align: center;

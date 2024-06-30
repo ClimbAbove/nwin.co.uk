@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Classes\Elements\Questionnaire\QuestionnaireElement;
 use App\Http\Controllers\Abstracts\AbstractController;
 use App\Mail\ContactUs;
+use App\Repositories\Interfaces\ContentRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -47,8 +48,10 @@ class QuestionnaireController extends AbstractController
 
         } else {
 
+            $content_repository = app()->make(ContentRepositoryInterface::class);
+            $data['config']  = $content_repository->getConfig();
 
-            $recipient = 'info@ecotechconservatories.co.uk';
+            $recipient =  $data['config']['company_email'];
 
             Mail::to($recipient)
                 ->bcc([

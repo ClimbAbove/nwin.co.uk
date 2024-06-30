@@ -1,7 +1,12 @@
+section.faqs {
+    background: #ECECEC;
+    margin-top:2rem;
+}
 section.faqs dt {
     border:1px solid #e8e8e8;
     border-left: 8px solid var(--ca-tertiary);
     position: relative;
+    background:#FFFFFF;
 }
 section.faqs dt .icon {
     position: absolute;

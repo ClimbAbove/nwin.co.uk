@@ -165,5 +165,13 @@
 
 
     }
-
+    @media print, screen and (max-width: 380px) {
+        section.our_services .services_grid .service .cta_container .button {
+            font-size:0.9rem;
+            padding:0.8rem;
+        }
+        section.our_services .seconds{
+            font-size:0.7rem;
+        }
+    }
 </style>

@@ -3,6 +3,8 @@
 namespace App\Repositories\Implementations\Nwin;
 
 
+use App\DTOs\TestimonialDTO;
+use App\DTOs\TestimonialsDTO;
 use App\Repositories\Content\DefaultContentRepository;
 use App\Repositories\Interfaces\ContentRepositoryInterface;
 use Carbon\Carbon;
@@ -16,6 +18,30 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $hero['h1'] = 'Window & Door Sale';
         $hero['h2'] = 'Unbeatable Prices, Unbeatable Quality';
         $hero['hero_image'] = '/images/partners/nwin/hero.png';
+        $hero['hero_selling_points'] = [
+           'Guaranteed Lowest Price',
+           'Free Expert Advice',
+           'Friendly & Local Installers',
+           '25+ Years Experience',
+           'Finance Available',
+           '10 Year Warranties',
+        ];
+        $hero['hero_selling_points_mobile'] = [
+            'Rated "Excellent" on TrustPilot',
+            'Free Expert Advice',
+            'Low Monthly Finance',
+            '25+ Years Experience',
+        ];
+        $hero['review_partners'] = [
+            [
+                'image' => "/images/logos/trustpilot-stars-60.png",
+                'href' => null,
+            ],
+            [
+                'image' => "/images/logos/google-reviews-60.png",
+                'href' => null,
+            ]
+        ];
 
         return $hero;
     }
@@ -27,6 +53,7 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         $config['logo'] = '/images/partners/nwin/logo.png';
         $config['company_name'] = 'NWIN';
         $config['company_number'] = '1231312';
+        $config['company_email']   = 'hello@climbabove.co.uk';
         $config['vat_number'] = '34234234';
         $config['tracking_product'] = 'windows_and_doors';
 
@@ -67,6 +94,34 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             'Poole',
         ];
     }
+
+    public function getTestimonials()
+    {
+
+        $testimonials_dto = new TestimonialsDTO();
+
+        $testimonial_dto = new TestimonialDTO();
+        $testimonial_dto->title = "Exceptional Quality, Endless Delight";
+        $testimonial_dto->caption = "I recently had the pleasure of working with Ecotech Conservatories to install a new conservatory in my home, and I couldn't be happier with the results. From start to finish, the team was professional, courteous, and highly skilled. They listened to my needs and preferences, offering valuable suggestions along the way. The quality of their product exceeded my expectations. I now have a beautiful space that I can enjoy all year round thank you Ecotech";
+        $testimonial_dto->author = "Ethan H";
+        $testimonials_dto->addTestimonial($testimonial_dto);
+
+        $testimonial_dto = new TestimonialDTO();
+        $testimonial_dto->title = "Great Experience";
+        $testimonial_dto->caption = "We had such a great experience with Eco Tech. The window fitters were amazing at making the experience as stress free as possible. They were also lovely guys which also helps. The windows are incredible, and have made such a difference to our home. This is the best quote we received by far, and the quality is exceptional! I cannot rate them enough";
+        $testimonial_dto->author = "Shaune B";
+        $testimonials_dto->addTestimonial($testimonial_dto);
+
+        $testimonial_dto = new TestimonialDTO();
+        $testimonial_dto->title = "Great team turned up promptly";
+        $testimonial_dto->caption = "Great team turned up promptly, explained to me exactly what they were going to do and got stuck straight into the job even when I asked a question they were great at explaining to me. Really customer focused even doing a bit of work for me for free ( not in the quote ) after completing I rang the office to make final payment which was so smooth and within a minute had a receipt emailed. Would definitely use again not just builders but gentleman builders. Turned my conservatory into a lovable room.";
+        $testimonial_dto->author = "Jeremy P";
+        $testimonials_dto->addTestimonial($testimonial_dto);
+
+        return $testimonials_dto;
+
+    }
+
 
     public function getMasonry()
     {

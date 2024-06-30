@@ -86,6 +86,43 @@
                                 </p>
                             </div>
                         </div>
+
+                        <div class="cell large-6 card">
+                            <div class="image">
+                                <div class="circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 300 300"><path d="M207 280a6 6 0 0 1-6 6h-99a6 6 0 0 1-6-6V22a6 6 0 0 1 6-6h99a6 6 0 0 1 6 6v258z"/><path fill="none" stroke="#FFF" stroke-miterlimit="10" d="M207.5 279.5c0 3.3-2.7 6-6 6h-99c-3.3 0-6-2.7-6-6v-258c0-3.3 2.7-6 6-6h99c3.3 0 6 2.7 6 6v258z"/><path d="M281 95c3.3 0 6 2.7 6 6v99c0 3.3-2.7 6-6 6H23c-3.3 0-6-2.7-6-6v-99c0-3.3 2.7-6 6-6h258z"/></svg>
+                                </div>
+                            </div>
+                            <div class="blurb">
+                                <p class="title">Premium After Care</p>
+                                <p>
+                                    Our dedicated after care team are as experienced as they come, and are fully devoted to assisting you with any queries.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cell large-6 card">
+                            <div class="image">
+                                <div class="circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 150 150">
+<g fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+    <path d="M126.334 56.104c5.477 0 10.041 4.482 10.041 10.01 0 5.53-4.377 10.012-9.854 10.012"/>
+    <path d="m126.021 76.083.544.021h0c5.477 0 9.926 4.454 9.926 9.948 0 5.495-4.43 9.948-9.906 9.948H127l-4.984.094-.432.01c5.477 0 9.916 4.482 9.916 10.01 0 5.53-4.439 10.012-9.916 10.012l.374-.041-5.374.02c5.477 0 9.916 4.454 9.916 9.948 0 5.495-4.439 9.948-9.916 9.948H117 84h.188c-12.75-.813-16.704-12.209-28.549-12.256l1.355.008-7.9-.035M48.857 64.502l7.162.023-.746.01c13.734.053 19.312-8.785 23.645-14.452 6.417-9.458 7.495-38.833 13.458-38.833C106.209 11.167 106 22.667 106 26.333v-.583c0 16.858-2.25 26.875-4.75 30.125l.188.208 24.865.02h0"/>
+</g>
+                                        <path fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M48 126a2 2 0 0 1-2 2H19a2 2 0 0 1-2-2V63a2 2 0 0 1 2-2h27a2 2 0 0 1 2 2v63z"/>
+                                        <ellipse fill="#000000" cx="33.25" cy="115.341" rx="6.799" ry="7.02"/>
+                                        <path fill="#FFF" d="M37.169 117.603c-.798 1.464-2.298 2.375-3.919 2.375-2.479 0-4.487-2.079-4.487-4.636 0-2.555 2.009-4.634 4.487-4.634 1.621 0 3.122.907 3.919 2.373a.611.611 0 0 1-.226.813.57.57 0 0 1-.787-.228c-.593-1.089-1.706-1.763-2.907-1.763-1.839 0-3.33 1.544-3.33 3.438 0 1.898 1.491 3.438 3.33 3.438 1.201 0 2.313-.673 2.907-1.76a.565.565 0 0 1 .787-.229.61.61 0 0 1 .226.813z"/>
+                                        <path fill="#FFF" d="M37.394 116h-2.826c-.308 0-.559-.191-.559-.5 0-.311.251-.5.559-.5h2.826c.309 0 .558.189.558.5-.001.309-.25.5-.558.5z"/>
+</svg>
+
+                                </div>
+                            </div>
+                            <div class="blurb">
+                                <p class="title">5 Star Reviews</p>
+                                <p>
+                                    Our online 5 Star review testament to our expertise, performance and dedicated customer service.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -30,6 +30,9 @@ class AppRepositoryProvider extends ServiceProvider
             if($p == 1) {
                 $domain = 'ecotechconservatories.local';
             }
+            if($p == 2) {
+                $domain = 'profitinstallations.local';
+            }
         }
 
         switch($domain) {
@@ -43,6 +46,13 @@ class AppRepositoryProvider extends ServiceProvider
 
                 break;
 
+            case 'profitinstallations.local':
+            case 'pro-installations..co.uk':
+
+                $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\ProFitInstallations\WindowQuoteRepository::class);
+                $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\ProFitInstallations\ContentRepository::class);
+
+            break;
             case 'nwin.local':
             case 'nwin.co.uk':
             case 'www.nwin.co.uk':
