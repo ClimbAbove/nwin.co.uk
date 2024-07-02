@@ -460,15 +460,39 @@
                            }
                         }
 
+                        @media print, screen and (max-width: 380px) {
+                            section.results .price_container .text {
+                                font-size: 1rem;
+                                font-family: lato;
+                                font-weight: bold;
+                            }
+                            section.results .price_container .price {
+                                font-size: 2rem;
+                                font-family: lato;
+                                font-weight: bold;
+                            }
+                            section.results .price_container .vat {
+                                font-size: 0.6rem;
+                            }
 
+
+                            section.what_happens_next h2 {
+                                font-size:1.8rem;
+                            }
+                            section.what_happens_next .step .number {
+                                font-size: 1.8rem;
+                                width: 3.4rem;
+                                height: 3.4rem;
+                                border-radius: 1.75rem;
+                            }
+
+                        }
 
                     </style>
 
-
+xxxx
 
                 </section>
-
-
 
 
 

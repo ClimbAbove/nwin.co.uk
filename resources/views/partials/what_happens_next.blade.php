@@ -66,5 +66,9 @@
         font-size:1.2rem;
     }
 
-
+    @media print, screen and (max-width: 380px) {
+        .what_happens_next h2 {
+            font-size:1.2rem;
+        }
+    }
 </style>
