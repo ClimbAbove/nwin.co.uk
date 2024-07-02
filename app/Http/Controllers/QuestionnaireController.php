@@ -22,7 +22,7 @@ class QuestionnaireController extends AbstractController
 
 
         $data = $questionnaire_element->getData();
-/*
+
         if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
 
             if($data['email']['answer'] == 'mailspringie@gmail.com') {
@@ -67,7 +67,7 @@ class QuestionnaireController extends AbstractController
                 );
         }
 
-*/
+
     }
 
     public function saveConservatoryQuote(QuestionnaireElement $questionnaire_element)
