@@ -10,7 +10,7 @@ class InlineForm extends Form
     {
         $this->input('name')->label('Name');
         $this->input('telephone_number')->label('Telephone Number');
-        $this->input('email')->label('Email');
+        $this->email('email')->label('Email');
         $this->hidden('liame');
         $this->button('send')->value('Send')->class('primary');
 

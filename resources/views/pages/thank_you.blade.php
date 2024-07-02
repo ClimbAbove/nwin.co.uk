@@ -6,7 +6,7 @@
     <section class="thank_you">
         <div class="grid-container">
             <div class="grid-x">
-                <div class="large-12">
+                <div class="large-12 medium-12 small-12">
                     <div class="content">
                         <h1>Thank You</h1>
                         <p>
@@ -23,9 +23,7 @@
     </section>
 
     <style>
-        body {
-            background:#ECECEC;
-        }
+
         .thank_you .button {
             font-weight: bold;
             margin-top:2rem;
@@ -37,11 +35,9 @@
         .thank_you {
             background:#ECECEC;
             padding:2rem;
-            margin-top:2rem;
+            min-height:600px;
         }
-        footer {
-            position: absolute;
-        }
+
 
         .thank_you .content {
             background: #FFF;
@@ -54,6 +50,33 @@
         }
         #profitinstallations-body .masthead + .selling_points_bar{
             margin-top:0;
+        }
+
+        @media print, screen and (max-width: 640px) {
+            h1 {
+                font-size:2.4rem;
+            }
+            footer {
+                position: static;
+            }
+            .thank_you {
+                padding:2rem 1rem;
+                min-height:300px;
+            }
+
+        }
+        @media print, screen and (max-width: 450px) {
+            .thank_you {
+                padding:2rem 1rem;
+                min-height:300px;
+            }
+            .content .button {
+                width:100%;
+                font-size:0.9rem;
+            }
+            .thank_you .content {
+                padding:1rem;
+            }
         }
     </style>
 @endsection

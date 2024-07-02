@@ -19,6 +19,7 @@
 
                                     @switch($data['product_type']['answer'])
                                         @case('new_conservatory')
+                                        @case('conservatory')
                                             <img src="/images/icons/conservatory.svg" alt="Icon">
                                         @break
                                         @case('doors')
@@ -75,6 +76,7 @@
 
                                         @switch($data['product_type']['answer'])
                                             @case('new_conservatory')
+                                            @case('conservatory')
                                                 <div class="price">£14,995</div>
                                                 @break
                                             @case('doors')
@@ -175,6 +177,7 @@
 
                             @switch($data['product_type']['answer'])
                                 @case('new_conservatory')
+                                @case('conservatory')
                                     <div class="step cell large-4">
                                         <div class="number">2</div>
                                         <div class="image_container">
@@ -428,7 +431,9 @@
                             font-family: "lato";
                         }
 
-
+.result_row .image img {
+    max-width:180px;
+}
                         @media print, screen and (max-width: 1023px) {
 
                             section.what_happens_next {
@@ -490,7 +495,7 @@
 
                     </style>
 
-xxxx
+
 
                 </section>
 

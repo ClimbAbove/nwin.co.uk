@@ -124,4 +124,11 @@
         }
 
     }
+
+
+    @media print, screen and (max-width: 400px) {
+        .selling_points_bar ul li span {
+            font-size:0.9rem;
+        }
+    }
 </style>

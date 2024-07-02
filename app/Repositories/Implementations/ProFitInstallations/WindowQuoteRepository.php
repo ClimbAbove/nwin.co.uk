@@ -94,7 +94,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $form_two->id = 'form_step_1';
         $form_two->name = 'form_step_1';
         $form_two->text = 'Last step to receive your prices…';
-        
+
         $field = new FormFieldElement([
             'name' => 'name',
             'label' => 'Your Name',
@@ -105,7 +105,7 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $field = new FormFieldElement([
             'name' => 'email',
             'label' => 'Your Email',
-            'type' => 'text',
+            'type' => 'email',
         ]);
         $form_two->pushField($field);
 

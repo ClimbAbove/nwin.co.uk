@@ -72,16 +72,22 @@
         line-height: 1rem;
         font-size:0.8rem;
     }
-    .masthead .fensa {
-        display:none;
+    #profitinstallations-body .section_hero h1 {
+        text-align: center;
+        font-size:2.5rem;
+    }
+    .masthead .logo_container img {
+        width:50x;
+        height:50px;
     }
     .masthead .fensa img {
-       /* display: none!important;*/
+        width:90px;
+        height:50px;
+        margin-top:4px;
     }
-    .masthead.mobile .inner {
-      /*  display:block;*/
+    .cta_container .cta.secondary.ghost {
+        margin-top:1.2rem;
     }
-
     .masthead.mobile {
         display: flex !important;
         flex-direction: row;
@@ -100,10 +106,7 @@
     .masthead .cta_wrapper .cta_container {
         margin:auto;
     }
-    .masthead .cta_wrapper .cta_container .button {
-        margin: 1rem 0 0 0;
 
-    }
     .masthead .logo_container {
        /* width: 100%;
         display:block;
@@ -113,12 +116,41 @@
         margin-top:0.3rem;
     }
 }
-
+@media print, screen and (max-width: 420px) {
+    .masthead .cta_wrapper .cta_container .button {
+        margin-top: 0;
+    }
+    .masthead .fensa img {
+        width:80px;
+        height:40px;
+        margin-top:14px;
+    }
+}
 @media print, screen and (max-width: 330px) {
     .masthead .logo_container img {
         max-height: 50px;
     }
     .masthead .cta_wrapper .cta_container .button {
         margin-top:0;
+        padding:0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+    #profitinstallations-body .section_hero h1 {
+        text-align: center;
+        font-size:2rem;
+    }
+}
+@media print, screen and (max-width: 318px) {
+    .masthead .fensa {
+        display: inline-block;
+    }
+    #profitinstallations-body .section_hero .star_container .box img {
+        height: 38px;
+    }
+}
+@media print, screen and (max-width: 285px) {
+    .masthead .fensa {
+        display: none;
     }
 }

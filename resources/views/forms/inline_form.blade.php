@@ -25,14 +25,17 @@
 {!! $page->addJS('<script src="/modules/FormBuilder/js/pristine.min.js"></script>','top') !!}
 
 <style>
-    .input_input {
+    .input_input, .input_email {
         padding:0.3rem;
         border-radius: 0.2rem;
         outline: none;
         border:1px solid #CCCCCC;
         box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
         width:100%;
+        height:36px;
     }
+
+
     .input_textarea {
         padding:0.3rem;
         border-radius: 0.2rem;

@@ -132,6 +132,7 @@ class FormElement extends AbstractQuestionnaireElement
         else {
             switch ($this->type) {
                 case 'text':
+                case 'email':
 
                     foreach (($this->fields ?? []) as $field) {
                         if ($field->answered === true) {

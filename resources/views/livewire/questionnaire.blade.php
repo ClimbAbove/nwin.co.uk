@@ -52,6 +52,19 @@
                                         </div>
                                     @break
 
+                                    @case('email')
+                                        <div class="field_container text">
+                                            <label>{{ $field->label }}</label>
+                                            <input type="email" wire:model="_form_fields.{{$field->name}}" wire:key="{{$field->id}}">
+                                            <div class="error">
+                                                @if(isset($_custom_validation_messages[$field->name]))
+                                                    {{$_custom_validation_messages[$field->name] ?? ''}}
+                                                @endif
+                                            </div>
+                                            <div class="error">@error($field->name){{$message}} @enderror</div>
+                                        </div>
+                                        @break
+
                                 @endswitch
 
                             @endforeach

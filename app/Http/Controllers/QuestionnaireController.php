@@ -40,7 +40,7 @@ class QuestionnaireController extends AbstractController
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
-                        'postcode'         => $data['postcode']['answer'],
+                        'postcode'         => '',
                     ])
                 );
 
@@ -62,7 +62,7 @@ class QuestionnaireController extends AbstractController
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
-                        'postcode'         => $data['postcode']['answer'],
+                        'postcode'         => '',
                     ])
                 );
         }
@@ -95,7 +95,7 @@ class QuestionnaireController extends AbstractController
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
-                        'postcode'         => ($data['postcode']['answer'] ?? ''),
+                        'postcode'         => '',
                     ])
                 );
 
@@ -117,7 +117,7 @@ class QuestionnaireController extends AbstractController
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
-                        'postcode'         => ($data['postcode']['answer'] ?? ''),
+                        'postcode'         => '',
                     ])
                 );
         }
