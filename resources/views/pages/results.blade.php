@@ -59,7 +59,11 @@
                                 <div class="cells large-6 medium-12 small-12 detail">
 
                                     @if($data['product_type']['answer'] == 'conservatory_repair')
-                                        <p style="text-align: center; font-weight: bold">We can undertake your {{ str_replace(['-','_', 'new'], ' ', $data['product_type']['answer']) }}</p>
+                                        <p style="text-align: center; font-weight: bold">We can undertake your new {{ str_replace(['-','_'], ' ', $data['product_type']['answer']) }}</p>
+                                    @elseif($data['product_type']['answer'] == 'garage_door')
+                                        <p style="text-align: center; font-weight: bold">We can supply and install your new Garage Door</p>
+                                    @elseif($data['product_type']['answer'] == 'orangeries')
+                                        <p style="text-align: center; font-weight: bold">We can supply and install your new Orangery</p>
                                     @else
                                         <p style="text-align: center; font-weight: bold">We can supply and install your new {{ str_replace(['-','_', 'new'], '', $data['product_type']['answer']) }}</p>
                                     @endif

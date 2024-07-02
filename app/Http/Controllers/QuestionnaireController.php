@@ -15,11 +15,14 @@ class QuestionnaireController extends AbstractController
     public function save(QuestionnaireElement $questionnaire_element)
     {
 
+        session()->forget('quote_type');
+        session()->forget('data');
         session()->push('quote_type', 'default');
         session()->push('data', $questionnaire_element->getData());
 
-        $data = $questionnaire_element->getData();
 
+        $data = $questionnaire_element->getData();
+/*
         if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
 
             if($data['email']['answer'] == 'mailspringie@gmail.com') {
@@ -64,7 +67,7 @@ class QuestionnaireController extends AbstractController
                 );
         }
 
-
+*/
     }
 
     public function saveConservatoryQuote(QuestionnaireElement $questionnaire_element)
