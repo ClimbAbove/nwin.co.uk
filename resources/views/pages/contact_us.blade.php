@@ -17,7 +17,7 @@
     </section>
     <style>
         h1 {
-            font-family: 'Lato Black', sans-serif;
+            font-family: 'Lato', sans-serif;
         }
         footer {
 

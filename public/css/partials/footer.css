@@ -20,7 +20,7 @@ footer .logo_container svg g {
 }
 footer .block p.title {
     color: var(--ca-white);
-    font-family: "Lato Black";
+    font-family: "Lato";
     font-size:1.2rem;
     margin-bottom: 0.2rem;
 }
