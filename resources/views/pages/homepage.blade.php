@@ -25,6 +25,12 @@
         @include('partials/how_we_work')
         @include('partials/our_services')
         @include('partials/why_customers_love_us')
+
+        <div id="faqs_cta" class="large-12 medium-12 small-12 cta_container" style="padding-top:2rem;">
+            <div class="cta_wrapper">
+                @include('partials/ctas/button', ['cta_text' => "Find Prices Now!",'seconds' => true, 'scrolling_text_enabled' => false])
+            </div>
+        </div>
         @include('partials/benefits')
         @include('partners/eco-tech-conservatories/partials/testimonials')
         @include('partials/price_beater')
