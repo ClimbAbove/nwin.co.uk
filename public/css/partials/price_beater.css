@@ -104,5 +104,14 @@
         font-size:2rem;
     }
 }
+@media print, screen and (max-width: 340px) {
+    .section_price_beater .content_container {
+        padding:1rem 0.4rem;
 
+    }
+    .section_price_beater .image_container img {
+        width:80%;
+    }
+
+}
 
