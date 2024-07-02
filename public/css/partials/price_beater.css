@@ -2,9 +2,13 @@
     background:#ececec;
     background: radial-gradient(ellipse at center, #7db9e8 0%, #207cca 0%, #2989d8 0%, #1e5799 100%);
     margin-top: 2rem;
-    padding: 6rem 4rem 4.5rem 4rem;
+    padding: 2rem 4rem 0.75rem 4rem;
     background:#FFFFFF;
     padding-top:1rem;
+    margin-top:1rem;
+}
+.section_price_beater h3 {
+    font-size:2.4rem;
 }
 .section_price_beater .block {
     padding:2rem;
@@ -12,6 +16,9 @@
     border-radius: 2rem;
     background:#21427f;
     color:#FFFFFF;
+}
+.section_price_beater .cta_wrapper {
+    text-align: center;
 }
 .section_price_beater .image_container img {
     transform: rotate(-20deg);
@@ -44,6 +51,8 @@
     margin-right:0.3rem;
     color: var(--ds-green)
 }
+
+
 @media print, screen and (max-width: 1023px) {
     .section_cta_block {
         padding:1rem;
@@ -56,7 +65,7 @@
 .price_beater .image_container img {
     transform: rotate(-20deg);
 }
-.price_beater .content_container {
+.section_price_beater .content_container {
     padding:0 2rem;
     display: flex;
     flex-direction: column;
@@ -83,11 +92,13 @@
 }
 @media print, screen and (max-width: 500px) {
     .section_price_beater .block {
-        padding: 1rem;
+        padding: 0.4rem;
         text-align: center;
         border-radius: 2rem;
-        background: var(--ds-primary);
-        color: var(--ds-white);
+    }
+    .section_price_beater {
+        margin-top:0;
+        padding:1rem;
     }
     .section_price_beater .block h3 {
         font-size:2rem;

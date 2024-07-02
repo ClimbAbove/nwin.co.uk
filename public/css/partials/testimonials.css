@@ -83,7 +83,12 @@ section.testimonials .testimonials_glide ul li .testimonial_card .title {
     font-size:1.4rem;
     font-weight:bold;
 }
-
+section.testimonials .cta_container .cta {
+    color: #FFFFFF;
+    background: var(--ca-button-primary);
+    border: 2px solid var(--ca-button-primary);
+    margin-top:1.2rem;
+}
 section.testimonials .testimonials_glide ul li .testimonial_card .testimonial {
     padding: 3rem 2rem 0 2rem;
 }
@@ -183,7 +188,12 @@ section.testimonials .testimonials_glide ul li .testimonial_card .author {
     height:46px;
     margin-bottom: -60px;
 }
-
+section.testimonials .cta_wrapper {
+    text-align: center;
+}
+section.testimonials .seconds {
+    color:#000;
+}
 @media print, screen and (max-width: 40em) {
     section.testimonials {
         padding:1.5rem 0 2rem 0;
@@ -224,6 +234,9 @@ section.testimonials .testimonials_glide ul li .testimonial_card .author {
 @media print, screen and (max-width: 600px) {
     section.testimonials {
         padding:2rem 0 !important;
+    }
+    section.testimonials .cta_wrapper {
+        padding:0 1rem !important;
     }
     section.testimonials h2 {
         font-size:1.5rem !important;

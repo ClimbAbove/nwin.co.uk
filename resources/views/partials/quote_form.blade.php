@@ -8,7 +8,7 @@
                     <ul>
                         <li><i class="fa fa-check-circle"></i> Free No Obligation Quote</li>
                         <li><i class="fa fa-check-circle"></i> Leading Brands</li>
-                        <li><i class="fa fa-check-circle"></i> Lowest prices</li>
+                        <li><i class="fa fa-check-circle"></i> Lowest price</li>
                         <li><i class="fa fa-check-circle"></i> 25+ Years Experience</li>
                         <li><i class="fa fa-check-circle"></i> Free Expert Advice</li>
                         <li><i class="fa fa-check-circle"></i> 10 Year Warranties</li>

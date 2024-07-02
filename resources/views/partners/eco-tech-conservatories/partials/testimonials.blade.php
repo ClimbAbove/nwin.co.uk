@@ -46,9 +46,9 @@
                 @endforeach
             </ul>
         </div>
+        @include('partials/ctas/button', ['cta_text' => 'Find Prices Now!', 'seconds' => true])
     </div>
 </section>
-
 
 {!! $page->addCSS('<link rel="stylesheet" href="/assets/css/partials/testimonials.min.css">','bottom') !!}
 {!! $page->addJS('<script src="/assets/js/glide.min.js"></script>','top') !!}

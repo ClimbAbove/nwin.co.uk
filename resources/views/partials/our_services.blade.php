@@ -147,6 +147,14 @@
             margin:0;
         }
     }
+
+    @media print, screen and (max-width: 600px) {
+        section.our_services .cta_container .cta_wrapper {
+            padding:0.5rem;
+            width:100%;
+        }
+
+    }
     @media print, screen and (max-width: 420px) {
         section.our_services .cta_container {
             padding:0.5rem;

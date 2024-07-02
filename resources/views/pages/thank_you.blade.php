@@ -2,12 +2,12 @@
 
 @section('content')
     {{ $page->title('Thank You') }}
-
+    @include('partials/selling_points_bar')
     <section class="thank_you">
         <div class="grid-container">
             <div class="grid-x">
                 <div class="large-12">
-                    <div>
+                    <div class="content">
                         <h1>Thank You</h1>
                         <p>
                             Thank you for submitting your details. A member of the team will be in contact
@@ -41,6 +41,19 @@
         }
         footer {
             position: absolute;
+        }
+
+        .thank_you .content {
+            background: #FFF;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        #profitinstallations-body .masthead {
+            padding-bottom: 1rem;
+        }
+        #profitinstallations-body .masthead + .selling_points_bar{
+            margin-top:0;
         }
     </style>
 @endsection

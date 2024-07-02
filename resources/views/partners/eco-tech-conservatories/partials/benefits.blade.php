@@ -55,7 +55,9 @@
     #benefits .grid-container.fluid {
         padding:0;
     }
-
+    #benefits .cta_wrapper {
+        text-align: center;
+    }
     #benefits .sidekick {
         background: url('/images/partners/eco-tech-conservatories/replacement-conservatory-roof.jpg');
         background-position: -80px 1px;

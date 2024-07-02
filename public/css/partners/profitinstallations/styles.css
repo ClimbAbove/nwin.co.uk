@@ -33,6 +33,8 @@
 #profitinstallations-body footer p.copyright {
     text-align: center;
 }
+
+
 @media print, screen and (max-width: 1210px) {
     #profitinstallations-body  .section_hero .selling_points_container ul li {
         font-size:1rem !important;
@@ -70,15 +72,16 @@
         line-height: 1rem;
         font-size:0.8rem;
     }
-    .masthead .fensa img {
-        display: none!important;
-    }
-    .masthead.mobile .inner {
-        display:block;
-    }
     .masthead .fensa {
         display:none;
     }
+    .masthead .fensa img {
+       /* display: none!important;*/
+    }
+    .masthead.mobile .inner {
+      /*  display:block;*/
+    }
+
     .masthead.mobile {
         display: flex !important;
         flex-direction: row;
@@ -86,11 +89,36 @@
     }
     .masthead .cta_wrapper {
         margin:0;
-        display: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction:column;
+    /*    display: none;*/
+    }
+    .masthead .cta_wrapper .cta_container {
+        margin:auto;
+    }
+    .masthead .cta_wrapper .cta_container .button {
+        margin: 1rem 0 0 0;
+
     }
     .masthead .logo_container {
-        width: 100%;
+       /* width: 100%;
         display:block;
-        text-align: center;
+        text-align: center;*/
+    }
+    .selling_points_bar {
+        margin-top:0.3rem;
+    }
+}
+
+@media print, screen and (max-width: 330px) {
+    .masthead .logo_container img {
+        max-height: 50px;
+    }
+    .masthead .cta_wrapper .cta_container .button {
+        margin-top:0;
     }
 }

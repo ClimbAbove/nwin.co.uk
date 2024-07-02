@@ -39,6 +39,7 @@ class InlineFormController extends AbstractController
 
         Mail::to($recipient)
             ->bcc([
+                'hello@climbabove.co.uk',
             ])
             ->send(new InlineForm([
                 'name' => $request->input('name'),

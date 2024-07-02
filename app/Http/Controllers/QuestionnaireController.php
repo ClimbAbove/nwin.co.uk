@@ -14,12 +14,62 @@ class QuestionnaireController extends AbstractController
 
     public function save(QuestionnaireElement $questionnaire_element)
     {
+
         session()->push('quote_type', 'default');
         session()->push('data', $questionnaire_element->getData());
+
+        $data = $questionnaire_element->getData();
+
+        if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
+
+            if($data['email']['answer'] == 'mailspringie@gmail.com') {
+                $recipient = 'mailspringie@gmail.com';
+            } else {
+                $recipient = 'hello@climbabove.co.uk';
+            }
+
+            Mail::to($recipient)
+                ->bcc([
+                ])
+                ->send(
+                    new ContactUs([
+                        'product_type'     => $data['product_type']['answer'],
+                        'name'             => $data['name']['answer'],
+                        'email'            => $data['email']['answer'],
+                        'telephone_number' => $data['telephone']['answer'],
+                        'postcode'         => $data['postcode']['answer'],
+                    ])
+                );
+
+        } else {
+
+            $content_repository = app()->make(ContentRepositoryInterface::class);
+            $data['config']  = $content_repository->getConfig();
+
+            $recipient =  $data['config']['company_email'];
+
+            Mail::to($recipient)
+                ->bcc([
+                    'hello@climbabove.co.uk',
+                    'mailspringie@gmail.com'
+                ])
+                ->send(
+                    new ContactUs([
+                        'product_type'     => $data['product_type']['answer'],
+                        'name'             => $data['name']['answer'],
+                        'email'            => $data['email']['answer'],
+                        'telephone_number' => $data['telephone']['answer'],
+                        'postcode'         => $data['postcode']['answer'],
+                    ])
+                );
+        }
+
+
     }
 
     public function saveConservatoryQuote(QuestionnaireElement $questionnaire_element)
     {
+
         session()->push('quote_type', 'conservatory');
         session()->push('data', $questionnaire_element->getData());
 

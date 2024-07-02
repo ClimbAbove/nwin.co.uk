@@ -25,7 +25,7 @@ class AppRepositoryProvider extends ServiceProvider
     {
 
         $domain = parse_url(request()->root())['host'];
-
+/*
         if($p = request()->input('p') !== null) {
             if($p == 1) {
                 $domain = 'ecotechconservatories.local';
@@ -34,7 +34,7 @@ class AppRepositoryProvider extends ServiceProvider
                 $domain = 'profitinstallations.local';
             }
         }
-
+*/
         switch($domain) {
             case 'ecotechconservatories.local':
             case 'ecoconservatories.local':
@@ -47,7 +47,8 @@ class AppRepositoryProvider extends ServiceProvider
                 break;
 
             case 'profitinstallations.local':
-            case 'pro-installations..co.uk':
+            case 'pro-installation.co.uk':
+            case 'www.pro-installation.co.uk':
 
                 $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\ProFitInstallations\WindowQuoteRepository::class);
                 $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\ProFitInstallations\ContentRepository::class);

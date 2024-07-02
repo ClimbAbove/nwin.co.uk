@@ -109,20 +109,20 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             ],
             [
                 'text'     => 'Windows',
-                'sub_text' => 'Our uPVC windows contain a unique compound that guarantees a smooth, high gloss finish meaning that your new windows retain their pristine appearance for years to come. This also means that they will never rot or warp and, of course. We offer a wide range of Colours to suit your property and style.',
+                'sub_text' => 'Our uPVC windows contain a unique compound that guarantees a smooth, high gloss finish, meaning that your new windows retain their pristine appearance for years to come. This also means that they will never rot or wrap. We of course offer a wide range of colours to suit your property and style.',
                 'image'    => '/assets/images/partners/eco-tech-conservatories/upvc-rehaus-windows-RSTC-380x270.jpg',
 
             ],
             [
                 'text'     => 'Conservatory Roofs',
-                'sub_text' => 'There are instant benefits to replacing your existing conservatory roof panels with insulated panels! You will Reduce energy bills, regulate temperature and reduce noise & UV rays. The best bit is this work can all be done in 1 day! ',
+                'sub_text' => 'There are instant benefits to replacing your existing conservatory roof panels with insulated panels! You will reduce energy bills, regulate temperature and reduce noise & UV rays. The best bit is that this work can all be done in 1 day.',
 
                 'image'    => '/assets/images/partners/eco-tech-conservatories/solid-dark-grey-conservatory-roof-RSTC-380x270.jpg',
             ],
             [
-                'text'     => 'Bi Fold / Sliding Door',
-                'sub_text' => 'We offer a superior quality and range of bespoke Bi Folding and Sliding doors to suit every style of property. Bringing the outdoors into your home! Choose from a wide range of exponential colours. ',
-                'image'    => '/assets/images/partners/eco-tech-conservatories/upvc-rehaus-windows-RSTC-380x270.jpg',
+                'text'     => 'Bi Fold/Sliding Door',
+                'sub_text' => 'We offer a superior quality and range of bespoke Bi folding and sliding doors to suit every style of property. Bringing the outdoors into your home! Choose from a wide range of exponential colours.',
+                'image'    => '/assets/images/product-grid/bifolds-RSTC-380x270.jpg',
             ],
             [
                 'text'     => 'Conservatories',
@@ -197,59 +197,59 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
 
         return [
             [
-                'question' => 'Are your quotes actually 100% Fixed?  ',
+                'question' => 'Are your quotes actually 100% fixed? ',
                 'answer' => [
-                    'Yes, they are! We are really proud to be setting an example in our industry. Our customers have complete peace of mind, the price they see is the price you pay, that\'s a promise. '
+                    'Yes, they are! We are really proud to be setting an example in our industry. Our customers have complete peace of mind, the price they see is the price you pay. That’s a promise.'
                 ]
             ],
             [
-                'question' => 'What happens if I find a cheaper Quote?',
+                'question' => 'What happens if I find a cheaper quote?',
                 'answer' => [
                     'We are so confidant in the products we supply and our competitive prices, that we offer a price beat guarantee by £100, should you get a quote for the exact same product and installation service.'
                 ]
             ],
             [
-                'question' => 'Will new Windows and doors save me money on my energy bills?',
+                'question' => 'Will new windows and doors save me money on my energy bills?',
                 'answer' => [
                     'Yes. uPVC should save you money if converting from single glass to double glazing or just really old uPVC windows. According to the energy saving trust. You could save £195 a year and 330 kg of CO2 in a single-glazed, semi-detached gas-heated property with single-glazed windows. It is possible that you could save up to £235 a year and 405 kg of carbon dioxide if you replace single-glazed windows with A++-rated double-glazed ones. Double or triple glazing windows are a great long term energy saving investment, which as a bonus could increase your property value.'
                 ]
             ],
             [
-                'question' => 'Do newly installed Windows and doors decrease external noise?',
+                'question' => 'Do newly installed windows and doors decrease external noise?',
                 'answer' => [
                     'If you can hear noise outside your windows are mostly likely old or are failing and it\'s a good time to make the decision to replace your windows. By installing new uPVC windows you could achieve a significant noise reduction, which can be a key decision when buying new double or triple glazing windows for your home. Noise pollution can be reduced by new energy efficient windows.'
                 ]
             ],
             [
-                'question' => 'What is the difference between Double and Triple glazing?',
+                'question' => 'What is the difference between double and triple glazing?',
                 'answer' => [
-                    'The main reason customers choose triple glazing is for energy efficiency reasons, Triple glazing should make your house warmer! Having three panes of glass and a further two insulated spaces in between, will make it the best at preventing heat escaping your home through your windows. Triple glazing will prevent more noise from outside traveling into your home, which is great if you live near a main or busy Road. Triple glazing is more expensive than double glazing, by around £300 per window, depending on the size and shape.'
+                    'The main reason customers choose triple glazing is for energy efficiency reasons. Triple glazing should make your house warmer! Having three panes of glass and a further two insulated spaces in between will make it the best at preventing heat escaping your home through your windows. Triple glazing will prevent more noise from outside traveling into your home, which is great if you live near a main or busy road. Triple glazing is more expensive than double glazing by around £300 per window, depending on the size and shape.'
                 ]
             ],
             [
-                'question' => 'How do I know if I should invest in new windows or repair my existing one’s? ',
+                'question' => 'How do I know if I should invest in new windows or repair my existing ones?',
                 'answer' => [
-                    'Windows will typically last between 15 and 25 years depending on the quality. When windows are Beyond economical repair, you should consider making that commercial decision to replace them sooner, rather than later! The following reasons are typically a indication you should make this investment: If The Windows are rotten or worn out, High energy bills or having to run your boiler for long period of time in the winter to heat your home, increase in noise from outside, Damp or your room feeling damp, your window / doors struggle to open or close and your windows are leaking.'
+                    'Windows will typically last between 15 and 25 years depending on the quality. When windows are beyond economical repair, you should consider making that commercial decision to replace them sooner, rather than later! The following reasons are typically an indication you should make this investment: If the windows are rotten or worn out, high energy bills or having to run your boiler for long period of time in the winter to heat your home, increase in noise from outside, damp or your room feeling damp, your window / doors struggle to open or close and your windows are leaking.'
                 ]
             ],
             [
-                'question' => 'Will new windows & Doors add value to my home?',
+                'question' => 'Will new windows & doors add value to my home?',
                 'answer' => [
-                    'Yes. Research shows that houses typically increase with double or triple glazing. Your property will stand out by having new windows and doors, which should increase the likelihood to sell your property fast. New windows and Doors will increase the Energy Performance certificate, which is really important as new home owners are looking for energy saving benefits to a property.',
+                    'Yes. Research shows that houses typically increase with double or triple glazing. Your property will stand out by having new windows and doors, which should increase the likelihood to sell your property fast. New windows and doors will increase the energy performance certificate, which is really important, as new home owners are looking for energy saving benefits to a property.',
                 ]
             ],
             [
-                'question' => 'What Colours do uPVC windows come in?',
+                'question' => 'What colours do uPVC windows come in??',
                 'answer' => [
-                    'Many of us just think of White windows, but there are now some fantastic colours that can have a significant impact on the way a property looks, our team will work with you and give you a choice of colour that might suit your taste and most importantly your property. Please see a list of some of our most popular colours,',
+                    'Many of us just think of white windows, but there are now some fantastic colours that can have a significant impact on the way a property looks. Our team will work with you and give you a choice of colours that might suit your taste and most importantly your property. Please see a list of some of our most popular colours:',
                     '<ul><li>Agate Grey.</li><li>Anthracite Grey.</li><li>Black Ash.</li><li>Chartwell Green.</li><li>Cream.</li><li>Golden Oak.</li><li>Grey Aluminium.</li><li>Ice Cream.</li><li>Nut Tree.</li></ul>',
-                    'But we also offer a wide variety of coloured glass to match any aesthetics of a property, if required. '
+                    'We also offer a wide variety of coloured glass to match any aesthetics of a property if required.'
                 ],
             ],
             [
                 'question' => 'Do you offer any product guarantee with your products?',
                 'answer' => [
-                    'Yes, we offer a 10 year warranty on all of our products to ensure complete customer satisfaction and peace of mind, that we have supplied and installed leading quality products. '
+                    'Yes. We offer a 10 year warranty on all of our products to ensure complete customer satisfaction and peace of mind that we have supplied and installed leading quality products.'
                 ]
             ],
             [

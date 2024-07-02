@@ -499,6 +499,11 @@
                 }
 
             }
+            @media print, screen and (max-width: 700px) {
+                .section_hero .seconds {
+                    font-size:0.8rem;
+                }
+            }
 
         </style>
     </section>

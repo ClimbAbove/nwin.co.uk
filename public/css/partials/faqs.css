@@ -2,6 +2,16 @@ section.faqs {
     background: #ECECEC;
     margin-top:2rem;
 }
+#faqs_cta .cta_wrapper {
+    text-align: center;
+}
+#faqs_cta .seconds {
+    text-align: center;
+    margin: auto;
+}
+section.faqs h3 {
+    font-size:2.4rem;
+}
 section.faqs dt {
     border:1px solid #e8e8e8;
     border-left: 8px solid var(--ca-tertiary);
@@ -92,6 +102,18 @@ section.faqs dt .icon {
         text-align: left;
     }
 }
+@media print, screen and (max-width: 600px) {
+    #faqs_cta {
+        padding-top:0 !important;
+    }
+    #faqs_cta .cta_wrapper {
+        width:100%;
+        padding:0 0.7rem 0 0.7rem !important;
+    }
+    #faqs_cta .cta_wrapper .button {
+        width:100%;
+    }
+}
 @media print, screen and (max-width: 400px) {
     section.faqs dt {
         border-left:5px solid var(--ca-tertiary);;
@@ -107,5 +129,9 @@ section.faqs dt .icon {
     }
     section.faqs dd p {
         font-size:0.9rem;
+    }
+    #faqs_cta .cta_wrapper .button {
+        padding-left:0.5rem;
+        padding-right:0.5rem;
     }
 }

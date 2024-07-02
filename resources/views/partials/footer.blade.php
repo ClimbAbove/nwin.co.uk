@@ -49,7 +49,7 @@
 
             <div class="large-12 medium-12 small-12 ca">
                 <img src="/images/ca-logo-horizontal-white.png">
-                <span>Online Marketing and PPC provided by <a href="https://climbabove.co.uk">Climb Above</a></span>
+                <span>Website and Lead Generation Provided By <a href="https://climbabove.co.uk">Climb Above</a></span>
             </div>
         </div>
     </div>

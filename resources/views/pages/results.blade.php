@@ -28,7 +28,7 @@
                                             <img src="/images/icons/conservatory-roof.svg" alt="Icon">
                                         @break
                                         @case('windows')
-                                            <img src="/images/icons/windows.svg" alt="Icon">
+                                            <img src="/images/icons/window.svg" alt="Icon">
                                         @break
                                         @case('conservatory_repair')
                                             <img src="/images/icons/conservatory-repair.svg" alt="Icon">
@@ -42,8 +42,17 @@
                                         @case('roof_line')
                                             <img src="/images/icons/roof-line.svg" alt="Icon">
                                             @break
+                                        @case('porch')
+                                            <img src="/images/icons/porch.svg" alt="Icon">
+                                            @break
+                                        @case('bifold')
+                                            <img src="/images/icons/bifold.svg" alt="Icon">
+                                            @break
+                                        @case('garage_door')
+                                            <img src="/images/icons/garage-door.svg" alt="Icon">
+                                            @break
                                         @default
-                                            <img src="/images/icons/windows.svg" alt="Icon">
+                                            <img src="/images/icons/window.svg" alt="Icon">
                                         @break
                                     @endswitch
                                 </div>
@@ -81,6 +90,15 @@
                                                 @break
                                             @case('garden_room')
                                                 <div class="price">£14,995</div>
+                                                @break
+                                            @case('porch')
+                                                <div class="price">£1,995</div>
+                                                @break
+                                            @case('bifold')
+                                                <div class="price">£2,995</div>
+                                                @break
+                                            @case('garage_door')
+                                                <div class="price">£995</div>
                                                 @break
                                             @case('roof_line')
                                                 <div class="price">£1995</div>
@@ -198,7 +216,7 @@
                                     <div class="step cell large-4">
                                         <div class="number">2</div>
                                         <div class="image_container">
-                                            <img src="/images/icons/windows.svg" alt="Icon">>
+                                            <img src="/images/icons/window.svg" alt="Icon">
                                         </div>
                                         <h3>Step Two</h3>
                                         <h6>You Choose</h6>
@@ -263,11 +281,53 @@
                                     </div>
 
                                     @break
+                                @case('porch')
+                                    <div class="step cell large-4">
+                                        <div class="number">2</div>
+                                        <div class="image_container">
+                                            <img src="/images/icons/porch.svg" alt="Icon">
+                                        </div>
+                                        <h3>Step Two</h3>
+                                        <h6>You Choose</h6>
+                                        <p>
+                                            You can choose to accept your fixed price quote
+                                        </p>
+                                    </div>
+
+                                    @break
+                                @case('bifold')
+                                    <div class="step cell large-4">
+                                        <div class="number">2</div>
+                                        <div class="image_container">
+                                            <img src="/images/icons/bifold.svg" alt="Icon">
+                                        </div>
+                                        <h3>Step Two</h3>
+                                        <h6>You Choose</h6>
+                                        <p>
+                                            You can choose to accept your fixed price quote
+                                        </p>
+                                    </div>
+
+                                    @break
+                                @case('garage_door')
+
+                                    <div class="step cell large-4">
+                                        <div class="number">2</div>
+                                        <div class="image_container">
+                                            <img src="/images/icons/garage-door.svg" alt="Icon">
+                                        </div>
+                                        <h3>Step Two</h3>
+                                        <h6>You Choose</h6>
+                                        <p>
+                                            You can choose to accept your fixed price quote
+                                        </p>
+                                    </div>
+                                    @break
                                 @default
                                     <div class="step cell large-4">
                                         <div class="number">2</div>
                                         <div class="image_container">
-                                            <img src="/images/icons/windows.svg" alt="Icon">
+                                            <img src="/images/icons/window.svg" alt="Icon">
                                         </div>
                                         <h3>Step Two</h3>
                                         <h6>You Choose</h6>

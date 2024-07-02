@@ -90,39 +90,11 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $questionnaire_element->pushStep($question);
 
 
-        $form_one = new FormElement();
-        $form_one->id = 'form_step_1';
-        $form_one->name = 'form_step_1';
-        $form_one->next_step = 'form_step_2';
-
-        $field = new FormFieldElement([
-            'name' => 'postcode',
-            'label' => 'Postcode',
-            'type' => 'text',
-        ]);
-        $form_one->pushField($field);
-
-
-
-        $field = new FormFieldElement([
-            'name' => 'next',
-            'label' => 'Next',
-            'type' => 'button',
-        ]);
-        $form_one->pushField($field);
-
-
-        $form_one->setRules([
-            'postcode' => 'required|min:5'
-        ]);
-
-        $questionnaire_element->pushStep($form_one);
-
-
         $form_two = new FormElement();
-        $form_two->id = 'form_step_2';
-        $form_two->name = 'form_step_2';
-
+        $form_two->id = 'form_step_1';
+        $form_two->name = 'form_step_1';
+        $form_two->text = 'Last step to receive your prices…';
+        
         $field = new FormFieldElement([
             'name' => 'name',
             'label' => 'Your Name',

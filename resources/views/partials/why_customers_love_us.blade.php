@@ -119,7 +119,7 @@
                             <div class="blurb">
                                 <p class="title">5 Star Reviews</p>
                                 <p>
-                                    Our online 5 Star review testament to our expertise, performance and dedicated customer service.
+                                    Our online 5 star review is a testament to our expertise, performance and dedicated customer service.
                                 </p>
                             </div>
                         </div>

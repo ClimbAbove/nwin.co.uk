@@ -7,11 +7,9 @@
             <div class="block left">
                 <h2>Choose your colours</h2>
                 <p>
-                    We can supply and install a stunning range of windows and doors you can be sure to find a colour that suits you and your home.
+                    We can supply and install a stunning range of windows and doors in a plethora of colours. You can be sure to find a colour that suits you and your home.
                 </p>
-
                 <div class="swatches">
-
                     <div class="swatch mobile">
                         <img src="/images/swatches/swatch-1.png">
                     </div>
@@ -24,25 +22,21 @@
                     <div class="swatch mobile">
                         <img src="/images/swatches/swatch-4.png">
                     </div>
-
                     <div class="swatch">
                         <img src="/images/swatches/swatch-5.png">
                     </div>
                     <div class="swatch">
                         <img src="/images/swatches/swatch-6.png">
                     </div>
-
                     <div class="swatch">
                         <img src="/images/swatches/swatch-9.png">
                     </div>
                     <div class="swatch">
                         <img src="/images/swatches/swatch-10.png">
                     </div>
-
                     <div class="swatch">
                         <img src="/images/swatches/swatch-11.png">
                     </div>
-
                     <div class="swatch">
                         <img src="/images/swatches/swatch-13.png">
                     </div>
@@ -53,10 +47,9 @@
                         <img src="/images/swatches/swatch-15.png">
                     </div>
                 </div>
-
             </div>
             <div class="block right">
-                <h2>Get In Touch</h2>
+                <h2>Free Fixed Price Quote</h2>
                 @include('forms/inline_form')
             </div>
             </div>
@@ -66,8 +59,8 @@
     </div>
 </section>
 <style>
-    #benefits {
-
+    #benefits .cta_wrapper {
+        text-align: center;
     }
     #benefits .blocks {
         display: grid;
@@ -86,9 +79,17 @@
         padding:2rem 2rem;
         justify-items: center;
         align-content: center;
-        background:#d0e1eb;;
+        background:#21427f;
         border-radius: 1rem;
+        color: #FFFFFF;
     }
+    #benefits .right label {
+        color: #FFFFFF;
+    }
+    #benefits .pristine-error {
+        color: #FFFFFF;
+    }
+
     #benefits .swatches {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -108,6 +109,10 @@
     #benefits .right .button.primary {
         width:100%;
         margin-top:1rem;
+        background: var(--ca-button-primary);
+        color: var(--ca-white);
+        font-size:1.1rem;
+        font-weight: bold;
     }
 
     @media print, screen and (max-width: 1023px) {
@@ -185,7 +190,6 @@
     #benefits .cta_container a.ghost {
         color: var(--ca-button-primary);
         background: #FFFFFF;
-
     }
     #benefits .cta_container a.ghost:hover {
         background: var(--ca-button-primary);
@@ -194,6 +198,7 @@
     #benefits .text_scroller {
         color:#000000;
     }
+
     @media print, screen and (max-width: 1023px) {
         #benefits .content {
             padding:2rem;
