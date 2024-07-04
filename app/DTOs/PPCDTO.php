@@ -12,6 +12,7 @@ class PPCDTO extends AbstractDTO
     public $isGooglePPC = false;
     public $gclid = null;
     public $msclkid = null;
+    public $queryString = null;
 
     public function __construct($bulk_assignments = [])
     {
@@ -25,18 +26,22 @@ class PPCDTO extends AbstractDTO
             $this->isGooglePPC = $ppc_dto->isGooglePPC;
             $this->gclid = $ppc_dto->gclid;
             $this->msclkid = $ppc_dto->msclkid;
+            $this->queryString = $ppc_dto->queryString;
         }
 
         if(request()->input('gclid') !== null) {
             $this->isPPC = true;
             $this->isGooglePPC = true;
             $this->gclid = request()->input('gclid');
+            $this->queryString = request()->all();
         }
         elseif(request()->input('msclkid') !== null) {
             $this->isPPC = true;
             $this->isBingPPC = true;
             $this->msclkid = request()->input('msclkid');
+            $this->queryString = request()->all();
         }
+
 
     }
 

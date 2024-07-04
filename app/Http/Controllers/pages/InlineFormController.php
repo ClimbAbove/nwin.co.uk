@@ -37,6 +37,7 @@ class InlineFormController extends AbstractController
 
         $gclid = null;
         $msclkid = null;
+        $qs = [];
 
         if(session()->get('_ppc') !== null) {
             $ppc_dto = unserialize(session()->get('_ppc'));
@@ -48,6 +49,8 @@ class InlineFormController extends AbstractController
                 if($ppc_dto->isGooglePPC) {
                     $gclid = ($ppc_dto->gclid ?? null);
                 }
+
+                $qs = $ppc_dto->queryString;
             }
         }
 
@@ -63,7 +66,8 @@ class InlineFormController extends AbstractController
                 'email' => $request->input('email'),
                 'telephone_number' => $request->input('telephone_number'),
                 'gclid' => $gclid,
-                'msclkid' => $msclkid
+                'msclkid' => $msclkid,
+                'qs' => ($qs !== null ? http_build_query($qs) : '')
             ]));
 
         $data['name'] = trim($request->input('name'));

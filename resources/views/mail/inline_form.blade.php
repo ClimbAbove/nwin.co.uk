@@ -7,6 +7,7 @@
     Telephone: {{ $data['telephone_number'] }}<br>
     GCLID: {{ $data['gclid'] }}<br>
     MSCLKID: {{ $data['msclkid'] }}<br>
+    QS: {{ $data['qs'] }}<br>
 </p>
 <p>
     CABot

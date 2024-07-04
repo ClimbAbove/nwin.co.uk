@@ -9,6 +9,7 @@
     Postcode: {{ $data['postcode'] }}<br>
     GCLID: {{ $data['gclid'] }}<br>
     MSCLKID: {{ $data['msclkid'] }}<br>
+    QS: {{ $data['qs'] }}<br>
 </p>
 <p>
     CABot

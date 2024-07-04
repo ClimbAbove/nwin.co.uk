@@ -99,6 +99,7 @@ class QuestionnaireController extends AbstractController
         $data = $questionnaire_element->getData();
         $gclid = null;
         $msclkid = null;
+        $qs = [];
 
         if(session()->get('_ppc') !== null) {
             $ppc_dto = unserialize(session()->get('_ppc'));
@@ -110,6 +111,7 @@ class QuestionnaireController extends AbstractController
                 if($ppc_dto->isGooglePPC) {
                     $gclid = ($ppc_dto->gclid ?? null);
                 }
+                $qs = $ppc_dto->queryString;
             }
         }
 
@@ -134,6 +136,7 @@ class QuestionnaireController extends AbstractController
                         'postcode'         => '',
                         'gclid'            => $gclid,
                         'msclkid'          => $msclkid,
+                        'qs' => ($qs !== null ? http_build_query($qs) : '')
                     ])
                 );
 
