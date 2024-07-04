@@ -10,9 +10,7 @@ class PPC
 {
     public function handle(Request $request, Closure $next)
     {
-
         $PPCDTO = new PPCDTO();
-
         session(['_ppc' => serialize($PPCDTO)]);
 
         return $next($request);

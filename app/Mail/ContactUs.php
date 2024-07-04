@@ -22,7 +22,7 @@ class ContactUs extends Mailable
         public array $data
     )
     {
-        //
+
     }
 
     /**

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Mail;
 
 class QuestionnaireController extends AbstractController
 {
+    public $opening_hours_logic = true;
 
     public function save(QuestionnaireElement $questionnaire_element)
     {
@@ -20,8 +21,23 @@ class QuestionnaireController extends AbstractController
         session()->push('quote_type', 'default');
         session()->push('data', $questionnaire_element->getData());
 
-
         $data = $questionnaire_element->getData();
+        $gclid = null;
+        $msclkid = null;
+
+        if(session()->get('_ppc') !== null) {
+            $ppc_dto = unserialize(session()->get('_ppc'));
+            if($ppc_dto->isPPC) {
+                if($ppc_dto->isBingPPC) {
+                    $this->opening_hours_logic = false;
+                    $msclkid = ($ppc_dto->msclkid ?? null);
+                }
+                if($ppc_dto->isGooglePPC) {
+                    $gclid = ($ppc_dto->gclid ?? null);
+                }
+            }
+        }
+
 
         if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
 
@@ -41,6 +57,8 @@ class QuestionnaireController extends AbstractController
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
                         'postcode'         => '',
+                        'gclid'            => $gclid,
+                        'msclkid'          => $msclkid,
                     ])
                 );
 
@@ -49,7 +67,7 @@ class QuestionnaireController extends AbstractController
             $content_repository = app()->make(ContentRepositoryInterface::class);
             $data['config']  = $content_repository->getConfig();
 
-            $recipient =  $data['config']['company_email'];
+            $recipient = $data['config']['company_email'];
 
             Mail::to($recipient)
                 ->bcc([
@@ -63,6 +81,8 @@ class QuestionnaireController extends AbstractController
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
                         'postcode'         => '',
+                        'gclid'            => $gclid,
+                        'msclkid'          => $msclkid,
                     ])
                 );
         }
@@ -77,6 +97,22 @@ class QuestionnaireController extends AbstractController
         session()->push('data', $questionnaire_element->getData());
 
         $data = $questionnaire_element->getData();
+        $gclid = null;
+        $msclkid = null;
+
+        if(session()->get('_ppc') !== null) {
+            $ppc_dto = unserialize(session()->get('_ppc'));
+            if($ppc_dto->isPPC) {
+                if($ppc_dto->isBingPPC) {
+                    $this->opening_hours_logic = false;
+                    $msclkid = ($ppc_dto->msclkid ?? null);
+                }
+                if($ppc_dto->isGooglePPC) {
+                    $gclid = ($ppc_dto->gclid ?? null);
+                }
+            }
+        }
+
 
         if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
 
@@ -96,6 +132,8 @@ class QuestionnaireController extends AbstractController
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
                         'postcode'         => '',
+                        'gclid'            => $gclid,
+                        'msclkid'          => $msclkid,
                     ])
                 );
 
@@ -118,6 +156,8 @@ class QuestionnaireController extends AbstractController
                         'email'            => $data['email']['answer'],
                         'telephone_number' => $data['telephone']['answer'],
                         'postcode'         => '',
+                        'gclid'            => $gclid,
+                        'msclkid'          => $msclkid,
                     ])
                 );
         }

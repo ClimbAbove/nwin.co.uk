@@ -5,6 +5,8 @@
     Name: {{ $data['name'] }}<br>
     Email: {{ $data['email'] }}<br>
     Telephone: {{ $data['telephone_number'] }}<br>
+    GCLID: {{ $data['gclid'] }}<br>
+    MSCLKID: {{ $data['msclkid'] }}<br>
 </p>
 <p>
     CABot

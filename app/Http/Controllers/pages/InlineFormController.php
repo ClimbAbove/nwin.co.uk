@@ -35,16 +35,35 @@ class InlineFormController extends AbstractController
         }
 
 
-        $recipient =  'mailspringie@gmail.com';
+        $gclid = null;
+        $msclkid = null;
 
+        if(session()->get('_ppc') !== null) {
+            $ppc_dto = unserialize(session()->get('_ppc'));
+            if($ppc_dto->isPPC) {
+                if($ppc_dto->isBingPPC) {
+                    $this->opening_hours_logic = false;
+                    $msclkid = ($ppc_dto->msclkid ?? null);
+                }
+                if($ppc_dto->isGooglePPC) {
+                    $gclid = ($ppc_dto->gclid ?? null);
+                }
+            }
+        }
+
+        $recipient =  'mailspringie@gmail.com';
+     //   $recipient = $data['config']['company_email'];
         Mail::to($recipient)
             ->bcc([
-                'hello@climbabove.co.uk',
+       //         'hello@climbabove.co.uk',
+                'springieuk@springie.net',
             ])
             ->send(new InlineForm([
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'telephone_number' => $request->input('telephone_number'),
+                'gclid' => $gclid,
+                'msclkid' => $msclkid
             ]));
 
         $data['name'] = trim($request->input('name'));
