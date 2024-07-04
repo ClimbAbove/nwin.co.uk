@@ -13,7 +13,7 @@
                         <div class="grid-container">
                             <div class="grid-padding-x">
                                 <div class="cells small-12 text-center">
-                                    <h1>Hi {{ $data['name']['answer'] }}, We're Got Your Prices</h1>
+                                    <h1>Hi {{ $data['name']['answer'] }}, We've Got Your Prices</h1>
                                 </div>
                                 <div class="cells large-6 medium-12 small-12 image">
 

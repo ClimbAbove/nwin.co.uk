@@ -16,7 +16,6 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
     {
         $hero = [];
 
-
         $hero['h1']         = 'SALE NOW ON';
         $hero['h2']         = 'Window & Door Experts.';
         $hero['hero_image'] = '/images/partners/eco-tech-conservatories/hero.png';

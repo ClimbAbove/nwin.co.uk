@@ -91,7 +91,6 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             'Suite 11',
             'Wallisdown Rd',
             'Poole',
-            'Poole',
         ];
     }
 
@@ -127,51 +126,38 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
     {
         return [
             [
+                'text'     => 'Composite Doors',
+                'sub_text' => 'Our  composite doors are an affordable solution to replacing your existing wooden or PVC doors. We can supply an extensive range of contemporary and traditional composite doors that offer excellent value for money, impressive thermal efficiency, extra security and are made to suit your exact requirements.',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/ODL-composite-door-beige-RSTC-380x270.jpg',
+            ],
+            [
                 'text'     => 'Windows',
-                'sub_text' => '',
-                'image'    => '/images/product-grid/windows.jpg',
+                'sub_text' => 'Our uPVC windows contain a unique compound that guarantees a smooth, high gloss finish, meaning that your new windows retain their pristine appearance for years to come. This also means that they will never rot or wrap. We of course offer a wide range of colours to suit your property and style.',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/upvc-rehaus-windows-RSTC-380x270.jpg',
+
             ],
             [
-                'text'     => 'Conservatory',
-                'sub_text' => '',
-                'image' => '/images/product-grid/conservatory.jpg',
+                'text'     => 'Conservatory Roofs',
+                'sub_text' => 'There are instant benefits to replacing your existing conservatory roof panels with insulated panels! You will reduce energy bills, regulate temperature and reduce noise & UV rays. The best bit is that this work can all be done in 1 day.',
+
+                'image'    => '/assets/images/partners/eco-tech-conservatories/solid-dark-grey-conservatory-roof-RSTC-380x270.jpg',
             ],
             [
-                'text'     => 'Sliding Door',
-                'sub_text' => '',
-                'image' => '/images/product-grid/sliding-door.jpg',
+                'text'     => 'Bi Fold/Sliding Door',
+                'sub_text' => 'We offer a superior quality and range of bespoke Bi folding and sliding doors to suit every style of property. Bringing the outdoors into your home! Choose from a wide range of exponential colours.',
+                'image'    => '/assets/images/product-grid/bifolds-RSTC-380x270.jpg',
             ],
             [
-                'text'     => 'Bi Folds',
-                'sub_text' => '',
-                'image' => '/images/product-grid/bifolds.jpg',
+                'text'     => 'Conservatories',
+                'sub_text' => 'Conservatories are the perfect way to extend your living space and bring the outdoors indoors. We offer a fantastic range of Ultraframe conservatories so there\'s a style to suit all properties.',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/classic-conservatory-roof-with-grey-panels-RSTC-380x270.jpg',
             ],
             [
-                'text'     => 'Orangery',
-                'sub_text' => '',
-                'image' => '/images/product-grid/orangery.jpg',
-            ],
-            [
-                'text'     => 'Garden Room',
-                'sub_text' => '',
-                'image' => '/images/product-grid/garden-room.jpg',
+                'text'     => 'Patio & French Doors',
+                'sub_text' => 'We offer a huge range of patio and french doors to suit all tastes and budgets. These offer all the benefits of modern uPVC including noise reduction, energy efficiency, low maintenance and extra security.',
+                'image'    => '/assets/images/partners/eco-tech-conservatories/REHAU-french-door-RSTC-380x270.jpg',
             ],
 
-            [
-                'text'     => 'Doors',
-                'sub_text' => '',
-                'image' => '/images/product-grid/doors.jpg',
-            ],
-            [
-                'text'     => 'Porch',
-                'sub_text' => '',
-                'image' => '/images/product-grid/porch.jpg',
-            ],
-            [
-                'text'     => 'Garage',
-                'sub_text' => '',
-                'image' => '/images/product-grid/garage.jpg',
-            ],
         ];
 
 
