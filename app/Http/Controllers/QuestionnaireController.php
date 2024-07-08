@@ -136,7 +136,7 @@ class QuestionnaireController extends AbstractController
                         'postcode'         => '',
                         'gclid'            => $gclid,
                         'msclkid'          => $msclkid,
-                        'qs' => ($qs !== null ? http_build_query($qs) : '')
+                        'qs'               => ($qs !== null ? http_build_query($qs) : '')
                     ])
                 );
 
