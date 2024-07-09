@@ -22,6 +22,8 @@ class QuestionnaireController extends AbstractController
         session()->push('data', $questionnaire_element->getData());
 
         $data = $questionnaire_element->getData();
+
+
         $gclid = null;
         $msclkid = null;
 
@@ -93,10 +95,13 @@ class QuestionnaireController extends AbstractController
     public function saveConservatoryQuote(QuestionnaireElement $questionnaire_element)
     {
 
-        session()->push('quote_type', 'conservatory');
+        session()->forget('quote_type');
+        session()->forget('data');
+        session()->push('quote_type', 'default');
         session()->push('data', $questionnaire_element->getData());
 
         $data = $questionnaire_element->getData();
+
         $gclid = null;
         $msclkid = null;
         $qs = [];
