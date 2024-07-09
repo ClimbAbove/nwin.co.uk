@@ -70,8 +70,8 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         if(Carbon::now()->setTimezone('Europe/London')->between($config['opening_time_carbon'],  $config['closing_time_carbon'])) {
             $config['contact_mode'] = 'telephone';
             $config['telephone'] = [
-                'international' =>  '+447447024816',
-                'number' => '07447 024816',
+                'international' =>  '+447889507981',
+                'number' => '07889 507981',
             ];
 
         } else {
@@ -79,8 +79,8 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             $config['contact_url'] = route('page-quote');
 
             $config['telephone'] = [
-                'international' =>  '+447447024816',
-                'number' => '07447 024816',
+                'international' =>  '+447889507981',
+                'number' => '07889 507981',
             ];
         }
 
