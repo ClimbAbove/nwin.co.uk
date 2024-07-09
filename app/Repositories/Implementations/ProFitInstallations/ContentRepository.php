@@ -38,11 +38,11 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
 
             [
                 'image' => '/images/logos/googlereviews.png',
-                'href' => 'https://www.google.com/search?q=pro-fit+window+installations+ltd&rlz=1C1GCEA_enGB1015GB1015&oq=pro&aqs=chrome.0.69i59j69i57j69i61l2j69i60l4.1592j0j7&sourceid=chrome&ie=UTF-8#lrd=0x4871cfa76d377ad1:0xbc334955c409b896,1,,,',
+             //   'href' => 'https://www.google.com/search?q=pro-fit+window+installations+ltd&rlz=1C1GCEA_enGB1015GB1015&oq=pro&aqs=chrome.0.69i59j69i57j69i61l2j69i60l4.1592j0j7&sourceid=chrome&ie=UTF-8#lrd=0x4871cfa76d377ad1:0xbc334955c409b896,1,,,',
             ],
             [
                 'image' => '/images/logos/facebookreviews.png',
-                'href' => 'https://www.facebook.com/profitwindowinstallationsltd/reviews',
+            //    'href' => 'https://www.facebook.com/profitwindowinstallationsltd/reviews',
             ],
         ];
 
