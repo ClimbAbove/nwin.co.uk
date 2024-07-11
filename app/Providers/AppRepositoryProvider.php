@@ -35,7 +35,18 @@ class AppRepositoryProvider extends ServiceProvider
             }
         }
 */
+
         switch($domain) {
+            case 'localwindowfitter.local':
+            case 'localwindowfitter.co.uk':
+            case 'www.localwindowfitter.co.uk':
+
+                $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\LocalWindowFitter\WindowQuoteRepository::class);
+                $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\LocalWindowFitter\ContentRepository::class);
+
+
+                break;
+
             case 'ecotechconservatories.local':
             case 'ecoconservatories.local':
             case 'ecoconservatories.co.uk':

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Implementations\ProFitInstallations;
+namespace App\Repositories\Implementations\LocalWindowFitter;
 
 use App\Classes\Elements\Answer\AnswerElement;
 use App\Classes\Elements\Form\FormElement;

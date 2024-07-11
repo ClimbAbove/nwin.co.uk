@@ -12,7 +12,7 @@
                     <div class="reversable">
 
                         @if(($hero['review_partners'] ?? null) !== null)
-                            <div class="star_container">
+                            <div class="star_container col-{{count($hero['review_partners'] ?? [])}}">
                                 @foreach($hero['review_partners'] as $review_partner)
                                 <div class="box" style="text-align: center;">
                                     @if(($review_partner['href'] ?? null) !== null)
@@ -250,6 +250,15 @@
                 align-items: center;
                 margin:0;
             }
+            .section_hero .star_container.col-1 {
+                display: grid;
+                flex-direction: row;
+                grid-template-columns: 1fr;
+                gap:1rem;
+                vertical-align: center;
+                align-items: center;
+                margin:0;
+            }
             .section_hero .star_container .box {
                 height:90px;
                 display:flex;
@@ -474,8 +483,12 @@
                     margin-bottom: 0.8rem;
                 }
 
+                .section_hero .reversable .star_container {
+                   display: none;
+                }
                 .section_hero .star_container.mobile svg {
                     width:50%;
+                    display: grid;
                 }
 
                 .section_hero .cta_container {

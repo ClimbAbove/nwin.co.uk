@@ -1,0 +1,159 @@
+:root {
+    --ca-button-primary: #ff4747;
+}
+.masthead .logo_container img {
+    height:75px;
+    width:auto;
+    margin-top:1.2rem;
+}
+#localwindowfitter-body .hero_image_container .hero_image {
+    background-image: url('/images/partners/eco-tech-conservatories/hero.png');
+    background-size:cover;
+}
+#localwindowfitter-body .section_hero h1 {
+    text-align: center;
+}
+#localwindowfitter-body .section_hero h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+#localwindowfitter-body .section_hero .hero_image_container {
+    text-align: right;
+    height: 490px;
+}
+#localwindowfitter-body .section_hero .hero_image_container .slant {
+    right:-4rem;
+}
+#localwindowfitter-body .section_hero .selling_points_container {
+    margin-left:3.7rem;
+}
+#localwindowfitter-body footer {
+    background:#000000;
+}
+#localwindowfitter-body footer .logo_container img {
+    height:80px;
+}
+#localwindowfitter-body footer p.copyright {
+    text-align: center;
+}
+
+
+@media print, screen and (max-width: 1210px) {
+    #localwindowfitter-body  .section_hero .selling_points_container ul li {
+        font-size:1rem !important;
+
+    }
+    #localwindowfitter-body .section_hero .hero_image_container {
+        height:455px;
+    }
+    #localwindowfitter-body .section_hero .hero_image_container .slant {
+        right:-6rem;
+    }
+}
+@media print, screen and (max-width: 1120px) {
+    #localwindowfitter-body .hero_image_container .hero_image {
+        background-size: 130% !important;
+        height: 506px;
+    }
+    #localwindowfitter-body .section_hero .hero_image_container .slant {
+        right:-8rem;
+    }
+}
+
+
+
+@media print, screen and (max-width: 705px) {
+#localwindowfitter-body .section_hero .selling_points_container {
+    margin-left:0;
+}
+}
+
+
+
+@media print, screen and (max-width: 460px) {
+    footer .ca {
+        line-height: 1rem;
+        font-size:0.8rem;
+    }
+    #localwindowfitter-body .section_hero h1 {
+        text-align: center;
+        font-size:2.5rem;
+    }
+    .masthead .logo_container img {
+        width:50x;
+        height:50px;
+    }
+    .masthead .fensa img {
+        width:90px;
+        height:50px;
+        margin-top:4px;
+    }
+    .cta_container .cta.secondary.ghost {
+        margin-top:1.2rem;
+    }
+    .masthead.mobile {
+        display: flex !important;
+        flex-direction: row;
+
+    }
+    .masthead .cta_wrapper {
+        margin:0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-direction:column;
+    /*    display: none;*/
+    }
+    .masthead .cta_wrapper .cta_container {
+        margin:auto;
+    }
+
+    .masthead .logo_container {
+       /* width: 100%;
+        display:block;
+        text-align: center;*/
+    }
+    .selling_points_bar {
+        margin-top:0.3rem;
+    }
+}
+@media print, screen and (max-width: 420px) {
+    .masthead .cta_wrapper .cta_container .button {
+        margin-top: 0;
+    }
+    .masthead .fensa img {
+        width:80px;
+        height:40px;
+        margin-top:14px;
+    }
+}
+@media print, screen and (max-width: 330px) {
+    .masthead .logo_container img {
+        max-height: 50px;
+    }
+    .masthead .cta_wrapper .cta_container .button {
+        margin-top:0;
+        padding:0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+    #localwindowfitter-body .section_hero h1 {
+        text-align: center;
+        font-size:2rem;
+    }
+}
+@media print, screen and (max-width: 318px) {
+    .masthead .fensa {
+        display: inline-block;
+    }
+    #localwindowfitter-body .section_hero .star_container .box img {
+        height: 38px;
+    }
+}
+@media print, screen and (max-width: 285px) {
+    .masthead .fensa {
+        display: none;
+    }
+}

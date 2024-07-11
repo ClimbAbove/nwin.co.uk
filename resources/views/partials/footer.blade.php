@@ -42,7 +42,11 @@
             </div>
             <div class="small-12">
                 <p class="content copyright">
-                    &copy; Copyright {{ \Carbon\Carbon::now()->format('Y') }} {{ $config['company_name'] }} is a private limited company registered in England and Wales, UK Company Reg No. {{ $config['company_number'] }}. VAT No. {{ $config['vat_number'] }}.
+                    &copy; Copyright {{ \Carbon\Carbon::now()->format('Y') }} {{ $config['company_name'] }} is a private limited company registered in England and Wales, UK Company Reg No. {{ $config['company_number'] }}.
+
+                    @if(($config['vat_number'] ?? '') !== '')
+                        VAT No. {{ $config['vat_number'] }}.
+                    @endif
                 </p>
             </div>
 

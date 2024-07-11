@@ -40,6 +40,8 @@ class QuestionnaireController extends AbstractController
             }
         }
 
+        $domain = parse_url(request()->root())['host'];
+
 
         if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
 
@@ -49,11 +51,13 @@ class QuestionnaireController extends AbstractController
                 $recipient = 'hello@climbabove.co.uk';
             }
 
+
             Mail::to($recipient)
                 ->bcc([
                 ])
                 ->send(
                     new ContactUs([
+                        'domain'           => ($domain ?? ''),
                         'product_type'     => $data['product_type']['answer'],
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
@@ -78,6 +82,7 @@ class QuestionnaireController extends AbstractController
                 ])
                 ->send(
                     new ContactUs([
+                        'domain'           => ($domain ?? ''),
                         'product_type'     => $data['product_type']['answer'],
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
@@ -101,6 +106,8 @@ class QuestionnaireController extends AbstractController
         session()->push('data', $questionnaire_element->getData());
 
         $data = $questionnaire_element->getData();
+
+        $domain = parse_url(request()->root())['host'];
 
         $gclid = null;
         $msclkid = null;
@@ -134,6 +141,7 @@ class QuestionnaireController extends AbstractController
                 ])
                 ->send(
                     new ContactUs([
+                        'domain'           => ($domain ?? ''),
                         'product_type'     => $data['product_type']['answer'],
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
@@ -159,6 +167,7 @@ class QuestionnaireController extends AbstractController
                 ])
                 ->send(
                     new ContactUs([
+                        'domain'           => ($domain ?? ''),
                         'product_type'     => $data['product_type']['answer'],
                         'name'             => $data['name']['answer'],
                         'email'            => $data['email']['answer'],
