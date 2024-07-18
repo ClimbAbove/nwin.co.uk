@@ -7,8 +7,6 @@
 @endsection
 <style>
 
-
-
      .loading_text {
          margin-bottom: 0.5rem;
          font-weight: bold;

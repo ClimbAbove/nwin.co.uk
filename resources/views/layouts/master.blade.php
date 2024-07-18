@@ -7,6 +7,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/partners/{{$config['partner']}}/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/partners/{{$config['partner']}}/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/partners/{{$config['partner']}}/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/partners/{{$config['partner']}}/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/partners/{{$config['partner']}}/android-chrome-512x512.png">
         <link rel="manifest" href="/partners/{{$config['partner']}}/site.webmanifest">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/css/foundation/foundation.css">
@@ -14,18 +16,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
         <link href="/css/fontawesome/css/all.min.css" rel="stylesheet">
-        <style>
-            :root {
-                --ca-action: #BF0F30;
-            }
-        </style>
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16506920005"></script>
         <script>
             (function(w,d,t,r,u) { var f,n,i; w[u]=w[u]||[],f=function() { var o={ti:"97130056", enableAutoSpaTracking: true}; o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad") }, n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function() { var s=this.readyState; s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null) }, i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i) }) (window,document,"script","//bat.bing.com/bat.js","uetq");
             window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments);}
             gtag('js', new Date()); gtag('config', 'AW-16506920005');
-
-
             @switch($config['tracking_product'])
                 @case('conservatory')
                     gtag('config', 'AW-16506920005/KkZACP7n17AZEMW4jr89', {
@@ -33,7 +28,7 @@
                         'phone_conversion_css_class': 'cta_telephone'
                     });
                 @break
-                @default
+                @case('windows_and_doors')
                     gtag('config', 'AW-16506920005/G9plCKjY0bAZEMW4jr89', {
                         'phone_conversion_number':  '{{$config['telephone']['number']}}',
                         'phone_conversion_css_class': 'cta_telephone'
@@ -41,17 +36,12 @@
                 @break
             @endswitch
         </script>
-        @if(($tracking_send_to ?? null) !== null)
-            <script>
-                gtag('event', 'conversion', {'send_to': '{{$tracking_send_to}}'});
-                window.uetq = window.uetq || [];
-                window.uetq.push('set', { 'pid': {
-                        'em': '{{$tidy_email}}',
-                        'ph': '{{$tidy_phone}}',
-                }});
-                window.uetq.push('event', 'submit_lead_form', {});
-            </script>
-        @endif
+
+        <style>
+            :root {
+                --ca-action: #BF0F30;
+            }
+        </style>
         <link rel="stylesheet" href="/css/master.css">
         {!! $page->getCSSInline('top') !!}
         {!! $page->getCSS('top') !!}

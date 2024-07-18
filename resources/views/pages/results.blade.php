@@ -1,6 +1,19 @@
 @extends('layouts/master')
 
 @section('content')
+
+    @if(($tracking_send_to ?? null) !== null)
+        <script>
+            gtag('event', 'conversion', {'send_to': '{{$tracking_send_to}}'});
+            window.uetq = window.uetq || [];
+            window.uetq.push('set', { 'pid': {
+                    'em': '{{$tidy_email}}',
+                    'ph': '{{$tidy_phone}}',
+                }});
+            window.uetq.push('event', 'submit_lead_form', {});
+        </script>
+    @endif
+
     {{ $page->title('Your Results') }}
     @include('partials/selling_points_bar')
 
