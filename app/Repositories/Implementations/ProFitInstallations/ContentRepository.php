@@ -64,23 +64,24 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
 
         // Times
         $config['opening_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 7:00:00');
-        $config['closing_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 19:00:00'); // summer - 1 7m
+        $config['closing_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 21:00:00'); // summer - 1 7m
         //$config['closing_time_carbon'] = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now()->setTimezone('Europe/London')->format('Y-m-d') . ' 18:00:00'); // summer - 1 7m
 
         if(Carbon::now()->setTimezone('Europe/London')->between($config['opening_time_carbon'],  $config['closing_time_carbon'])) {
             $config['contact_mode'] = 'telephone';
             $config['telephone'] = [
-                'international' =>  '+447889507981',
-                'number' => '07889 507981',
+                'international' =>  '+447447024816',
+                'number' => '07447 024816',
             ];
+
 
         } else {
             $config['contact_mode'] = 'form';
             $config['contact_url'] = route('page-quote');
 
             $config['telephone'] = [
-                'international' =>  '+447889507981',
-                'number' => '07889 507981',
+                'international' =>  '+447447024816',
+                'number' => '07447 024816',
             ];
         }
 
