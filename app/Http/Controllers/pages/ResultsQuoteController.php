@@ -42,6 +42,7 @@ class ResultsQuoteController extends AbstractController
         }
 
         $data['tracking_send_to'] = null;
+        $data['conversion_product'] = 'windows_and_doors';
 
         switch($data['config']['tracking_product']) {
             case 'windows_and_doors':
@@ -49,6 +50,7 @@ class ResultsQuoteController extends AbstractController
             break;
             case 'conservatory':
                 $data['tracking_send_to'] = 'AW-16506920005/8LA2CMzT17AZEMW4jr89';
+                $data['conversion_product'] = 'conservatory';
             break;
         }
 

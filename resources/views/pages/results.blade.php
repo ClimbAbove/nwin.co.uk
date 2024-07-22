@@ -10,7 +10,7 @@
                     'em': '{{$tidy_email}}',
                     'ph': '{{$tidy_phone}}',
                 }});
-            window.uetq.push('event', 'submit_lead_form', {});
+            window.uetq.push('event', 'submit_lead_form', {"event_category":"{{$conversion_product}}"});
         </script>
     @endif
 
