@@ -24,17 +24,8 @@ class AppRepositoryProvider extends ServiceProvider
     public function boot()
     {
 
+        // Grab the request domain.
         $domain = parse_url(request()->root())['host'];
-/*
-        if($p = request()->input('p') !== null) {
-            if($p == 1) {
-                $domain = 'ecotechconservatories.local';
-            }
-            if($p == 2) {
-                $domain = 'profitinstallations.local';
-            }
-        }
-*/
 
         switch($domain) {
             case 'localwindowfitter.local':
@@ -51,7 +42,7 @@ class AppRepositoryProvider extends ServiceProvider
             case 'ecoconservatories.local':
             case 'ecoconservatories.co.uk':
             case 'www.ecoconservatories.co.uk':
-
+die('Maintence');
                 $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\EcoTechConservatories\WindowQuoteRepository::class);
                 $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\EcoTechConservatories\ContentRepository::class);
 
