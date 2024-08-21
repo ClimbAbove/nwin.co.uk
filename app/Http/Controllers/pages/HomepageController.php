@@ -8,6 +8,7 @@ use App\Http\Controllers\Abstracts\AbstractController;
 
 use App\Repositories\Interfaces\ContentRepositoryInterface;
 use App\Repositories\Interfaces\WindowQuoteRepositoryInterface;
+use App\Repositories\QuoteQuestionnaires\WindowQuoteRepository;
 use Illuminate\Http\Request;
 
 class HomepageController extends AbstractController

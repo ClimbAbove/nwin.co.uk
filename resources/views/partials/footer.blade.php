@@ -31,6 +31,9 @@
                     <p class="content">
                         {!! implode('<br>',$address) !!}
                     </p>
+                    <p>
+                        <a style="color:#FFF;" href="tel:{{$telephone['international']}}">{{$telephone['number']}}</a>
+                    </p>
                 </div>
             </div>
             <div class="large-6 small-12 show-for-small-only">

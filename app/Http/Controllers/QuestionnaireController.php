@@ -8,6 +8,7 @@ use App\Mail\ContactUs;
 use App\Repositories\Interfaces\ContentRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Lead;
 
 class QuestionnaireController extends AbstractController
 {
@@ -26,6 +27,7 @@ class QuestionnaireController extends AbstractController
 
         $gclid = null;
         $msclkid = null;
+        $ppc_source = 'none';
 
         if(session()->get('_ppc') !== null) {
             $ppc_dto = unserialize(session()->get('_ppc'));
@@ -33,16 +35,27 @@ class QuestionnaireController extends AbstractController
                 if($ppc_dto->isBingPPC) {
                     $this->opening_hours_logic = false;
                     $msclkid = ($ppc_dto->msclkid ?? null);
+                    $ppc_source = 'bing';
                 }
                 if($ppc_dto->isGooglePPC) {
                     $gclid = ($ppc_dto->gclid ?? null);
+                    $ppc_source = 'google';
                 }
             }
         }
 
         $domain = parse_url(request()->root())['host'];
 
-
+        $lead = Lead::create([
+            'domain'       => ($domain ?? ''),
+            'name'         => $data['name']['answer'],
+            'email'        => $data['email']['answer'],
+            'telephone'    => $data['telephone']['answer'],
+            'product_type' => $data['product_type']['answer'],
+            'meta'         => ($lead_meta ?? []),
+            'ppc_source'   => $ppc_source
+        ]);
+/*
         if(in_array($data['email']['answer'],['mailspringie@gmail.com','test@test.com'])) {
 
             if($data['email']['answer'] == 'mailspringie@gmail.com') {
@@ -50,7 +63,6 @@ class QuestionnaireController extends AbstractController
             } else {
                 $recipient = 'hello@climbabove.co.uk';
             }
-
 
             Mail::to($recipient)
                 ->bcc([
@@ -94,7 +106,7 @@ class QuestionnaireController extends AbstractController
                 );
         }
 
-
+*/
     }
 
     public function saveConservatoryQuote(QuestionnaireElement $questionnaire_element)
