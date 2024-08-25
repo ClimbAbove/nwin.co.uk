@@ -74,8 +74,8 @@ class WindowQuoteRepository extends AbstractRepository implements WindowQuoteRep
         $question->pushAnswer($answer);
 
         $answer = new AnswerElement();
-        $answer->id = 'roof_line';
-        $answer->value = 'roof_line';
+        $answer->id = 'bi_bold';
+        $answer->value = 'bi_fold_sliding_door';
         $answer->text = 'Bifold / Sliding Door';
         $answer->icon = '/images/icons/bifold.svg';
         $question->pushAnswer($answer);

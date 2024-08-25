@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Abstracts\AbstractController;;
 
+use App\Models\Lead;
 use App\Repositories\Interfaces\ContentRepositoryInterface;
 use App\Repositories\QuoteQuestionnaires\WindowQuoteRepository;
 
@@ -15,12 +16,25 @@ class ResultsQuoteController extends AbstractController
     {
         $data = [];
 
+        $gclid = null;
+        $msclkid = null;
+        $qs = [];
+        $ppc_source = 'none';
+
         if(session()->get('_ppc') !== null) {
             $ppc_dto = unserialize(session()->get('_ppc'));
-            if($ppc_dto->isPPC) {
-                if($ppc_dto->isBingPPC) {
+            if ($ppc_dto->isPPC) {
+                if ($ppc_dto->isBingPPC) {
                     $this->opening_hours_logic = false;
+                    $msclkid                   = ($ppc_dto->msclkid ?? null);
+                    $ppc_source                = 'bing';
                 }
+                if ($ppc_dto->isGooglePPC) {
+                    $gclid      = ($ppc_dto->gclid ?? null);
+                    $ppc_source = 'google';
+                }
+
+                $qs = $ppc_dto->queryString;
             }
         }
 
@@ -53,6 +67,26 @@ class ResultsQuoteController extends AbstractController
                 $data['conversion_product'] = 'conservatory';
             break;
         }
+
+
+        $lead_meta = [
+            'message' => null,
+            'gclid' => $gclid,
+            'msclkid' => $msclkid,
+            'qs' => ($qs !== null ? http_build_query($qs) : '')
+        ];
+
+        $domain = parse_url(request()->root())['host'];
+/*
+        $lead = Lead::create([
+            'domain'       => ($domain ?? ''),
+            'name'         => $data['data']['name']['answer'],
+            'email'        => $data['data']['email']['answer'],
+            'telephone'    => $data['data']['telephone']['answer'],
+            'product_type' => 'windows',
+            'meta'         => ($lead_meta ?? []),
+            'ppc_source'   => ($ppc_source ?? 'none')
+        ]);*/
 
         $untidy_email = $data['data']['email']['answer'] ;
         $untidy_email = strtolower($untidy_email);

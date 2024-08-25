@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pages;
 use App\Http\Controllers\Abstracts\AbstractController;
 use App\Mail\ContactUs;
 use App\Mail\InlineForm;
+use App\Models\Lead;
 use App\Repositories\Interfaces\ContentRepositoryInterface;
 use App\Repositories\Interfaces\WindowQuoteRepositoryInterface;
 use Illuminate\Http\Request;
@@ -38,23 +39,46 @@ class InlineFormController extends AbstractController
         $gclid = null;
         $msclkid = null;
         $qs = [];
+        $ppc_source = 'none';
 
         if(session()->get('_ppc') !== null) {
             $ppc_dto = unserialize(session()->get('_ppc'));
-            if($ppc_dto->isPPC) {
-                if($ppc_dto->isBingPPC) {
+            if ($ppc_dto->isPPC) {
+                if ($ppc_dto->isBingPPC) {
                     $this->opening_hours_logic = false;
-                    $msclkid = ($ppc_dto->msclkid ?? null);
+                    $msclkid                   = ($ppc_dto->msclkid ?? null);
+                    $ppc_source                = 'bing';
                 }
-                if($ppc_dto->isGooglePPC) {
-                    $gclid = ($ppc_dto->gclid ?? null);
+                if ($ppc_dto->isGooglePPC) {
+                    $gclid      = ($ppc_dto->gclid ?? null);
+                    $ppc_source = 'google';
                 }
 
                 $qs = $ppc_dto->queryString;
             }
         }
 
-        $recipient =  'mailspringie@gmail.com';
+            $lead_meta = [
+                'message' => $request->input('message'),
+                'gclid' => $gclid,
+                'msclkid' => $msclkid,
+                'qs' => ($qs !== null ? http_build_query($qs) : '')
+            ];
+
+            $domain = parse_url(request()->root())['host'];
+
+            $lead = Lead::create([
+                'domain'       => ($domain ?? ''),
+                'name'         => $request->input('name'),
+                'email'        => $request->input('email'),
+                'telephone'    => $request->input('telephone_number'),
+                'product_type' => 'windows',
+                'meta'         => ($lead_meta ?? []),
+                'ppc_source'   => ($ppc_source ?? 'none')
+            ]);
+
+
+            $recipient =  'mailspringie@gmail.com';
      //   $recipient = $data['config']['company_email'];
         Mail::to($recipient)
             ->bcc([
