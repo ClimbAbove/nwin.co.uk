@@ -35,7 +35,6 @@ class AppRepositoryProvider extends ServiceProvider
                 $this->app->bind(\App\Repositories\Interfaces\WindowQuoteRepositoryInterface::class, \App\Repositories\Implementations\LocalWindowFitter\WindowQuoteRepository::class);
                 $this->app->bind(\App\Repositories\Interfaces\ContentRepositoryInterface::class, \App\Repositories\Implementations\LocalWindowFitter\ContentRepository::class);
 
-
                 break;
 
             case 'ecotechconservatories.local':

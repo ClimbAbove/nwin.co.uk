@@ -65,7 +65,7 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
         if(Carbon::now()->setTimezone('Europe/London')->between($config['opening_time_carbon'],  $config['closing_time_carbon'])) {
             $config['contact_mode'] = 'telephone';
             $config['telephone'] = [
-                'international' =>  '+441138715099',
+                'international' =>  '+44113 8715099',
                 'number' => '0113 8715099',
             ];
 
@@ -74,7 +74,7 @@ class ContentRepository extends DefaultContentRepository implements ContentRepos
             $config['contact_url'] = route('page-quote');
 
             $config['telephone'] = [
-                'international' =>  '+441138715099',
+                'international' =>  '+44113 8715099',
                 'number' => '0113 8715099',
             ];
         }

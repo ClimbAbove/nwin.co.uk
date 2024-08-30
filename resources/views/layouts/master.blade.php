@@ -24,13 +24,13 @@
             @switch($config['tracking_product'])
                 @case('conservatory')
                     gtag('config', 'AW-16506920005/KkZACP7n17AZEMW4jr89', {
-                        'phone_conversion_number':  '{{$config['telephone']['number']}}',
+                        'phone_conversion_number':  '{{$config['telephone']['international']}}',
                         'phone_conversion_css_class': 'cta_telephone'
                     });
                 @break
                 @case('windows_and_doors')
                     gtag('config', 'AW-16506920005/G9plCKjY0bAZEMW4jr89', {
-                        'phone_conversion_number':  '{{$config['telephone']['number']}}',
+                        'phone_conversion_number':  '{{$config['telephone']['international']}}',
                         'phone_conversion_css_class': 'cta_telephone'
                     });
                 @break

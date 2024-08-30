@@ -24,7 +24,7 @@
         window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments);}
         gtag('js', new Date()); gtag('config', 'AW-16506920005');
         gtag('config', 'AW-16506920005/KkZACP7n17AZEMW4jr89', {
-            'phone_conversion_number': '{{$config['telephone']['number']}}',
+            'phone_conversion_number': '{{$config['telephone']['international']}}',
             'phone_conversion_css_class': 'cta_telephone'
         });
     </script>
