@@ -32,7 +32,7 @@
                         {!! implode('<br>',$address) !!}
                     </p>
                     <p>
-                        <a style="color:#FFF;" href="tel:{{$telephone['international']}}">{{$telephone['number']}}</a>
+                        <a style="color:#FFF;" href="tel:{{$telephone['international']}}">{{$telephone['international']}}</a>
                     </p>
                 </div>
             </div>
